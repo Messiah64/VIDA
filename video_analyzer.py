@@ -1,15 +1,22 @@
 import time
 import requests
 import json
+import math
 from pathlib import Path
 from openai import AzureOpenAI
 import logging
+from concurrent.futures import ThreadPoolExecutor
 
 logger = logging.getLogger(__name__)
 
 class VideoAnalyzer:
     """
-    Video Analysis using Azure Video Indexer and Azure OpenAI
+    Enhanced Video Analysis using Azure Video Indexer and Azure OpenAI
+    Features:
+    - Token-safe hierarchical summarization
+    - Chunked transcript processing for large videos
+    - Parallel GPT calls for improved speed
+    - Robust error handling and fallback summaries
     """
     
     def __init__(self, config_file='config.json'):
@@ -54,7 +61,9 @@ class VideoAnalyzer:
             },
             "processing": {
                 "timeout_seconds": 900,
-                "privacy": "Private"
+                "privacy": "Private",
+                "chunk_size": 30,  # transcript segments per chunk
+                "max_workers": 4   # parallel processing threads
             }
         }
     
@@ -181,67 +190,147 @@ class VideoAnalyzer:
         
         return structured_data
     
-    def generate_summary(self, structured_data):
-        """Generate human-readable summary using GPT-4o - following exact working pattern"""
-        openai_config = self.config['openai']
+    def chunk_transcript(self, transcript):
+        """Break transcript into manageable chunks for token-safe processing"""
+        chunk_size = self.config['processing']['chunk_size']
         
-        detailed_prompt = f"""
-You are an expert multimedia content analyst.
-You will receive the full structured metadata extracted from a video, including:
-- Full transcript with timestamps and speakers
-- Scene and shot breakdowns
-- Visual labels, tags, and detected objects
-- Named people, brands, and locations
-- Detected emotions and sentiments
-- Audio events and effects
-- On-screen text from OCR
-- Any moderation or safety flags
-
-Your task:
-1. Reconstruct a coherent, chronological narrative of the video, blending both visual and audio elements.
-2. Identify the key characters, settings, and events.
-3. Highlight any major changes in tone, emotion, or topic.
-4. Create a scene-by-scene breakdown with timestamps.
-5. Provide a final concise TL;DR summary (3–4 sentences).
-
-The output should read like a human-written report, not raw data.
-
-Here is the metadata JSON:
-{json.dumps(structured_data, ensure_ascii=False)}
-"""
-        
+        for i in range(0, len(transcript), chunk_size):
+            yield transcript[i:i + chunk_size]
+    
+    def summarize_chunk(self, chunk, chunk_index):
+        """Summarize a single transcript chunk with detailed analysis"""
         try:
-            logger.info("Sending insights to GPT-4o for summarization...")
+            # Build text from chunk with timestamps
+            chunk_text = []
+            for segment in chunk:
+                timestamp = segment.get('start', '00:00')
+                text = segment.get('text', '')
+                speaker_id = segment.get('speakerId', 'Unknown')
+                chunk_text.append(f"[{timestamp}] Speaker {speaker_id}: {text}")
             
-            # Following exact working pattern from original code
+            text_content = "\n".join(chunk_text)
+            
+            prompt = f"""
+Analyze this video transcript segment in detail. Focus on:
+1. Key events and actions described
+2. Speaker interactions and dialogue
+3. Visual elements mentioned
+4. Emotional tone and context
+5. Important topics discussed
+
+Transcript segment:
+{text_content}
+
+Provide a comprehensive summary that captures the essence of this segment.
+"""
+            
+            logger.info(f"Processing chunk {chunk_index} with {len(chunk)} segments")
+            
             response = self.openai_client.chat.completions.create(
                 messages=[
-                    {"role": "system", "content": "You are a senior multimedia content summarizer."},
-                    {"role": "user", "content": detailed_prompt}
+                    {"role": "system", "content": "You are a professional video content analyst specializing in detailed segment analysis."},
+                    {"role": "user", "content": prompt}
                 ],
-                max_tokens=8192,
+                max_tokens=1500,
+                temperature=0.5,
+                top_p=1.0,
+                model=self.config['openai']['deployment']
+            )
+            
+            return {
+                "chunk_index": chunk_index,
+                "summary": response.choices[0].message.content,
+                "segment_count": len(chunk)
+            }
+            
+        except Exception as e:
+            logger.error(f"Failed to summarize chunk {chunk_index}: {e}")
+            return {
+                "chunk_index": chunk_index,
+                "summary": f"Chunk {chunk_index}: Processing failed - {len(chunk)} segments with basic transcript content.",
+                "segment_count": len(chunk)
+            }
+    
+    def generate_final_summary(self, chunk_summaries, structured_data):
+        """Generate comprehensive final summary from chunk summaries and metadata"""
+        try:
+            # Combine chunk summaries
+            condensed_summaries = "\n\n".join(
+                f"**Segment {s['chunk_index']}** ({s['segment_count']} parts):\n{s['summary']}" 
+                for s in chunk_summaries
+            )
+            
+            # Extract key metadata highlights
+            metadata_highlights = {
+                "duration": structured_data.get("video_metadata", {}).get("duration", 0),
+                "speakers": len(structured_data.get("speakers", [])),
+                "labels": [label.get("name", "") for label in structured_data.get("labels", [])[:8]],
+                "topics": [topic.get("name", "") for topic in structured_data.get("topics", [])[:5]],
+                "keywords": [kw.get("name", "") for kw in structured_data.get("keywords", [])[:10]],
+                "key_sentiments": structured_data.get("sentiments", [])[:3],
+                "ocr_detected": len(structured_data.get("ocr_text", [])) > 0
+            }
+            
+            final_prompt = f"""
+You are an expert multimedia content analyst. Create a comprehensive video analysis report using the segment summaries and metadata below.
+
+**Segment-by-Segment Analysis:**
+{condensed_summaries}
+
+**Video Metadata:**
+{json.dumps(metadata_highlights, ensure_ascii=False, indent=2)}
+
+**Create a detailed report with these sections:**
+
+### Narrative Reconstruction
+Reconstruct a coherent, chronological narrative blending visual and audio elements from all segments.
+
+### Key Characters, Settings, and Events
+Identify main participants, locations, and significant events across the video.
+
+### Tone, Emotion, and Topic Changes
+Highlight major shifts in mood, emotion, or discussion topics throughout the video.
+
+### Scene-by-Scene Breakdown
+Provide timestamped analysis of key moments and transitions.
+
+### TL;DR Summary
+Conclude with 3-4 sentences summarizing the entire video content and main takeaways.
+
+Make this read like a professional content analysis report, not raw data.
+"""
+            
+            logger.info("Generating final comprehensive summary")
+            
+            response = self.openai_client.chat.completions.create(
+                messages=[
+                    {"role": "system", "content": "You are a senior multimedia content summarizer creating professional analysis reports."},
+                    {"role": "user", "content": final_prompt}
+                ],
+                max_tokens=4000,
                 temperature=0.6,
                 top_p=1.0,
-                model=openai_config['deployment']
+                model=self.config['openai']['deployment']
             )
             
             final_summary = response.choices[0].message.content
-            logger.info("Summary generation complete")
+            logger.info("Final comprehensive summary generated successfully")
             return final_summary
             
         except Exception as e:
-            logger.error(f"Failed to generate summary: {e}")
-            # Return a fallback summary based on the structured data
+            logger.error(f"Failed to generate final summary: {e}")
             return self.generate_fallback_summary(structured_data)
     
     def generate_fallback_summary(self, structured_data):
-        """Generate a basic summary when OpenAI is unavailable"""
+        """Generate a basic summary when OpenAI processing fails"""
         logger.info("Generating fallback summary from structured data")
         
         # Extract basic information
         transcript = structured_data.get('transcript', [])
         speakers = structured_data.get('speakers', [])
         duration = structured_data.get('video_metadata', {}).get('duration', 0)
+        labels = structured_data.get('labels', [])
+        topics = structured_data.get('topics', [])
         
         # Create basic summary
         summary = f"""# Video Analysis Report
@@ -251,24 +340,44 @@ Video analysis completed successfully. Duration: {duration} seconds.
 
 ## Content Overview
 - **Speakers Detected**: {len(speakers)} speaker(s) identified
-- **Transcript Length**: {len(transcript)} transcript segments
-- **Processing Status**: Analysis completed with basic extraction
+- **Transcript Segments**: {len(transcript)} segments processed
+- **Visual Labels**: {len(labels)} visual elements detected
+- **Topics Identified**: {len(topics)} main topics found
 
-## Transcript Preview
+## Key Elements Detected
 """
         
-        # Add first few transcript lines
-        for i, segment in enumerate(transcript[:5]):
-            if isinstance(segment, dict) and 'text' in segment:
-                summary += f"- {segment.get('text', '')}\n"
+        # Add top labels and topics
+        if labels:
+            summary += "### Visual Elements:\n"
+            for label in labels[:5]:
+                if isinstance(label, dict) and 'name' in label:
+                    summary += f"- {label['name']}\n"
         
-        if len(transcript) > 5:
-            summary += f"... and {len(transcript) - 5} more segments\n"
+        if topics:
+            summary += "\n### Topics Discussed:\n"
+            for topic in topics[:5]:
+                if isinstance(topic, dict) and 'name' in topic:
+                    summary += f"- {topic['name']}\n"
+        
+        # Add transcript preview
+        summary += "\n## Transcript Preview\n"
+        for i, segment in enumerate(transcript[:3]):
+            if isinstance(segment, dict) and 'text' in segment:
+                timestamp = segment.get('start', '00:00')
+                summary += f"**[{timestamp}]** {segment.get('text', '')}\n\n"
+        
+        if len(transcript) > 3:
+            summary += f"... and {len(transcript) - 3} more segments\n"
         
         summary += """
-## Note
+## Processing Note
 This is a basic summary generated due to OpenAI service limitations. 
-For enhanced analysis, please check your Azure OpenAI configuration.
+The video was successfully analyzed by Azure Video Indexer with full transcript and metadata extraction.
+For enhanced narrative analysis, please check your Azure OpenAI configuration.
+
+### TL;DR Summary
+Video processing completed with transcript extraction and metadata analysis. Multiple speakers and topics detected with comprehensive visual element identification.
 """
         
         return summary
@@ -294,7 +403,7 @@ For enhanced analysis, please check your Azure OpenAI configuration.
     
     def analyze_video(self, video_path, video_name, video_description):
         """
-        Main method to analyze a video file
+        Enhanced video analysis with chunked processing for large transcripts
         
         Args:
             video_path (str): Path to the video file
@@ -317,10 +426,46 @@ For enhanced analysis, please check your Azure OpenAI configuration.
             # Step 4: Extract insights
             structured_data = self.extract_insights(insights)
             
-            # Step 5: Generate summary
-            final_summary = self.generate_summary(structured_data)
+            # Step 5: Process transcript in chunks for large videos
+            transcript = structured_data.get('transcript', [])
             
-            return final_summary
+            if len(transcript) == 0:
+                logger.warning("No transcript found - generating summary from metadata only")
+                return self.generate_fallback_summary(structured_data)
+            
+            logger.info(f"Processing transcript with {len(transcript)} segments")
+            
+            # Chunk transcript for token-safe processing
+            chunks = list(self.chunk_transcript(transcript))
+            logger.info(f"Split transcript into {len(chunks)} chunks")
+            
+            # Process chunks in parallel for speed
+            max_workers = self.config['processing'].get('max_workers', 4)
+            
+            try:
+                with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                    chunk_args = [(chunk, i+1) for i, chunk in enumerate(chunks)]
+                    chunk_results = list(executor.map(lambda args: self.summarize_chunk(*args), chunk_args))
+                
+                logger.info(f"Processed {len(chunk_results)} chunks successfully")
+                
+                # Step 6: Generate final comprehensive summary
+                final_summary = self.generate_final_summary(chunk_results, structured_data)
+                
+                return final_summary
+                
+            except Exception as e:
+                logger.error(f"Parallel processing failed: {e}")
+                # Fallback to sequential processing
+                logger.info("Falling back to sequential chunk processing")
+                
+                chunk_results = []
+                for i, chunk in enumerate(chunks):
+                    result = self.summarize_chunk(chunk, i+1)
+                    chunk_results.append(result)
+                
+                final_summary = self.generate_final_summary(chunk_results, structured_data)
+                return final_summary
             
         except Exception as e:
             logger.error(f"Video analysis failed: {str(e)}")

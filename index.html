@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Analysis Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+            min-height: 600px;
+        }
+
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .video-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .file-upload {
+            margin-bottom: 20px;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-input-button {
+            display: block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .file-input-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .video-player {
+            width: 100%;
+            height: 300px;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-player video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .video-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #666;
+            font-size: 18px;
+            background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0),
+                        linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        .summary-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            flex-grow: 1;
+        }
+
+        .summary-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .summary-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4facfe;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .right-panel {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .markdown-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .markdown-header h3 {
+            color: #333;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .export-btn {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+        }
+
+        .markdown-viewer {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            flex-grow: 1;
+            overflow-y: auto;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .markdown-viewer h1 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .markdown-viewer h2 {
+            color: #34495e;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+        }
+
+        .markdown-viewer h3 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+
+        .markdown-viewer p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .markdown-viewer ul, .markdown-viewer ol {
+            margin: 10px 0 15px 20px;
+        }
+
+        .markdown-viewer li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .markdown-viewer strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .markdown-viewer code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4facfe;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .process-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .process-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);
+        }
+
+        .process-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Video Analysis Dashboard</h1>
+            <p>Upload, analyze, and export comprehensive video insights</p>
+        </div>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="video-section">
+                    <div class="file-upload">
+                        <div class="file-input-wrapper">
+                            <input type="file" id="videoFile" class="file-input" accept="video/*">
+                            <label for="videoFile" class="file-input-button">
+                                📁 Select Video File
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="video-player" id="videoContainer">
+                        <div class="video-placeholder">
+                            Select a video file to begin
+                        </div>
+                    </div>
+
+                    <button class="process-btn" id="processBtn" disabled>
+                        🚀 Process Video
+                    </button>
+
+                    <div class="loading" id="loadingIndicator">
+                        <div class="spinner"></div>
+                        <p>Processing video... This may take several minutes</p>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <h3>📋 Summary</h3>
+                    <div class="summary-content" id="summaryContent">
+                        Upload and process a video to see the summary here.
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="markdown-header">
+                    <h3>📄 Detailed Analysis</h3>
+                    <button class="export-btn" id="exportBtn" disabled>
+                        📥 Export to DOCX
+                    </button>
+                </div>
+                
+                <div class="markdown-viewer" id="markdownViewer">
+                    <h1>Video Analysis Report</h1>
+                    <p><em>Upload and process a video to see detailed analysis here.</em></p>
+                    
+                    <h2>Sample Analysis Structure</h2>
+                    <p>Once processing is complete, you'll see:</p>
+                    <ul>
+                        <li><strong>Narrative Reconstruction</strong> - Chronological story</li>
+                        <li><strong>Key Characters & Settings</strong> - Important elements</li>
+                        <li><strong>Scene Breakdown</strong> - Timestamped analysis</li>
+                        <li><strong>Emotion & Sentiment</strong> - Mood tracking</li>
+                        <li><strong>TL;DR Summary</strong> - Quick overview</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentVideoFile = null;
+        let analysisData = null;
+
+        // File input handling
+        document.getElementById('videoFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                currentVideoFile = file;
+                loadVideoPreview(file);
+                document.getElementById('processBtn').disabled = false;
+            }
+        });
+
+        function loadVideoPreview(file) {
+            const videoContainer = document.getElementById('videoContainer');
+            const video = document.createElement('video');
+            video.controls = true;
+            video.src = URL.createObjectURL(file);
+            
+            videoContainer.innerHTML = '';
+            videoContainer.appendChild(video);
+        }
+
+        // Process button handling
+        document.getElementById('processBtn').addEventListener('click', async function() {
+            if (!currentVideoFile) return;
+
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const processBtn = document.getElementById('processBtn');
+            
+            processBtn.disabled = true;
+            loadingIndicator.classList.add('show');
+
+            try {
+                const formData = new FormData();
+                formData.append('video', currentVideoFile);
+                
+                const response = await fetch('/api/process-video', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Processing failed');
+                }
+                
+                const result = await response.json();
+                displayAnalysisResults(result.analysis);
+                
+            } catch (error) {
+                console.error('Processing failed:', error);
+                alert('Processing failed. Please try again.');
+            } finally {
+                loadingIndicator.classList.remove('show');
+                processBtn.disabled = false;
+            }
+        });
+
+        function displayAnalysisResults(markdownContent) {
+            analysisData = markdownContent;
+            
+            // Extract TL;DR for summary
+            const tldrMatch = markdownContent.match(/### TL;DR Summary\s*([\s\S]*?)(?=###|$)/);
+            const summary = tldrMatch ? tldrMatch[1].trim() : 'Analysis complete. See detailed results.';
+            
+            document.getElementById('summaryContent').textContent = summary;
+            document.getElementById('markdownViewer').innerHTML = convertMarkdownToHTML(markdownContent);
+            document.getElementById('exportBtn').disabled = false;
+        }
+
+        function convertMarkdownToHTML(markdown) {
+            return markdown
+                .replace(/### (.*?)$/gm, '<h3>$1</h3>')
+                .replace(/## (.*?)$/gm, '<h2>$1</h2>')
+                .replace(/# (.*?)$/gm, '<h1>$1</h1>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/^\- (.*?)$/gm, '<li>$1</li>')
+                .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+                .replace(/^\d+\. (.*?)$/gm, '<li>$1</li>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/^(?!<[hul])/gm, '<p>')
+                .replace(/$(?![hul>])/gm, '</p>')
+                .replace(/<p><\/p>/g, '');
+        }
+
+        // Export button handling
+        document.getElementById('exportBtn').addEventListener('click', async function() {
+            if (!analysisData) return;
+
+            try {
+                const response = await fetch('/api/export-docx', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ content: analysisData })
+                });
+
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'video-analysis-report.docx';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+
+                    // Show success message
+                    const originalText = this.textContent;
+                    this.textContent = '✅ Downloaded!';
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                    }, 2000);
+                } else {
+                    throw new Error('Export failed');
+                }
+            } catch (error) {
+                console.error('Export failed:', error);
+                alert('Export failed. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

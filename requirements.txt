@@ -1,5 +1,23 @@
+# Web app
 Flask==2.3.3
 Flask-CORS==4.0.0
-requests==2.31.0
+
+# Core HTTP & API interaction
+requests>=2.31.0
+aiohttp>=3.9.0
+aiofiles>=23.2.1
+
+# OpenAI / Azure OpenAI SDK
 openai>=1.35.0
+
+# Document generation
 python-docx==0.8.11
+
+# Optional: improve async event loop performance
+uvloop>=0.19.0; sys_platform != "win32"
+
+# Logging (already in stdlib, but including for easy setup in some envs)
+loguru>=0.7.0
+
+# Typing extensions for broader Python version support
+typing-extensions>=4.8.0

@@ -3,85 +3,15 @@ import requests
 import json
 import math
 import hashlib
-import pickle
 import os
 from pathlib import Path
 from openai import AsyncOpenAI
 import asyncio
 import logging
-from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, List, Any, Optional, Tuple
-import aiofiles
-import aiohttp
 from datetime import datetime, timedelta
 
 logger = logging.getLogger(__name__)
-
-class CacheManager:
-    """Manages caching for video analysis results and OpenAI responses"""
-    
-    def __init__(self, cache_dir: str = "cache", cache_expiry_hours: int = 24):
-        self.cache_dir = Path(cache_dir)
-        self.cache_dir.mkdir(exist_ok=True)
-        self.cache_expiry = timedelta(hours=cache_expiry_hours)
-    
-    def _get_cache_key(self, data: Any) -> str:
-        """Generate cache key from data"""
-        if isinstance(data, dict):
-            data_str = json.dumps(data, sort_keys=True)
-        else:
-            data_str = str(data)
-        return hashlib.md5(data_str.encode()).hexdigest()
-    
-    def _get_cache_path(self, cache_key: str) -> Path:
-        """Get cache file path"""
-        return self.cache_dir / f"{cache_key}.pkl"
-    
-    def _is_cache_valid(self, cache_path: Path) -> bool:
-        """Check if cache file is still valid"""
-        if not cache_path.exists():
-            return False
-        
-        file_time = datetime.fromtimestamp(cache_path.stat().st_mtime)
-        return datetime.now() - file_time < self.cache_expiry
-    
-    def get(self, key_data: Any) -> Optional[Any]:
-        """Get cached data if valid"""
-        cache_key = self._get_cache_key(key_data)
-        cache_path = self._get_cache_path(cache_key)
-        
-        if self._is_cache_valid(cache_path):
-            try:
-                with open(cache_path, 'rb') as f:
-                    cached_data = pickle.load(f)
-                logger.info(f"Cache hit for key: {cache_key[:8]}...")
-                return cached_data
-            except Exception as e:
-                logger.warning(f"Failed to load cache: {e}")
-        
-        return None
-    
-    def set(self, key_data: Any, value: Any) -> None:
-        """Cache data"""
-        cache_key = self._get_cache_key(key_data)
-        cache_path = self._get_cache_path(cache_key)
-        
-        try:
-            with open(cache_path, 'wb') as f:
-                pickle.dump(value, f)
-            logger.info(f"Cached data for key: {cache_key[:8]}...")
-        except Exception as e:
-            logger.warning(f"Failed to cache data: {e}")
-    
-    def clear_expired(self) -> None:
-        """Remove expired cache files"""
-        for cache_file in self.cache_dir.glob("*.pkl"):
-            if not self._is_cache_valid(cache_file):
-                try:
-                    cache_file.unlink()
-                    logger.info(f"Removed expired cache: {cache_file.name}")
-                except Exception as e:
-                    logger.warning(f"Failed to remove cache file {cache_file}: {e}")
 
 class ConfidenceFilter:
     """Filters insights based on confidence thresholds"""
@@ -151,10 +81,9 @@ class ConfidenceFilter:
 
 class VideoAnalyzer:
     """
-    Enhanced Video Analysis using Azure Video Indexer and Azure OpenAI
+    Video Analysis using Azure Video Indexer and Azure OpenAI
     Features:
     - Async OpenAI API calls for improved performance
-    - Intelligent caching system for results and API responses
     - Confidence-based filtering of insights (0.8+ threshold)
     - Token-safe hierarchical summarization
     - Chunked transcript processing for large videos
@@ -162,15 +91,9 @@ class VideoAnalyzer:
     - Robust error handling and fallback summaries
     """
     
-    def __init__(self, config_file='config.json'):
+    def __init__(self, config_file='configs.json'):
         """Initialize with configuration"""
         self.load_config(config_file)
-        
-        # Initialize cache manager
-        self.cache = CacheManager(
-            cache_dir=self.config.get('cache', {}).get('cache_dir', 'cache'),
-            cache_expiry_hours=self.config.get('cache', {}).get('expiry_hours', 24)
-        )
         
         # Initialize confidence filter
         min_confidence = self.config.get('processing', {}).get('min_confidence', 0.8)
@@ -178,7 +101,6 @@ class VideoAnalyzer:
         
         # Initialize Azure OpenAI client - async version
         try:
-            # Using AsyncOpenAI instead of AsyncAzureOpenAI for better async support
             self.openai_client = AsyncOpenAI(
                 api_key=self.config['openai']['subscription_key'],
                 base_url=f"{self.config['openai']['endpoint']}openai/deployments/{self.config['openai']['deployment']}",
@@ -195,46 +117,16 @@ class VideoAnalyzer:
         try:
             with open(config_file, 'r') as f:
                 self.config = json.load(f)
+            logger.info(f"Configuration loaded from {config_file}")
         except FileNotFoundError:
-            logger.warning(f"Config file {config_file} not found. Using default values.")
-            self.config = self.get_default_config()
-    
-    def get_default_config(self):
-        """Return default configuration (replace with your actual values)"""
-        return {
-            "video_indexer": {
-                "location": "trial",
-                "account_id": "ac09490f-3445-4638-91da-3f3e659fd268",
-                "subscription_key": "f99caefac00047e0979f7a7b35144cdd"
-            },
-            "openai": {
-                "endpoint": "https://khamb-me7vxhbb-eastus2.cognitiveservices.azure.com/",
-                "model_name": "gpt-4o",
-                "deployment": "gpt-4o",
-                "subscription_key": "9fFeYtGLfGZxtysxr81gcn3yiBPginpV7uobhhWv8Uf2kpWDpPByJQQJ99BHACHYHv6XJ3w3AAAAACOGvfk3",
-                "api_version": "2024-12-01-preview"
-            },
-            "processing": {
-                "timeout_seconds": 900,
-                "privacy": "Private",
-                "chunk_size": 30,  # transcript segments per chunk
-                "max_workers": 4,   # parallel processing threads
-                "min_confidence": 0.8  # minimum confidence threshold
-            },
-            "cache": {
-                "cache_dir": "cache",
-                "expiry_hours": 24
-            }
-        }
+            logger.error(f"Config file {config_file} not found!")
+            raise
+        except json.JSONDecodeError as e:
+            logger.error(f"Invalid JSON in config file: {e}")
+            raise
     
     def get_access_token(self):
-        """Get access token from Video Indexer with caching"""
-        # Check cache first
-        cache_key = {"action": "get_access_token", "config": self.config['video_indexer']}
-        cached_token = self.cache.get(cache_key)
-        if cached_token:
-            return cached_token
-        
+        """Get access token from Video Indexer"""
         vi_config = self.config['video_indexer']
         
         token_url = f"https://api.videoindexer.ai/Auth/{vi_config['location']}/Accounts/{vi_config['account_id']}/AccessTokenWithPermission"
@@ -251,28 +143,10 @@ class VideoAnalyzer:
         access_token = resp.text.strip().strip('"')
         logger.info("Access token retrieved successfully")
         
-        # Cache token for shorter duration (tokens typically expire in 1 hour)
-        short_cache = CacheManager(cache_expiry_hours=0.5)
-        short_cache.set(cache_key, access_token)
-        
         return access_token
     
     def upload_video(self, access_token, video_path, video_name, video_description):
-        """Upload video to Video Indexer with result caching"""
-        # Check cache based on file hash and metadata
-        file_hash = self._get_file_hash(video_path)
-        cache_key = {
-            "action": "upload_video",
-            "file_hash": file_hash,
-            "video_name": video_name,
-            "description": video_description
-        }
-        
-        cached_video_id = self.cache.get(cache_key)
-        if cached_video_id:
-            logger.info(f"Using cached video ID: {cached_video_id}")
-            return cached_video_id
-        
+        """Upload video to Video Indexer"""
         vi_config = self.config['video_indexer']
         
         upload_url = f"https://api.videoindexer.ai/{vi_config['location']}/Accounts/{vi_config['account_id']}/Videos"
@@ -302,29 +176,10 @@ class VideoAnalyzer:
             raise RuntimeError(f"Upload succeeded but no video ID returned. Response: {upload_data}")
         
         logger.info(f"Upload successful. Video ID: {video_id}")
-        
-        # Cache the video ID
-        self.cache.set(cache_key, video_id)
-        
         return video_id
     
-    def _get_file_hash(self, file_path: str) -> str:
-        """Generate hash of file for caching purposes"""
-        hash_md5 = hashlib.md5()
-        with open(file_path, "rb") as f:
-            for chunk in iter(lambda: f.read(4096), b""):
-                hash_md5.update(chunk)
-        return hash_md5.hexdigest()
-    
     def wait_for_indexing(self, access_token, video_id):
-        """Wait for video indexing to complete with result caching"""
-        # Check cache for completed indexing results
-        cache_key = {"action": "indexing_result", "video_id": video_id}
-        cached_result = self.cache.get(cache_key)
-        if cached_result:
-            logger.info("Using cached indexing results")
-            return cached_result
-        
+        """Wait for video indexing to complete"""
         vi_config = self.config['video_indexer']
         timeout_seconds = self.config['processing']['timeout_seconds']
         
@@ -348,8 +203,6 @@ class VideoAnalyzer:
             
             if state == "processed":
                 logger.info("Indexing complete!")
-                # Cache the successful result
-                self.cache.set(cache_key, idx_json)
                 return idx_json
             
             if state == "failed":
@@ -409,13 +262,6 @@ class VideoAnalyzer:
     
     async def summarize_chunk_async(self, chunk, chunk_index):
         """Asynchronously summarize a single transcript chunk with detailed analysis"""
-        # Check cache first
-        cache_key = {"action": "chunk_summary", "chunk": chunk, "index": chunk_index}
-        cached_result = self.cache.get(cache_key)
-        if cached_result:
-            logger.info(f"Using cached summary for chunk {chunk_index}")
-            return cached_result
-        
         try:
             # Build text from chunk with timestamps
             chunk_text = []
@@ -460,9 +306,6 @@ Provide a comprehensive summary that captures the essence of this segment.
                 "segment_count": len(chunk)
             }
             
-            # Cache the result
-            self.cache.set(cache_key, result)
-            
             return result
             
         except Exception as e:
@@ -475,17 +318,6 @@ Provide a comprehensive summary that captures the essence of this segment.
     
     async def generate_final_summary_async(self, chunk_summaries, structured_data):
         """Asynchronously generate comprehensive final summary from chunk summaries and metadata"""
-        # Check cache first
-        cache_key = {
-            "action": "final_summary",
-            "chunk_summaries": chunk_summaries,
-            "metadata_hash": self._get_dict_hash(structured_data)
-        }
-        cached_result = self.cache.get(cache_key)
-        if cached_result:
-            logger.info("Using cached final summary")
-            return cached_result
-        
         try:
             # Combine chunk summaries
             condensed_summaries = "\n\n".join(
@@ -549,18 +381,11 @@ Make this read like a professional content analysis report, not raw data.
             final_summary = response.choices[0].message.content
             logger.info("Final comprehensive summary generated successfully")
             
-            # Cache the result
-            self.cache.set(cache_key, final_summary)
-            
             return final_summary
             
         except Exception as e:
             logger.error(f"Failed to generate final summary: {e}")
             return self.generate_fallback_summary(structured_data)
-    
-    def _get_dict_hash(self, data: Dict[str, Any]) -> str:
-        """Generate hash for dictionary data"""
-        return hashlib.md5(json.dumps(data, sort_keys=True).encode()).hexdigest()
     
     def generate_fallback_summary(self, structured_data):
         """Generate a basic summary when OpenAI processing fails"""
@@ -648,7 +473,7 @@ Video processing completed with high-confidence transcript extraction and metada
     
     async def analyze_video_async(self, video_path, video_name, video_description):
         """
-        Enhanced async video analysis with chunked processing, caching, and confidence filtering
+        Enhanced async video analysis with chunked processing and confidence filtering
         
         Args:
             video_path (str): Path to the video file
@@ -659,9 +484,6 @@ Video processing completed with high-confidence transcript extraction and metada
             str: Human-readable analysis summary in markdown format
         """
         try:
-            # Clean expired cache files
-            self.cache.clear_expired()
-            
             # Step 1: Get access token
             access_token = self.get_access_token()
             
@@ -735,7 +557,6 @@ Video processing completed with high-confidence transcript extraction and metada
                 
                 chunk_results = []
                 for i, chunk in enumerate(chunks):
-                    # Use sync version as fallback
                     result = await self.summarize_chunk_async(chunk, i+1)
                     chunk_results.append(result)
                 

@@ -14,7 +14,7 @@ def check_requirements():
         'app.py', 
         'video_analyzer.py',
         'docx_exporter.py',
-        'config.json',
+        'configs.json',
         'requirements.txt'
     ]
     
@@ -34,7 +34,7 @@ def check_requirements():
 def check_config():
     """Check if configuration is properly set up"""
     try:
-        with open('config.json', 'r') as f:
+        with open('configs.json', 'r') as f:
             config = json.load(f)
         
         # Check for placeholder values

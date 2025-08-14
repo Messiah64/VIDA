@@ -1,0 +1,5212 @@
+{
+  "partition": null,
+  "description": "AVI test indexing",
+  "privacyMode": "Private",
+  "state": "Processed",
+  "accountId": "ac09490f-3445-4638-91da-3f3e659fd268",
+  "id": "fvfntzl97d",
+  "name": "Test Video",
+  "userName": "Mohammed Huzefa Khambhati",
+  "created": "2025-08-14T02:30:33.3033333+00:00",
+  "isOwned": true,
+  "isEditable": true,
+  "isBase": true,
+  "durationInSeconds": 77,
+  "duration": "0:01:17.024807",
+  "summarizedInsights": {
+    "name": "Test Video",
+    "id": "fvfntzl97d",
+    "privacyMode": "Private",
+    "duration": {
+      "time": "0:01:17.024807",
+      "seconds": 77
+    },
+    "thumbnailVideoId": "fvfntzl97d",
+    "thumbnailId": "bbf4df0f-8510-45b2-939f-4e828235047e",
+    "faces": [],
+    "keywords": [
+      {
+        "isTranscript": true,
+        "id": 1,
+        "name": "open",
+        "appearances": [
+          {
+            "startTime": "0:00:56.6",
+            "endTime": "0:00:57.04",
+            "startSeconds": 56.6,
+            "endSeconds": 57
+          },
+          {
+            "startTime": "0:01:03",
+            "endTime": "0:01:03.88",
+            "startSeconds": 63,
+            "endSeconds": 63.9
+          }
+        ]
+      },
+      {
+        "isTranscript": true,
+        "id": 2,
+        "name": "office",
+        "appearances": [
+          {
+            "startTime": "0:00:17.88",
+            "endTime": "0:00:19.76",
+            "startSeconds": 17.9,
+            "endSeconds": 19.8
+          },
+          {
+            "startTime": "0:00:57.04",
+            "endTime": "0:01:03.88",
+            "startSeconds": 57,
+            "endSeconds": 63.9
+          }
+        ]
+      },
+      {
+        "isTranscript": true,
+        "id": 4,
+        "name": "lollipops",
+        "appearances": [
+          {
+            "startTime": "0:00:10.4",
+            "endTime": "0:00:14.76",
+            "startSeconds": 10.4,
+            "endSeconds": 14.8
+          },
+          {
+            "startTime": "0:00:19.8",
+            "endTime": "0:00:22.24",
+            "startSeconds": 19.8,
+            "endSeconds": 22.2
+          },
+          {
+            "startTime": "0:00:35.84",
+            "endTime": "0:00:36.72",
+            "startSeconds": 35.8,
+            "endSeconds": 36.7
+          }
+        ]
+      },
+      {
+        "isTranscript": true,
+        "id": 5,
+        "name": "public",
+        "appearances": [
+          {
+            "startTime": "0:00:57.04",
+            "endTime": "0:01:02.44",
+            "startSeconds": 57,
+            "endSeconds": 62.4
+          }
+        ]
+      },
+      {
+        "isTranscript": false,
+        "id": 3,
+        "name": "finance",
+        "appearances": [
+          {
+            "startTime": "0:00:44.44",
+            "endTime": "0:00:45.44",
+            "startSeconds": 44.4,
+            "endSeconds": 45.4
+          },
+          {
+            "startTime": "0:00:52.0333333",
+            "endTime": "0:00:52.7666667",
+            "startSeconds": 52,
+            "endSeconds": 52.8
+          }
+        ]
+      }
+    ],
+    "sentiments": [
+      {
+        "sentimentKey": "Neutral",
+        "seenDurationRatio": 0.9997,
+        "appearances": [
+          {
+            "startTime": "0:00:00",
+            "endTime": "0:01:17.024807",
+            "startSeconds": 0,
+            "endSeconds": 77
+          }
+        ]
+      },
+      {
+        "sentimentKey": "Positive",
+        "seenDurationRatio": 0.026,
+        "appearances": [
+          {
+            "startTime": "0:00:05.8",
+            "endTime": "0:00:06.92",
+            "startSeconds": 5.8,
+            "endSeconds": 6.9
+          },
+          {
+            "startTime": "0:00:10.4",
+            "endTime": "0:00:11.28",
+            "startSeconds": 10.4,
+            "endSeconds": 11.3
+          }
+        ]
+      },
+      {
+        "sentimentKey": "Negative",
+        "seenDurationRatio": 0.0312,
+        "appearances": [
+          {
+            "startTime": "0:00:19.8",
+            "endTime": "0:00:22.24",
+            "startSeconds": 19.8,
+            "endSeconds": 22.2
+          }
+        ]
+      }
+    ],
+    "emotions": [
+      {
+        "type": "Joy",
+        "seenDurationRatio": 0.026,
+        "appearances": [
+          {
+            "startTime": "0:00:05.8",
+            "endTime": "0:00:06.92",
+            "startSeconds": 5.8,
+            "endSeconds": 6.9
+          },
+          {
+            "startTime": "0:00:10.4",
+            "endTime": "0:00:11.28",
+            "startSeconds": 10.4,
+            "endSeconds": 11.3
+          }
+        ]
+      },
+      {
+        "type": "Anger",
+        "seenDurationRatio": 0.0312,
+        "appearances": [
+          {
+            "startTime": "0:00:19.8",
+            "endTime": "0:00:22.24",
+            "startSeconds": 19.8,
+            "endSeconds": 22.2
+          }
+        ]
+      }
+    ],
+    "audioEffects": [
+      {
+        "audioEffectKey": "Silence",
+        "seenDurationRatio": 0.013,
+        "seenDuration": 1,
+        "appearances": [
+          {
+            "confidence": 0.7695,
+            "startTime": "0:00:28.86",
+            "endTime": "0:00:29.86",
+            "startSeconds": 28.9,
+            "endSeconds": 29.9
+          }
+        ]
+      }
+    ],
+    "labels": [
+      {
+        "id": 2,
+        "name": "wall",
+        "appearances": [
+          {
+            "confidence": 0.9517,
+            "startTime": "0:00:00",
+            "endTime": "0:01:09.3333333",
+            "startSeconds": 0,
+            "endSeconds": 69.3
+          },
+          {
+            "confidence": 0.971,
+            "startTime": "0:01:16.0666667",
+            "endTime": "0:01:16.8",
+            "startSeconds": 76.1,
+            "endSeconds": 76.8
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "indoor",
+        "appearances": [
+          {
+            "confidence": 0.9705,
+            "startTime": "0:00:00",
+            "endTime": "0:00:50.9",
+            "startSeconds": 0,
+            "endSeconds": 50.9
+          },
+          {
+            "confidence": 0.9598,
+            "startTime": "0:00:55.7666667",
+            "endTime": "0:01:09.5666667",
+            "startSeconds": 55.8,
+            "endSeconds": 69.6
+          },
+          {
+            "confidence": 0.9767,
+            "startTime": "0:01:15.8333333",
+            "endTime": "0:01:16.8",
+            "startSeconds": 75.8,
+            "endSeconds": 76.8
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "person",
+        "appearances": [
+          {
+            "confidence": 0.9708,
+            "startTime": "0:00:00",
+            "endTime": "0:00:30.1333333",
+            "startSeconds": 0,
+            "endSeconds": 30.1
+          },
+          {
+            "confidence": 0.9848,
+            "startTime": "0:00:34.3",
+            "endTime": "0:00:36.9",
+            "startSeconds": 34.3,
+            "endSeconds": 36.9
+          },
+          {
+            "confidence": 0.9825,
+            "startTime": "0:00:46.6666667",
+            "endTime": "0:00:46.9333333",
+            "startSeconds": 46.7,
+            "endSeconds": 46.9
+          },
+          {
+            "confidence": 0.9969,
+            "startTime": "0:00:58.1",
+            "endTime": "0:00:58.3666667",
+            "startSeconds": 58.1,
+            "endSeconds": 58.4
+          },
+          {
+            "confidence": 0.9813,
+            "startTime": "0:01:02.5333333",
+            "endTime": "0:01:02.5666667",
+            "startSeconds": 62.5,
+            "endSeconds": 62.6
+          },
+          {
+            "confidence": 0.9781,
+            "startTime": "0:01:08.6",
+            "endTime": "0:01:15.1666667",
+            "startSeconds": 68.6,
+            "endSeconds": 75.2
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "clothing",
+        "appearances": [
+          {
+            "confidence": 0.9764,
+            "startTime": "0:00:00",
+            "endTime": "0:00:13.3333333",
+            "startSeconds": 0,
+            "endSeconds": 13.3
+          },
+          {
+            "confidence": 0.9645,
+            "startTime": "0:00:17.5",
+            "endTime": "0:00:21.0333333",
+            "startSeconds": 17.5,
+            "endSeconds": 21
+          },
+          {
+            "confidence": 0.9519,
+            "startTime": "0:00:24.2666667",
+            "endTime": "0:00:24.3",
+            "startSeconds": 24.3,
+            "endSeconds": 24.3
+          },
+          {
+            "confidence": 0.9695,
+            "startTime": "0:00:34.0666667",
+            "endTime": "0:00:36.9",
+            "startSeconds": 34.1,
+            "endSeconds": 36.9
+          },
+          {
+            "confidence": 0.9865,
+            "startTime": "0:00:58.1",
+            "endTime": "0:00:58.3666667",
+            "startSeconds": 58.1,
+            "endSeconds": 58.4
+          },
+          {
+            "confidence": 0.9585,
+            "startTime": "0:01:07.2",
+            "endTime": "0:01:11.9",
+            "startSeconds": 67.2,
+            "endSeconds": 71.9
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "human face",
+        "appearances": [
+          {
+            "confidence": 0.9733,
+            "startTime": "0:00:00",
+            "endTime": "0:00:13.5666667",
+            "startSeconds": 0,
+            "endSeconds": 13.6
+          },
+          {
+            "confidence": 0.9697,
+            "startTime": "0:00:20.0666667",
+            "endTime": "0:00:30.1333333",
+            "startSeconds": 20.1,
+            "endSeconds": 30.1
+          },
+          {
+            "confidence": 0.9695,
+            "startTime": "0:00:36.6333333",
+            "endTime": "0:00:36.9",
+            "startSeconds": 36.6,
+            "endSeconds": 36.9
+          },
+          {
+            "confidence": 0.9687,
+            "startTime": "0:00:58.3333333",
+            "endTime": "0:00:58.3666667",
+            "startSeconds": 58.3,
+            "endSeconds": 58.4
+          },
+          {
+            "confidence": 0.9689,
+            "startTime": "0:01:10",
+            "endTime": "0:01:10.2666667",
+            "startSeconds": 70,
+            "endSeconds": 70.3
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "text",
+        "appearances": [
+          {
+            "confidence": 0.9774,
+            "startTime": "0:00:09.5666667",
+            "endTime": "0:00:09.6",
+            "startSeconds": 9.6,
+            "endSeconds": 9.6
+          },
+          {
+            "confidence": 0.9614,
+            "startTime": "0:00:37.5666667",
+            "endTime": "0:00:42.5",
+            "startSeconds": 37.6,
+            "endSeconds": 42.5
+          },
+          {
+            "confidence": 0.9925,
+            "startTime": "0:00:45.9666667",
+            "endTime": "0:00:46",
+            "startSeconds": 46,
+            "endSeconds": 46
+          },
+          {
+            "confidence": 0.9658,
+            "startTime": "0:00:51.1",
+            "endTime": "0:00:53.4666667",
+            "startSeconds": 51.1,
+            "endSeconds": 53.5
+          },
+          {
+            "confidence": 0.9769,
+            "startTime": "0:00:59.0333333",
+            "endTime": "0:01:09.1",
+            "startSeconds": 59,
+            "endSeconds": 69.1
+          },
+          {
+            "confidence": 0.9716,
+            "startTime": "0:01:13.0333333",
+            "endTime": "0:01:15.8666667",
+            "startSeconds": 73,
+            "endSeconds": 75.9
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "smile",
+        "appearances": [
+          {
+            "confidence": 0.9522,
+            "startTime": "0:00:00.4666667",
+            "endTime": "0:00:13.1",
+            "startSeconds": 0.5,
+            "endSeconds": 13.1
+          },
+          {
+            "confidence": 0.9713,
+            "startTime": "0:00:27.0666667",
+            "endTime": "0:00:27.3333333",
+            "startSeconds": 27.1,
+            "endSeconds": 27.3
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "window",
+        "appearances": [
+          {
+            "confidence": 0.9666,
+            "startTime": "0:00:09.8",
+            "endTime": "0:00:09.8333333",
+            "startSeconds": 9.8,
+            "endSeconds": 9.8
+          },
+          {
+            "confidence": 0.9507,
+            "startTime": "0:00:13.7666667",
+            "endTime": "0:00:17.5333333",
+            "startSeconds": 13.8,
+            "endSeconds": 17.5
+          },
+          {
+            "confidence": 0.9665,
+            "startTime": "0:00:21.4666667",
+            "endTime": "0:00:21.9666667",
+            "startSeconds": 21.5,
+            "endSeconds": 22
+          },
+          {
+            "confidence": 0.9739,
+            "startTime": "0:00:39.4333333",
+            "endTime": "0:00:42.0333333",
+            "startSeconds": 39.4,
+            "endSeconds": 42
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "furniture",
+        "appearances": [
+          {
+            "confidence": 0.9576,
+            "startTime": "0:00:03.2666667",
+            "endTime": "0:00:03.3",
+            "startSeconds": 3.3,
+            "endSeconds": 3.3
+          },
+          {
+            "confidence": 0.9741,
+            "startTime": "0:00:33.1333333",
+            "endTime": "0:00:33.4",
+            "startSeconds": 33.1,
+            "endSeconds": 33.4
+          },
+          {
+            "confidence": 0.9593,
+            "startTime": "0:00:38.5",
+            "endTime": "0:00:43.9",
+            "startSeconds": 38.5,
+            "endSeconds": 43.9
+          },
+          {
+            "confidence": 0.9589,
+            "startTime": "0:00:55.7666667",
+            "endTime": "0:00:55.8",
+            "startSeconds": 55.8,
+            "endSeconds": 55.8
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "door",
+        "appearances": [
+          {
+            "confidence": 0.9692,
+            "startTime": "0:00:33.8333333",
+            "endTime": "0:00:35.0333333",
+            "startSeconds": 33.8,
+            "endSeconds": 35
+          },
+          {
+            "confidence": 0.9643,
+            "startTime": "0:00:49.4666667",
+            "endTime": "0:00:49.5",
+            "startSeconds": 49.5,
+            "endSeconds": 49.5
+          },
+          {
+            "confidence": 0.9812,
+            "startTime": "0:01:13.5",
+            "endTime": "0:01:16.5666667",
+            "startSeconds": 73.5,
+            "endSeconds": 76.6
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "office building",
+        "appearances": [
+          {
+            "confidence": 0.9669,
+            "startTime": "0:00:39.2",
+            "endTime": "0:00:41.8",
+            "startSeconds": 39.2,
+            "endSeconds": 41.8
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "floor",
+        "appearances": [
+          {
+            "confidence": 0.9698,
+            "startTime": "0:00:32.6666667",
+            "endTime": "0:00:35.0333333",
+            "startSeconds": 32.7,
+            "endSeconds": 35
+          },
+          {
+            "confidence": 0.9873,
+            "startTime": "0:01:16.3",
+            "endTime": "0:01:16.3333333",
+            "startSeconds": 76.3,
+            "endSeconds": 76.3
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "house",
+        "appearances": [
+          {
+            "confidence": 0.9548,
+            "startTime": "0:00:16.8",
+            "endTime": "0:00:18.9333333",
+            "startSeconds": 16.8,
+            "endSeconds": 18.9
+          },
+          {
+            "confidence": 0.9581,
+            "startTime": "0:00:35.7",
+            "endTime": "0:00:35.7333333",
+            "startSeconds": 35.7,
+            "endSeconds": 35.7
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "desk",
+        "appearances": [
+          {
+            "confidence": 0.9664,
+            "startTime": "0:00:40.8333333",
+            "endTime": "0:00:42.5",
+            "startSeconds": 40.8,
+            "endSeconds": 42.5
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "interior design",
+        "appearances": [
+          {
+            "confidence": 0.955,
+            "startTime": "0:00:14.2333333",
+            "endTime": "0:00:14.2666667",
+            "startSeconds": 14.2,
+            "endSeconds": 14.3
+          },
+          {
+            "confidence": 0.9516,
+            "startTime": "0:00:32.6666667",
+            "endTime": "0:00:34.1",
+            "startSeconds": 32.7,
+            "endSeconds": 34.1
+          },
+          {
+            "confidence": 0.9534,
+            "startTime": "0:00:43.1666667",
+            "endTime": "0:00:43.4333333",
+            "startSeconds": 43.2,
+            "endSeconds": 43.4
+          },
+          {
+            "confidence": 0.9525,
+            "startTime": "0:00:59.2666667",
+            "endTime": "0:00:59.3",
+            "startSeconds": 59.3,
+            "endSeconds": 59.3
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "flooring",
+        "appearances": [
+          {
+            "confidence": 0.96,
+            "startTime": "0:00:32.9",
+            "endTime": "0:00:34.3333333",
+            "startSeconds": 32.9,
+            "endSeconds": 34.3
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "table",
+        "appearances": [
+          {
+            "confidence": 0.9571,
+            "startTime": "0:00:40.6",
+            "endTime": "0:00:41.3333333",
+            "startSeconds": 40.6,
+            "endSeconds": 41.3
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "building",
+        "appearances": [
+          {
+            "confidence": 0.9778,
+            "startTime": "0:00:31.5",
+            "endTime": "0:00:31.5333333",
+            "startSeconds": 31.5,
+            "endSeconds": 31.5
+          },
+          {
+            "confidence": 0.9821,
+            "startTime": "0:00:46.9",
+            "endTime": "0:00:47.1666667",
+            "startSeconds": 46.9,
+            "endSeconds": 47.2
+          },
+          {
+            "confidence": 0.9637,
+            "startTime": "0:00:59.2666667",
+            "endTime": "0:00:59.3",
+            "startSeconds": 59.3,
+            "endSeconds": 59.3
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "cabinetry",
+        "appearances": [
+          {
+            "confidence": 0.9679,
+            "startTime": "0:00:14",
+            "endTime": "0:00:14.2666667",
+            "startSeconds": 14,
+            "endSeconds": 14.3
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "home",
+        "appearances": [
+          {
+            "confidence": 0.9503,
+            "startTime": "0:00:14.2333333",
+            "endTime": "0:00:14.2666667",
+            "startSeconds": 14.2,
+            "endSeconds": 14.3
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "elevator",
+        "appearances": [
+          {
+            "confidence": 0.9548,
+            "startTime": "0:00:31.2666667",
+            "endTime": "0:00:31.3",
+            "startSeconds": 31.3,
+            "endSeconds": 31.3
+          },
+          {
+            "confidence": 0.9604,
+            "startTime": "0:01:02.5333333",
+            "endTime": "0:01:02.5666667",
+            "startSeconds": 62.5,
+            "endSeconds": 62.6
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "blurry",
+        "appearances": [
+          {
+            "confidence": 0.9849,
+            "startTime": "0:00:42.7",
+            "endTime": "0:00:42.7333333",
+            "startSeconds": 42.7,
+            "endSeconds": 42.7
+          },
+          {
+            "confidence": 0.9651,
+            "startTime": "0:00:46.4333333",
+            "endTime": "0:00:46.4666667",
+            "startSeconds": 46.4,
+            "endSeconds": 46.5
+          },
+          {
+            "confidence": 0.9516,
+            "startTime": "0:01:00.9",
+            "endTime": "0:01:00.9333333",
+            "startSeconds": 60.9,
+            "endSeconds": 60.9
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "countertop",
+        "appearances": [
+          {
+            "confidence": 0.9533,
+            "startTime": "0:00:14",
+            "endTime": "0:00:14.0333333",
+            "startSeconds": 14,
+            "endSeconds": 14
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "varnish",
+        "appearances": [
+          {
+            "confidence": 0.9659,
+            "startTime": "0:00:55.3",
+            "endTime": "0:00:55.3333333",
+            "startSeconds": 55.3,
+            "endSeconds": 55.3
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "wooden",
+        "appearances": [
+          {
+            "confidence": 0.9559,
+            "startTime": "0:00:55.3",
+            "endTime": "0:00:55.3333333",
+            "startSeconds": 55.3,
+            "endSeconds": 55.3
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "book",
+        "appearances": [
+          {
+            "confidence": 0.9615,
+            "startTime": "0:01:01.6",
+            "endTime": "0:01:01.6333333",
+            "startSeconds": 61.6,
+            "endSeconds": 61.6
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "man",
+        "appearances": [
+          {
+            "confidence": 0.9505,
+            "startTime": "0:01:08.6",
+            "endTime": "0:01:08.6333333",
+            "startSeconds": 68.6,
+            "endSeconds": 68.6
+          }
+        ]
+      }
+    ],
+    "framePatterns": [],
+    "brands": [
+      {
+        "referenceId": "SpaghettiOs",
+        "referenceUrl": "http://en.wikipedia.org/wiki/SpaghettiOs",
+        "confidence": 0.77,
+        "description": "SpaghettiOs is an American brand of canned spaghetti featuring circular pasta shapes in a cheese and tomato sauce — and marketed to parents as \"less messy\" than regular spaghetti. More than 150 million cans of SpaghettiOs are sold each year.",
+        "seenDuration": 3,
+        "id": 1,
+        "name": "SpaghettiOs",
+        "appearances": [
+          {
+            "startTime": "0:01:11.44",
+            "endTime": "0:01:14.36",
+            "startSeconds": 71.4,
+            "endSeconds": 74.4
+          }
+        ]
+      }
+    ],
+    "namedLocations": [
+      {
+        "referenceId": null,
+        "referenceUrl": null,
+        "confidence": 0.72,
+        "description": null,
+        "seenDuration": 5.4,
+        "id": 2,
+        "name": "office",
+        "appearances": [
+          {
+            "startTime": "0:00:57.04",
+            "endTime": "0:01:02.44",
+            "startSeconds": 57,
+            "endSeconds": 62.4
+          }
+        ]
+      },
+      {
+        "referenceId": null,
+        "referenceUrl": null,
+        "confidence": 0.54,
+        "description": null,
+        "seenDuration": 1.9,
+        "id": 1,
+        "name": "town offices",
+        "appearances": [
+          {
+            "startTime": "0:00:17.88",
+            "endTime": "0:00:19.76",
+            "startSeconds": 17.9,
+            "endSeconds": 19.8
+          }
+        ]
+      }
+    ],
+    "namedPeople": [],
+    "statistics": {
+      "correspondenceCount": 17,
+      "speakerTalkToListenRatio": {
+        "1": 0.489,
+        "2": 0.337,
+        "3": 0.173
+      },
+      "speakerLongestMonolog": {
+        "1": 10,
+        "2": 6,
+        "3": 5
+      },
+      "speakerNumberOfFragments": {
+        "1": 15,
+        "2": 8,
+        "3": 7
+      },
+      "speakerWordCount": {
+        "1": 82,
+        "2": 44,
+        "3": 32
+      }
+    },
+    "topics": []
+  },
+  "videos": [
+    {
+      "accountId": "ac09490f-3445-4638-91da-3f3e659fd268",
+      "id": "fvfntzl97d",
+      "state": "Processed",
+      "moderationState": "OK",
+      "reviewState": "None",
+      "privacyMode": "Private",
+      "processingProgress": "100%",
+      "failureMessage": "",
+      "externalId": null,
+      "externalUrl": null,
+      "metadata": null,
+      "insights": {
+        "version": "1.0.0.0",
+        "duration": "0:01:17.024807",
+        "sourceLanguage": "en-US",
+        "sourceLanguages": [
+          "en-US"
+        ],
+        "language": "en-US",
+        "languages": [
+          "en-US"
+        ],
+        "transcript": [
+          {
+            "id": 1,
+            "text": "The administrative assistant to the town manager.",
+            "confidence": 0.7552,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:01.16",
+                "adjustedEnd": "0:00:02.96",
+                "start": "0:00:01.16",
+                "end": "0:00:02.96"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "text": "Oh, wow.",
+            "confidence": 0.8199,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:02.96",
+                "adjustedEnd": "0:00:03.08",
+                "start": "0:00:02.96",
+                "end": "0:00:03.08"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "text": "Lucky you see a nice person.",
+            "confidence": 0.7351,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:03.08",
+                "adjustedEnd": "0:00:04.88",
+                "start": "0:00:03.08",
+                "end": "0:00:04.88"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "text": "Yes.",
+            "confidence": 0.1031,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:04.88",
+                "adjustedEnd": "0:00:05",
+                "start": "0:00:04.88",
+                "end": "0:00:05"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "text": "Oh yeah, that's good.",
+            "confidence": 0.7461,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:05.8",
+                "adjustedEnd": "0:00:06.92",
+                "start": "0:00:05.8",
+                "end": "0:00:06.92"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "text": "Yeah.",
+            "confidence": 0.5777,
+            "speakerId": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:07.04",
+                "adjustedEnd": "0:00:07.24",
+                "start": "0:00:07.04",
+                "end": "0:00:07.24"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "text": "Some of the lollipops.",
+            "confidence": 0.7263,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:10.4",
+                "adjustedEnd": "0:00:11.28",
+                "start": "0:00:10.4",
+                "end": "0:00:11.28"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "text": "Would you like one?",
+            "confidence": 0.7127,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:11.28",
+                "adjustedEnd": "0:00:12.48",
+                "start": "0:00:11.28",
+                "end": "0:00:12.48"
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "text": "Yes, please.",
+            "confidence": 0.9513,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:12.48",
+                "adjustedEnd": "0:00:12.92",
+                "start": "0:00:12.48",
+                "end": "0:00:12.92"
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "text": "What's?",
+            "confidence": 0.6208,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:12.92",
+                "adjustedEnd": "0:00:13.12",
+                "start": "0:00:12.92",
+                "end": "0:00:13.12"
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "text": "Up.",
+            "confidence": 0.5729,
+            "speakerId": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:13.8",
+                "adjustedEnd": "0:00:13.88",
+                "start": "0:00:13.8",
+                "end": "0:00:13.88"
+              }
+            ]
+          },
+          {
+            "id": 12,
+            "text": "With the lollipops.",
+            "confidence": 0.6906,
+            "speakerId": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:13.88",
+                "adjustedEnd": "0:00:14.76",
+                "start": "0:00:13.88",
+                "end": "0:00:14.76"
+              }
+            ]
+          },
+          {
+            "id": 13,
+            "text": "What a journey.",
+            "confidence": 0.6019,
+            "speakerId": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:15.4",
+                "adjustedEnd": "0:00:15.8",
+                "start": "0:00:15.4",
+                "end": "0:00:15.8"
+              }
+            ]
+          },
+          {
+            "id": 14,
+            "text": "Here they.",
+            "confidence": 0.6288,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:16.88",
+                "adjustedEnd": "0:00:17.12",
+                "start": "0:00:16.88",
+                "end": "0:00:17.12"
+              }
+            ]
+          },
+          {
+            "id": 15,
+            "text": "Always here at.",
+            "confidence": 0.5367,
+            "speakerId": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:17.12",
+                "adjustedEnd": "0:00:17.88",
+                "start": "0:00:17.12",
+                "end": "0:00:17.88"
+              }
+            ]
+          },
+          {
+            "id": 16,
+            "text": "All the town offices are always right here.",
+            "confidence": 0.8333,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:17.88",
+                "adjustedEnd": "0:00:19.76",
+                "start": "0:00:17.88",
+                "end": "0:00:19.76"
+              }
+            ]
+          },
+          {
+            "id": 17,
+            "text": "I guess people put a word out that I'm taking all the lollipops.",
+            "confidence": 0.8276,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:19.8",
+                "adjustedEnd": "0:00:22.24",
+                "start": "0:00:19.8",
+                "end": "0:00:22.24"
+              }
+            ]
+          },
+          {
+            "id": 18,
+            "text": "I'm a lollipop bandit.",
+            "confidence": 0.7767,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:22.24",
+                "adjustedEnd": "0:00:23.32",
+                "start": "0:00:22.24",
+                "end": "0:00:23.32"
+              }
+            ]
+          },
+          {
+            "id": 19,
+            "text": "Secular flavour anyway.",
+            "confidence": 0.1921,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:26.12",
+                "adjustedEnd": "0:00:26.88",
+                "start": "0:00:26.12",
+                "end": "0:00:26.88"
+              }
+            ]
+          },
+          {
+            "id": 20,
+            "text": "Oh, that's a quick thank you.",
+            "confidence": 0.5731,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:26.92",
+                "adjustedEnd": "0:00:28.36",
+                "start": "0:00:26.92",
+                "end": "0:00:28.36"
+              }
+            ]
+          },
+          {
+            "id": 21,
+            "text": "Trick or treat?",
+            "confidence": 0.8579,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:29",
+                "adjustedEnd": "0:00:29.52",
+                "start": "0:00:29",
+                "end": "0:00:29.52"
+              }
+            ]
+          },
+          {
+            "id": 22,
+            "text": "Thank you.",
+            "confidence": 0.769,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:30.88",
+                "adjustedEnd": "0:00:31.36",
+                "start": "0:00:30.88",
+                "end": "0:00:31.36"
+              }
+            ]
+          },
+          {
+            "id": 23,
+            "text": "Yep.",
+            "confidence": 0.5348,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:32.52",
+                "adjustedEnd": "0:00:32.76",
+                "start": "0:00:32.52",
+                "end": "0:00:32.76"
+              }
+            ]
+          },
+          {
+            "id": 24,
+            "text": "Hey I.",
+            "confidence": 0.4754,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:33.84",
+                "adjustedEnd": "0:00:35.72",
+                "start": "0:00:33.84",
+                "end": "0:00:35.72"
+              }
+            ]
+          },
+          {
+            "id": 25,
+            "text": "Got.",
+            "confidence": 0.7595,
+            "speakerId": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:35.72",
+                "adjustedEnd": "0:00:35.84",
+                "start": "0:00:35.72",
+                "end": "0:00:35.84"
+              }
+            ]
+          },
+          {
+            "id": 26,
+            "text": "Him for lollipops.",
+            "confidence": 0.6157,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:35.84",
+                "adjustedEnd": "0:00:36.72",
+                "start": "0:00:35.84",
+                "end": "0:00:36.72"
+              }
+            ]
+          },
+          {
+            "id": 27,
+            "text": "He's hiding in the left.",
+            "confidence": 0.4187,
+            "speakerId": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:40.76",
+                "adjustedEnd": "0:00:41.68",
+                "start": "0:00:40.76",
+                "end": "0:00:41.68"
+              }
+            ]
+          },
+          {
+            "id": 28,
+            "text": "Can you see him?",
+            "confidence": 0.6642,
+            "speakerId": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:42.68",
+                "adjustedEnd": "0:00:43.2",
+                "start": "0:00:42.68",
+                "end": "0:00:43.2"
+              }
+            ]
+          },
+          {
+            "id": 29,
+            "text": "I just work in the finance door.",
+            "confidence": 0.5394,
+            "speakerId": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:44.44",
+                "adjustedEnd": "0:00:45.44",
+                "start": "0:00:44.44",
+                "end": "0:00:45.44"
+              }
+            ]
+          },
+          {
+            "id": 30,
+            "text": "What do you think about that?",
+            "confidence": 0.8683,
+            "speakerId": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:45.44",
+                "adjustedEnd": "0:00:47.32",
+                "start": "0:00:45.44",
+                "end": "0:00:47.32"
+              }
+            ]
+          },
+          {
+            "id": 31,
+            "text": "Yeah, I'm.",
+            "confidence": 0.34,
+            "speakerId": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:47.32",
+                "adjustedEnd": "0:00:49.28",
+                "start": "0:00:47.32",
+                "end": "0:00:49.28"
+              }
+            ]
+          },
+          {
+            "id": 32,
+            "text": "Sorry, is.",
+            "confidence": 0.8572,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:55.88",
+                "adjustedEnd": "0:00:56.6",
+                "start": "0:00:55.88",
+                "end": "0:00:56.6"
+              }
+            ]
+          },
+          {
+            "id": 33,
+            "text": "It open to.",
+            "confidence": 0.8143,
+            "speakerId": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:56.6",
+                "adjustedEnd": "0:00:57.04",
+                "start": "0:00:56.6",
+                "end": "0:00:57.04"
+              }
+            ]
+          },
+          {
+            "id": 34,
+            "text": "Public This office is closed to the public, it seems.",
+            "confidence": 0.7059,
+            "speakerId": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:57.04",
+                "adjustedEnd": "0:01:02.44",
+                "start": "0:00:57.04",
+                "end": "0:01:02.44"
+              }
+            ]
+          },
+          {
+            "id": 35,
+            "text": "Seems like an.",
+            "confidence": 0.7763,
+            "speakerId": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:01:02.44",
+                "adjustedEnd": "0:01:03",
+                "start": "0:01:02.44",
+                "end": "0:01:03"
+              }
+            ]
+          },
+          {
+            "id": 36,
+            "text": "Open Office.",
+            "confidence": 0.9657,
+            "speakerId": 1,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:01:03",
+                "adjustedEnd": "0:01:03.88",
+                "start": "0:01:03",
+                "end": "0:01:03.88"
+              }
+            ]
+          },
+          {
+            "id": 37,
+            "text": "That's not going to look great.",
+            "confidence": 0.8596,
+            "speakerId": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:01:05.16",
+                "adjustedEnd": "0:01:06.36",
+                "start": "0:01:05.16",
+                "end": "0:01:06.36"
+              }
+            ]
+          },
+          {
+            "id": 38,
+            "text": "That's going to look really, really bad.",
+            "confidence": 0.8727,
+            "speakerId": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:01:07.84",
+                "adjustedEnd": "0:01:09.92",
+                "start": "0:01:07.84",
+                "end": "0:01:09.92"
+              }
+            ]
+          },
+          {
+            "id": 39,
+            "text": "Uh oh, Spaghetti OS She just.",
+            "confidence": 0.4532,
+            "speakerId": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:01:11.44",
+                "adjustedEnd": "0:01:14.36",
+                "start": "0:01:11.44",
+                "end": "0:01:14.36"
+              }
+            ]
+          },
+          {
+            "id": 40,
+            "text": "Gave me a while ago.",
+            "confidence": 0.5287,
+            "speakerId": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:01:16.2",
+                "adjustedEnd": "0:01:16.92",
+                "start": "0:01:16.2",
+                "end": "0:01:16.92"
+              }
+            ]
+          }
+        ],
+        "ocr": [
+          {
+            "id": 1,
+            "text": "15",
+            "confidence": 0.998,
+            "left": 355,
+            "top": 19,
+            "width": 18,
+            "height": 17,
+            "angle": 0,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:52.0333333",
+                "adjustedEnd": "0:00:52.3",
+                "start": "0:00:52.0333333",
+                "end": "0:00:52.3"
+              },
+              {
+                "adjustedStart": "0:01:02.3",
+                "adjustedEnd": "0:01:02.5666667",
+                "start": "0:01:02.3",
+                "end": "0:01:02.5666667"
+              },
+              {
+                "adjustedStart": "0:01:10.2333333",
+                "adjustedEnd": "0:01:14.4666667",
+                "start": "0:01:10.2333333",
+                "end": "0:01:14.4666667"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "text": "WELCOME",
+            "confidence": 0.956,
+            "left": 205,
+            "top": 27,
+            "width": 71,
+            "height": 14,
+            "angle": 17,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:07.7333333",
+                "start": "0:00:00",
+                "end": "0:00:07.7333333"
+              },
+              {
+                "adjustedStart": "0:00:10.5",
+                "adjustedEnd": "0:00:13.3333333",
+                "start": "0:00:10.5",
+                "end": "0:00:13.3333333"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "text": "Pension Fraud",
+            "confidence": 0.9975,
+            "left": 554,
+            "top": 126,
+            "width": 71,
+            "height": 14,
+            "angle": 0,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:49.9333333",
+                "adjustedEnd": "0:00:49.9666667",
+                "start": "0:00:49.9333333",
+                "end": "0:00:49.9666667"
+              },
+              {
+                "adjustedStart": "0:01:07.4333333",
+                "adjustedEnd": "0:01:08.6333333",
+                "start": "0:01:07.4333333",
+                "end": "0:01:08.6333333"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "text": "FINANCE",
+            "confidence": 0.985,
+            "left": 331,
+            "top": 69,
+            "width": 59,
+            "height": 17,
+            "angle": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:52.0333333",
+                "adjustedEnd": "0:00:52.7666667",
+                "start": "0:00:52.0333333",
+                "end": "0:00:52.7666667"
+              },
+              {
+                "adjustedStart": "0:01:02.5333333",
+                "adjustedEnd": "0:01:02.5666667",
+                "start": "0:01:02.5333333",
+                "end": "0:01:02.5666667"
+              },
+              {
+                "adjustedStart": "0:01:10.7",
+                "adjustedEnd": "0:01:14.4666667",
+                "start": "0:01:10.7",
+                "end": "0:01:14.4666667"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "text": "PLEASE",
+            "confidence": 0.963,
+            "left": 327,
+            "top": 124,
+            "width": 31,
+            "height": 11,
+            "angle": 4,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:52.2666667",
+                "adjustedEnd": "0:00:52.5333333",
+                "start": "0:00:52.2666667",
+                "end": "0:00:52.5333333"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "text": "CLOSE",
+            "confidence": 0.986,
+            "left": 328,
+            "top": 143,
+            "width": 28,
+            "height": 10,
+            "angle": 4,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:52.2666667",
+                "adjustedEnd": "0:00:52.5333333",
+                "start": "0:00:52.2666667",
+                "end": "0:00:52.5333333"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "text": "DOOR",
+            "confidence": 0.993,
+            "left": 285,
+            "top": 167,
+            "width": 34,
+            "height": 11,
+            "angle": 2,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:52.2666667",
+                "adjustedEnd": "0:00:52.5333333",
+                "start": "0:00:52.2666667",
+                "end": "0:00:52.5333333"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "text": "STAY SAFE",
+            "confidence": 0.99,
+            "left": 186,
+            "top": 232,
+            "width": 73,
+            "height": 17,
+            "angle": -4,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:01:04.6333333",
+                "adjustedEnd": "0:01:04.6666667",
+                "start": "0:01:04.6333333",
+                "end": "0:01:04.6666667"
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "text": "Pens",
+            "confidence": 0.969,
+            "left": 602,
+            "top": 128,
+            "width": 37,
+            "height": 14,
+            "angle": 3,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:01:09.0666667",
+                "adjustedEnd": "0:01:09.1",
+                "start": "0:01:09.0666667",
+                "end": "0:01:09.1"
+              }
+            ]
+          }
+        ],
+        "keywords": [
+          {
+            "id": 1,
+            "text": "open",
+            "confidence": 0.7217,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:56.6",
+                "adjustedEnd": "0:00:57.04",
+                "start": "0:00:56.6",
+                "end": "0:00:57.04"
+              },
+              {
+                "adjustedStart": "0:01:03",
+                "adjustedEnd": "0:01:03.88",
+                "start": "0:01:03",
+                "end": "0:01:03.88"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "text": "office",
+            "confidence": 0.7217,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:17.88",
+                "adjustedEnd": "0:00:19.76",
+                "start": "0:00:17.88",
+                "end": "0:00:19.76"
+              },
+              {
+                "adjustedStart": "0:00:57.04",
+                "adjustedEnd": "0:01:02.44",
+                "start": "0:00:57.04",
+                "end": "0:01:02.44"
+              },
+              {
+                "adjustedStart": "0:01:03",
+                "adjustedEnd": "0:01:03.88",
+                "start": "0:01:03",
+                "end": "0:01:03.88"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "text": "finance",
+            "confidence": 0.6495,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:44.44",
+                "adjustedEnd": "0:00:45.44",
+                "start": "0:00:44.44",
+                "end": "0:00:45.44"
+              },
+              {
+                "adjustedStart": "0:00:52.0333333",
+                "adjustedEnd": "0:00:52.7666667",
+                "start": "0:00:52.0333333",
+                "end": "0:00:52.7666667"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "text": "lollipops",
+            "confidence": 0.6211,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:10.4",
+                "adjustedEnd": "0:00:11.28",
+                "start": "0:00:10.4",
+                "end": "0:00:11.28"
+              },
+              {
+                "adjustedStart": "0:00:13.88",
+                "adjustedEnd": "0:00:14.76",
+                "start": "0:00:13.88",
+                "end": "0:00:14.76"
+              },
+              {
+                "adjustedStart": "0:00:19.8",
+                "adjustedEnd": "0:00:22.24",
+                "start": "0:00:19.8",
+                "end": "0:00:22.24"
+              },
+              {
+                "adjustedStart": "0:00:35.84",
+                "adjustedEnd": "0:00:36.72",
+                "start": "0:00:35.84",
+                "end": "0:00:36.72"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "text": "public",
+            "confidence": 0.6211,
+            "language": "en-US",
+            "instances": [
+              {
+                "adjustedStart": "0:00:57.04",
+                "adjustedEnd": "0:01:02.44",
+                "start": "0:00:57.04",
+                "end": "0:01:02.44"
+              }
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "id": 1,
+            "name": "person",
+            "referenceId": "person",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9969,
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:09.1333333",
+                "start": "0:00:00",
+                "end": "0:00:09.1333333"
+              },
+              {
+                "confidence": 0.9946,
+                "adjustedStart": "0:00:10.2666667",
+                "adjustedEnd": "0:00:13.5666667",
+                "start": "0:00:10.2666667",
+                "end": "0:00:13.5666667"
+              },
+              {
+                "confidence": 0.9601,
+                "adjustedStart": "0:00:15.4",
+                "adjustedEnd": "0:00:15.6666667",
+                "start": "0:00:15.4",
+                "end": "0:00:15.6666667"
+              },
+              {
+                "confidence": 0.9683,
+                "adjustedStart": "0:00:16.3333333",
+                "adjustedEnd": "0:00:16.8333333",
+                "start": "0:00:16.3333333",
+                "end": "0:00:16.8333333"
+              },
+              {
+                "confidence": 0.9708,
+                "adjustedStart": "0:00:17.9666667",
+                "adjustedEnd": "0:00:30.1333333",
+                "start": "0:00:17.9666667",
+                "end": "0:00:30.1333333"
+              },
+              {
+                "confidence": 0.9598,
+                "adjustedStart": "0:00:34.3",
+                "adjustedEnd": "0:00:34.3333333",
+                "start": "0:00:34.3",
+                "end": "0:00:34.3333333"
+              },
+              {
+                "confidence": 0.9848,
+                "adjustedStart": "0:00:34.7666667",
+                "adjustedEnd": "0:00:36.9",
+                "start": "0:00:34.7666667",
+                "end": "0:00:36.9"
+              },
+              {
+                "confidence": 0.9825,
+                "adjustedStart": "0:00:46.6666667",
+                "adjustedEnd": "0:00:46.9333333",
+                "start": "0:00:46.6666667",
+                "end": "0:00:46.9333333"
+              },
+              {
+                "confidence": 0.9969,
+                "adjustedStart": "0:00:58.1",
+                "adjustedEnd": "0:00:58.3666667",
+                "start": "0:00:58.1",
+                "end": "0:00:58.3666667"
+              },
+              {
+                "confidence": 0.9813,
+                "adjustedStart": "0:01:02.5333333",
+                "adjustedEnd": "0:01:02.5666667",
+                "start": "0:01:02.5333333",
+                "end": "0:01:02.5666667"
+              },
+              {
+                "confidence": 0.9742,
+                "adjustedStart": "0:01:08.6",
+                "adjustedEnd": "0:01:12.3666667",
+                "start": "0:01:08.6",
+                "end": "0:01:12.3666667"
+              },
+              {
+                "confidence": 0.9781,
+                "adjustedStart": "0:01:14.2",
+                "adjustedEnd": "0:01:15.1666667",
+                "start": "0:01:14.2",
+                "end": "0:01:15.1666667"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "wall",
+            "referenceId": "structure/wall",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9939,
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:09.1333333",
+                "start": "0:00:00",
+                "end": "0:00:09.1333333"
+              },
+              {
+                "confidence": 0.9873,
+                "adjustedStart": "0:00:10.0333333",
+                "adjustedEnd": "0:00:13.5666667",
+                "start": "0:00:10.0333333",
+                "end": "0:00:13.5666667"
+              },
+              {
+                "confidence": 0.9876,
+                "adjustedStart": "0:00:14",
+                "adjustedEnd": "0:00:15.9",
+                "start": "0:00:14",
+                "end": "0:00:15.9"
+              },
+              {
+                "confidence": 0.9858,
+                "adjustedStart": "0:00:16.3333333",
+                "adjustedEnd": "0:00:21.2666667",
+                "start": "0:00:16.3333333",
+                "end": "0:00:21.2666667"
+              },
+              {
+                "confidence": 0.9613,
+                "adjustedStart": "0:00:22.6333333",
+                "adjustedEnd": "0:00:22.6666667",
+                "start": "0:00:22.6333333",
+                "end": "0:00:22.6666667"
+              },
+              {
+                "confidence": 0.953,
+                "adjustedStart": "0:00:25.2",
+                "adjustedEnd": "0:00:25.2333333",
+                "start": "0:00:25.2",
+                "end": "0:00:25.2333333"
+              },
+              {
+                "confidence": 0.9608,
+                "adjustedStart": "0:00:27.0666667",
+                "adjustedEnd": "0:00:27.1",
+                "start": "0:00:27.0666667",
+                "end": "0:00:27.1"
+              },
+              {
+                "confidence": 0.9517,
+                "adjustedStart": "0:00:27.7666667",
+                "adjustedEnd": "0:00:27.8",
+                "start": "0:00:27.7666667",
+                "end": "0:00:27.8"
+              },
+              {
+                "confidence": 0.9744,
+                "adjustedStart": "0:00:29.8666667",
+                "adjustedEnd": "0:00:30.8333333",
+                "start": "0:00:29.8666667",
+                "end": "0:00:30.8333333"
+              },
+              {
+                "confidence": 0.9691,
+                "adjustedStart": "0:00:31.7333333",
+                "adjustedEnd": "0:00:32.2333333",
+                "start": "0:00:31.7333333",
+                "end": "0:00:32.2333333"
+              },
+              {
+                "confidence": 0.9861,
+                "adjustedStart": "0:00:32.6666667",
+                "adjustedEnd": "0:00:33.4",
+                "start": "0:00:32.6666667",
+                "end": "0:00:33.4"
+              },
+              {
+                "confidence": 0.9912,
+                "adjustedStart": "0:00:33.8333333",
+                "adjustedEnd": "0:00:35.2666667",
+                "start": "0:00:33.8333333",
+                "end": "0:00:35.2666667"
+              },
+              {
+                "confidence": 0.9593,
+                "adjustedStart": "0:00:35.9333333",
+                "adjustedEnd": "0:00:35.9666667",
+                "start": "0:00:35.9333333",
+                "end": "0:00:35.9666667"
+              },
+              {
+                "confidence": 0.9759,
+                "adjustedStart": "0:00:37.8",
+                "adjustedEnd": "0:00:39.4666667",
+                "start": "0:00:37.8",
+                "end": "0:00:39.4666667"
+              },
+              {
+                "confidence": 0.9521,
+                "adjustedStart": "0:00:39.9",
+                "adjustedEnd": "0:00:39.9333333",
+                "start": "0:00:39.9",
+                "end": "0:00:39.9333333"
+              },
+              {
+                "confidence": 0.9517,
+                "adjustedStart": "0:00:40.6",
+                "adjustedEnd": "0:00:40.6333333",
+                "start": "0:00:40.6",
+                "end": "0:00:40.6333333"
+              },
+              {
+                "confidence": 0.9796,
+                "adjustedStart": "0:00:41.0666667",
+                "adjustedEnd": "0:00:41.8",
+                "start": "0:00:41.0666667",
+                "end": "0:00:41.8"
+              },
+              {
+                "confidence": 0.9719,
+                "adjustedStart": "0:00:42.4666667",
+                "adjustedEnd": "0:00:42.5",
+                "start": "0:00:42.4666667",
+                "end": "0:00:42.5"
+              },
+              {
+                "confidence": 0.9829,
+                "adjustedStart": "0:00:43.1666667",
+                "adjustedEnd": "0:00:44.3666667",
+                "start": "0:00:43.1666667",
+                "end": "0:00:44.3666667"
+              },
+              {
+                "confidence": 0.9858,
+                "adjustedStart": "0:00:45.2666667",
+                "adjustedEnd": "0:00:46",
+                "start": "0:00:45.2666667",
+                "end": "0:00:46"
+              },
+              {
+                "confidence": 0.9797,
+                "adjustedStart": "0:00:47.3666667",
+                "adjustedEnd": "0:00:49.0333333",
+                "start": "0:00:47.3666667",
+                "end": "0:00:49.0333333"
+              },
+              {
+                "confidence": 0.9589,
+                "adjustedStart": "0:00:49.7",
+                "adjustedEnd": "0:00:50.2",
+                "start": "0:00:49.7",
+                "end": "0:00:50.2"
+              },
+              {
+                "confidence": 0.9683,
+                "adjustedStart": "0:00:50.6333333",
+                "adjustedEnd": "0:00:50.9",
+                "start": "0:00:50.6333333",
+                "end": "0:00:50.9"
+              },
+              {
+                "confidence": 0.9535,
+                "adjustedStart": "0:00:53.6666667",
+                "adjustedEnd": "0:00:53.7",
+                "start": "0:00:53.6666667",
+                "end": "0:00:53.7"
+              },
+              {
+                "confidence": 0.9734,
+                "adjustedStart": "0:00:55.7666667",
+                "adjustedEnd": "0:00:55.8",
+                "start": "0:00:55.7666667",
+                "end": "0:00:55.8"
+              },
+              {
+                "confidence": 0.9545,
+                "adjustedStart": "0:00:56.7",
+                "adjustedEnd": "0:00:56.7333333",
+                "start": "0:00:56.7",
+                "end": "0:00:56.7333333"
+              },
+              {
+                "confidence": 0.9916,
+                "adjustedStart": "0:00:59.2666667",
+                "adjustedEnd": "0:01:01.1666667",
+                "start": "0:00:59.2666667",
+                "end": "0:01:01.1666667"
+              },
+              {
+                "confidence": 0.9573,
+                "adjustedStart": "0:01:03",
+                "adjustedEnd": "0:01:03.0333333",
+                "start": "0:01:03",
+                "end": "0:01:03.0333333"
+              },
+              {
+                "confidence": 0.9553,
+                "adjustedStart": "0:01:04.4",
+                "adjustedEnd": "0:01:04.4333333",
+                "start": "0:01:04.4",
+                "end": "0:01:04.4333333"
+              },
+              {
+                "confidence": 0.9611,
+                "adjustedStart": "0:01:06.2666667",
+                "adjustedEnd": "0:01:06.3",
+                "start": "0:01:06.2666667",
+                "end": "0:01:06.3"
+              },
+              {
+                "confidence": 0.965,
+                "adjustedStart": "0:01:07.2",
+                "adjustedEnd": "0:01:07.2333333",
+                "start": "0:01:07.2",
+                "end": "0:01:07.2333333"
+              },
+              {
+                "confidence": 0.9517,
+                "adjustedStart": "0:01:09.3",
+                "adjustedEnd": "0:01:09.3333333",
+                "start": "0:01:09.3",
+                "end": "0:01:09.3333333"
+              },
+              {
+                "confidence": 0.971,
+                "adjustedStart": "0:01:16.0666667",
+                "adjustedEnd": "0:01:16.8",
+                "start": "0:01:16.0666667",
+                "end": "0:01:16.8"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "indoor",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9917,
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:29.2",
+                "start": "0:00:00",
+                "end": "0:00:29.2"
+              },
+              {
+                "confidence": 0.9794,
+                "adjustedStart": "0:00:29.6333333",
+                "adjustedEnd": "0:00:30.8333333",
+                "start": "0:00:29.6333333",
+                "end": "0:00:30.8333333"
+              },
+              {
+                "confidence": 0.9791,
+                "adjustedStart": "0:00:31.7333333",
+                "adjustedEnd": "0:00:35.5",
+                "start": "0:00:31.7333333",
+                "end": "0:00:35.5"
+              },
+              {
+                "confidence": 0.9676,
+                "adjustedStart": "0:00:37.1",
+                "adjustedEnd": "0:00:42.5",
+                "start": "0:00:37.1",
+                "end": "0:00:42.5"
+              },
+              {
+                "confidence": 0.9817,
+                "adjustedStart": "0:00:42.9333333",
+                "adjustedEnd": "0:00:44.8333333",
+                "start": "0:00:42.9333333",
+                "end": "0:00:44.8333333"
+              },
+              {
+                "confidence": 0.986,
+                "adjustedStart": "0:00:45.2666667",
+                "adjustedEnd": "0:00:46",
+                "start": "0:00:45.2666667",
+                "end": "0:00:46"
+              },
+              {
+                "confidence": 0.9776,
+                "adjustedStart": "0:00:47.3666667",
+                "adjustedEnd": "0:00:47.6333333",
+                "start": "0:00:47.3666667",
+                "end": "0:00:47.6333333"
+              },
+              {
+                "confidence": 0.9589,
+                "adjustedStart": "0:00:48.0666667",
+                "adjustedEnd": "0:00:48.1",
+                "start": "0:00:48.0666667",
+                "end": "0:00:48.1"
+              },
+              {
+                "confidence": 0.972,
+                "adjustedStart": "0:00:48.5333333",
+                "adjustedEnd": "0:00:49.0333333",
+                "start": "0:00:48.5333333",
+                "end": "0:00:49.0333333"
+              },
+              {
+                "confidence": 0.958,
+                "adjustedStart": "0:00:49.4666667",
+                "adjustedEnd": "0:00:49.5",
+                "start": "0:00:49.4666667",
+                "end": "0:00:49.5"
+              },
+              {
+                "confidence": 0.9705,
+                "adjustedStart": "0:00:49.9333333",
+                "adjustedEnd": "0:00:50.9",
+                "start": "0:00:49.9333333",
+                "end": "0:00:50.9"
+              },
+              {
+                "confidence": 0.9753,
+                "adjustedStart": "0:00:55.7666667",
+                "adjustedEnd": "0:00:56.0333333",
+                "start": "0:00:55.7666667",
+                "end": "0:00:56.0333333"
+              },
+              {
+                "confidence": 0.9793,
+                "adjustedStart": "0:00:56.7",
+                "adjustedEnd": "0:00:57.2",
+                "start": "0:00:56.7",
+                "end": "0:00:57.2"
+              },
+              {
+                "confidence": 0.9887,
+                "adjustedStart": "0:00:59.2666667",
+                "adjustedEnd": "0:01:01.1666667",
+                "start": "0:00:59.2666667",
+                "end": "0:01:01.1666667"
+              },
+              {
+                "confidence": 0.9564,
+                "adjustedStart": "0:01:03",
+                "adjustedEnd": "0:01:03.0333333",
+                "start": "0:01:03",
+                "end": "0:01:03.0333333"
+              },
+              {
+                "confidence": 0.9641,
+                "adjustedStart": "0:01:03.7",
+                "adjustedEnd": "0:01:03.9666667",
+                "start": "0:01:03.7",
+                "end": "0:01:03.9666667"
+              },
+              {
+                "confidence": 0.961,
+                "adjustedStart": "0:01:04.4",
+                "adjustedEnd": "0:01:04.4333333",
+                "start": "0:01:04.4",
+                "end": "0:01:04.4333333"
+              },
+              {
+                "confidence": 0.9803,
+                "adjustedStart": "0:01:05.3333333",
+                "adjustedEnd": "0:01:05.3666667",
+                "start": "0:01:05.3333333",
+                "end": "0:01:05.3666667"
+              },
+              {
+                "confidence": 0.9632,
+                "adjustedStart": "0:01:06.2666667",
+                "adjustedEnd": "0:01:06.7666667",
+                "start": "0:01:06.2666667",
+                "end": "0:01:06.7666667"
+              },
+              {
+                "confidence": 0.9533,
+                "adjustedStart": "0:01:07.2",
+                "adjustedEnd": "0:01:07.4666667",
+                "start": "0:01:07.2",
+                "end": "0:01:07.4666667"
+              },
+              {
+                "confidence": 0.9541,
+                "adjustedStart": "0:01:07.9",
+                "adjustedEnd": "0:01:08.1666667",
+                "start": "0:01:07.9",
+                "end": "0:01:08.1666667"
+              },
+              {
+                "confidence": 0.9598,
+                "adjustedStart": "0:01:09.0666667",
+                "adjustedEnd": "0:01:09.5666667",
+                "start": "0:01:09.0666667",
+                "end": "0:01:09.5666667"
+              },
+              {
+                "confidence": 0.9767,
+                "adjustedStart": "0:01:15.8333333",
+                "adjustedEnd": "0:01:16.8",
+                "start": "0:01:15.8333333",
+                "end": "0:01:16.8"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "clothing",
+            "referenceId": "consumer goods/clothing",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9917,
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:08.9",
+                "start": "0:00:00",
+                "end": "0:00:08.9"
+              },
+              {
+                "confidence": 0.9764,
+                "adjustedStart": "0:00:10.5",
+                "adjustedEnd": "0:00:13.3333333",
+                "start": "0:00:10.5",
+                "end": "0:00:13.3333333"
+              },
+              {
+                "confidence": 0.9532,
+                "adjustedStart": "0:00:17.5",
+                "adjustedEnd": "0:00:17.5333333",
+                "start": "0:00:17.5",
+                "end": "0:00:17.5333333"
+              },
+              {
+                "confidence": 0.9645,
+                "adjustedStart": "0:00:17.9666667",
+                "adjustedEnd": "0:00:21.0333333",
+                "start": "0:00:17.9666667",
+                "end": "0:00:21.0333333"
+              },
+              {
+                "confidence": 0.9519,
+                "adjustedStart": "0:00:24.2666667",
+                "adjustedEnd": "0:00:24.3",
+                "start": "0:00:24.2666667",
+                "end": "0:00:24.3"
+              },
+              {
+                "confidence": 0.9541,
+                "adjustedStart": "0:00:34.0666667",
+                "adjustedEnd": "0:00:34.1",
+                "start": "0:00:34.0666667",
+                "end": "0:00:34.1"
+              },
+              {
+                "confidence": 0.9918,
+                "adjustedStart": "0:00:34.7666667",
+                "adjustedEnd": "0:00:35.0333333",
+                "start": "0:00:34.7666667",
+                "end": "0:00:35.0333333"
+              },
+              {
+                "confidence": 0.9859,
+                "adjustedStart": "0:00:35.4666667",
+                "adjustedEnd": "0:00:36.2",
+                "start": "0:00:35.4666667",
+                "end": "0:00:36.2"
+              },
+              {
+                "confidence": 0.9695,
+                "adjustedStart": "0:00:36.6333333",
+                "adjustedEnd": "0:00:36.9",
+                "start": "0:00:36.6333333",
+                "end": "0:00:36.9"
+              },
+              {
+                "confidence": 0.9865,
+                "adjustedStart": "0:00:58.1",
+                "adjustedEnd": "0:00:58.3666667",
+                "start": "0:00:58.1",
+                "end": "0:00:58.3666667"
+              },
+              {
+                "confidence": 0.9736,
+                "adjustedStart": "0:01:07.2",
+                "adjustedEnd": "0:01:07.7",
+                "start": "0:01:07.2",
+                "end": "0:01:07.7"
+              },
+              {
+                "confidence": 0.9553,
+                "adjustedStart": "0:01:08.1333333",
+                "adjustedEnd": "0:01:08.1666667",
+                "start": "0:01:08.1333333",
+                "end": "0:01:08.1666667"
+              },
+              {
+                "confidence": 0.9651,
+                "adjustedStart": "0:01:09.0666667",
+                "adjustedEnd": "0:01:10.2666667",
+                "start": "0:01:09.0666667",
+                "end": "0:01:10.2666667"
+              },
+              {
+                "confidence": 0.958,
+                "adjustedStart": "0:01:10.7",
+                "adjustedEnd": "0:01:10.7333333",
+                "start": "0:01:10.7",
+                "end": "0:01:10.7333333"
+              },
+              {
+                "confidence": 0.9586,
+                "adjustedStart": "0:01:11.1666667",
+                "adjustedEnd": "0:01:11.2",
+                "start": "0:01:11.1666667",
+                "end": "0:01:11.2"
+              },
+              {
+                "confidence": 0.9585,
+                "adjustedStart": "0:01:11.8666667",
+                "adjustedEnd": "0:01:11.9",
+                "start": "0:01:11.8666667",
+                "end": "0:01:11.9"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "human face",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9872,
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:08.9",
+                "start": "0:00:00",
+                "end": "0:00:08.9"
+              },
+              {
+                "confidence": 0.9733,
+                "adjustedStart": "0:00:10.5",
+                "adjustedEnd": "0:00:13.5666667",
+                "start": "0:00:10.5",
+                "end": "0:00:13.5666667"
+              },
+              {
+                "confidence": 0.9558,
+                "adjustedStart": "0:00:20.0666667",
+                "adjustedEnd": "0:00:20.3333333",
+                "start": "0:00:20.0666667",
+                "end": "0:00:20.3333333"
+              },
+              {
+                "confidence": 0.9671,
+                "adjustedStart": "0:00:20.7666667",
+                "adjustedEnd": "0:00:22.2",
+                "start": "0:00:20.7666667",
+                "end": "0:00:22.2"
+              },
+              {
+                "confidence": 0.974,
+                "adjustedStart": "0:00:22.6333333",
+                "adjustedEnd": "0:00:22.6666667",
+                "start": "0:00:22.6333333",
+                "end": "0:00:22.6666667"
+              },
+              {
+                "confidence": 0.962,
+                "adjustedStart": "0:00:23.3333333",
+                "adjustedEnd": "0:00:24.5333333",
+                "start": "0:00:23.3333333",
+                "end": "0:00:24.5333333"
+              },
+              {
+                "confidence": 0.9553,
+                "adjustedStart": "0:00:24.9666667",
+                "adjustedEnd": "0:00:25.2333333",
+                "start": "0:00:24.9666667",
+                "end": "0:00:25.2333333"
+              },
+              {
+                "confidence": 0.9697,
+                "adjustedStart": "0:00:25.6666667",
+                "adjustedEnd": "0:00:30.1333333",
+                "start": "0:00:25.6666667",
+                "end": "0:00:30.1333333"
+              },
+              {
+                "confidence": 0.9695,
+                "adjustedStart": "0:00:36.6333333",
+                "adjustedEnd": "0:00:36.9",
+                "start": "0:00:36.6333333",
+                "end": "0:00:36.9"
+              },
+              {
+                "confidence": 0.9687,
+                "adjustedStart": "0:00:58.3333333",
+                "adjustedEnd": "0:00:58.3666667",
+                "start": "0:00:58.3333333",
+                "end": "0:00:58.3666667"
+              },
+              {
+                "confidence": 0.9689,
+                "adjustedStart": "0:01:10",
+                "adjustedEnd": "0:01:10.2666667",
+                "start": "0:01:10",
+                "end": "0:01:10.2666667"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "smile",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9618,
+                "adjustedStart": "0:00:00.4666667",
+                "adjustedEnd": "0:00:00.5",
+                "start": "0:00:00.4666667",
+                "end": "0:00:00.5"
+              },
+              {
+                "confidence": 0.9735,
+                "adjustedStart": "0:00:02.8",
+                "adjustedEnd": "0:00:07.9666667",
+                "start": "0:00:02.8",
+                "end": "0:00:07.9666667"
+              },
+              {
+                "confidence": 0.956,
+                "adjustedStart": "0:00:08.6333333",
+                "adjustedEnd": "0:00:08.6666667",
+                "start": "0:00:08.6333333",
+                "end": "0:00:08.6666667"
+              },
+              {
+                "confidence": 0.9699,
+                "adjustedStart": "0:00:10.9666667",
+                "adjustedEnd": "0:00:11",
+                "start": "0:00:10.9666667",
+                "end": "0:00:11"
+              },
+              {
+                "confidence": 0.9522,
+                "adjustedStart": "0:00:13.0666667",
+                "adjustedEnd": "0:00:13.1",
+                "start": "0:00:13.0666667",
+                "end": "0:00:13.1"
+              },
+              {
+                "confidence": 0.9713,
+                "adjustedStart": "0:00:27.0666667",
+                "adjustedEnd": "0:00:27.3333333",
+                "start": "0:00:27.0666667",
+                "end": "0:00:27.3333333"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "furniture",
+            "referenceId": "furniture",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9576,
+                "adjustedStart": "0:00:03.2666667",
+                "adjustedEnd": "0:00:03.3",
+                "start": "0:00:03.2666667",
+                "end": "0:00:03.3"
+              },
+              {
+                "confidence": 0.9741,
+                "adjustedStart": "0:00:33.1333333",
+                "adjustedEnd": "0:00:33.4",
+                "start": "0:00:33.1333333",
+                "end": "0:00:33.4"
+              },
+              {
+                "confidence": 0.9554,
+                "adjustedStart": "0:00:38.5",
+                "adjustedEnd": "0:00:38.5333333",
+                "start": "0:00:38.5",
+                "end": "0:00:38.5333333"
+              },
+              {
+                "confidence": 0.969,
+                "adjustedStart": "0:00:39.2",
+                "adjustedEnd": "0:00:41.8",
+                "start": "0:00:39.2",
+                "end": "0:00:41.8"
+              },
+              {
+                "confidence": 0.9573,
+                "adjustedStart": "0:00:42.4666667",
+                "adjustedEnd": "0:00:42.5",
+                "start": "0:00:42.4666667",
+                "end": "0:00:42.5"
+              },
+              {
+                "confidence": 0.9649,
+                "adjustedStart": "0:00:43.1666667",
+                "adjustedEnd": "0:00:43.2",
+                "start": "0:00:43.1666667",
+                "end": "0:00:43.2"
+              },
+              {
+                "confidence": 0.9593,
+                "adjustedStart": "0:00:43.8666667",
+                "adjustedEnd": "0:00:43.9",
+                "start": "0:00:43.8666667",
+                "end": "0:00:43.9"
+              },
+              {
+                "confidence": 0.9589,
+                "adjustedStart": "0:00:55.7666667",
+                "adjustedEnd": "0:00:55.8",
+                "start": "0:00:55.7666667",
+                "end": "0:00:55.8"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "name": "text",
+            "referenceId": "communication/writing/text",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9774,
+                "adjustedStart": "0:00:09.5666667",
+                "adjustedEnd": "0:00:09.6",
+                "start": "0:00:09.5666667",
+                "end": "0:00:09.6"
+              },
+              {
+                "confidence": 0.9544,
+                "adjustedStart": "0:00:37.5666667",
+                "adjustedEnd": "0:00:37.6",
+                "start": "0:00:37.5666667",
+                "end": "0:00:37.6"
+              },
+              {
+                "confidence": 0.9846,
+                "adjustedStart": "0:00:39.2",
+                "adjustedEnd": "0:00:39.2333333",
+                "start": "0:00:39.2",
+                "end": "0:00:39.2333333"
+              },
+              {
+                "confidence": 0.98,
+                "adjustedStart": "0:00:39.9",
+                "adjustedEnd": "0:00:39.9333333",
+                "start": "0:00:39.9",
+                "end": "0:00:39.9333333"
+              },
+              {
+                "confidence": 0.9614,
+                "adjustedStart": "0:00:42.2333333",
+                "adjustedEnd": "0:00:42.5",
+                "start": "0:00:42.2333333",
+                "end": "0:00:42.5"
+              },
+              {
+                "confidence": 0.9925,
+                "adjustedStart": "0:00:45.9666667",
+                "adjustedEnd": "0:00:46",
+                "start": "0:00:45.9666667",
+                "end": "0:00:46"
+              },
+              {
+                "confidence": 0.9927,
+                "adjustedStart": "0:00:51.1",
+                "adjustedEnd": "0:00:51.3666667",
+                "start": "0:00:51.1",
+                "end": "0:00:51.3666667"
+              },
+              {
+                "confidence": 0.9942,
+                "adjustedStart": "0:00:52.0333333",
+                "adjustedEnd": "0:00:53",
+                "start": "0:00:52.0333333",
+                "end": "0:00:53"
+              },
+              {
+                "confidence": 0.9658,
+                "adjustedStart": "0:00:53.4333333",
+                "adjustedEnd": "0:00:53.4666667",
+                "start": "0:00:53.4333333",
+                "end": "0:00:53.4666667"
+              },
+              {
+                "confidence": 0.9999,
+                "adjustedStart": "0:00:59.0333333",
+                "adjustedEnd": "0:00:59.0666667",
+                "start": "0:00:59.0333333",
+                "end": "0:00:59.0666667"
+              },
+              {
+                "confidence": 0.9515,
+                "adjustedStart": "0:01:00.4333333",
+                "adjustedEnd": "0:01:00.4666667",
+                "start": "0:01:00.4333333",
+                "end": "0:01:00.4666667"
+              },
+              {
+                "confidence": 0.999,
+                "adjustedStart": "0:01:01.6",
+                "adjustedEnd": "0:01:01.6333333",
+                "start": "0:01:01.6",
+                "end": "0:01:01.6333333"
+              },
+              {
+                "confidence": 0.9797,
+                "adjustedStart": "0:01:02.3",
+                "adjustedEnd": "0:01:02.8",
+                "start": "0:01:02.3",
+                "end": "0:01:02.8"
+              },
+              {
+                "confidence": 0.9987,
+                "adjustedStart": "0:01:03.2333333",
+                "adjustedEnd": "0:01:04.2",
+                "start": "0:01:03.2333333",
+                "end": "0:01:04.2"
+              },
+              {
+                "confidence": 0.9823,
+                "adjustedStart": "0:01:04.6333333",
+                "adjustedEnd": "0:01:04.6666667",
+                "start": "0:01:04.6333333",
+                "end": "0:01:04.6666667"
+              },
+              {
+                "confidence": 0.963,
+                "adjustedStart": "0:01:05.1",
+                "adjustedEnd": "0:01:05.1333333",
+                "start": "0:01:05.1",
+                "end": "0:01:05.1333333"
+              },
+              {
+                "confidence": 0.9982,
+                "adjustedStart": "0:01:05.5666667",
+                "adjustedEnd": "0:01:06.5333333",
+                "start": "0:01:05.5666667",
+                "end": "0:01:06.5333333"
+              },
+              {
+                "confidence": 0.9697,
+                "adjustedStart": "0:01:06.9666667",
+                "adjustedEnd": "0:01:07",
+                "start": "0:01:06.9666667",
+                "end": "0:01:07"
+              },
+              {
+                "confidence": 0.9731,
+                "adjustedStart": "0:01:07.4333333",
+                "adjustedEnd": "0:01:07.7",
+                "start": "0:01:07.4333333",
+                "end": "0:01:07.7"
+              },
+              {
+                "confidence": 0.9769,
+                "adjustedStart": "0:01:08.1333333",
+                "adjustedEnd": "0:01:09.1",
+                "start": "0:01:08.1333333",
+                "end": "0:01:09.1"
+              },
+              {
+                "confidence": 0.9755,
+                "adjustedStart": "0:01:13.0333333",
+                "adjustedEnd": "0:01:13.3",
+                "start": "0:01:13.0333333",
+                "end": "0:01:13.3"
+              },
+              {
+                "confidence": 0.991,
+                "adjustedStart": "0:01:15.3666667",
+                "adjustedEnd": "0:01:15.4",
+                "start": "0:01:15.3666667",
+                "end": "0:01:15.4"
+              },
+              {
+                "confidence": 0.9716,
+                "adjustedStart": "0:01:15.8333333",
+                "adjustedEnd": "0:01:15.8666667",
+                "start": "0:01:15.8333333",
+                "end": "0:01:15.8666667"
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "name": "window",
+            "referenceId": "structure/framework/window",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9666,
+                "adjustedStart": "0:00:09.8",
+                "adjustedEnd": "0:00:09.8333333",
+                "start": "0:00:09.8",
+                "end": "0:00:09.8333333"
+              },
+              {
+                "confidence": 0.9608,
+                "adjustedStart": "0:00:13.7666667",
+                "adjustedEnd": "0:00:13.8",
+                "start": "0:00:13.7666667",
+                "end": "0:00:13.8"
+              },
+              {
+                "confidence": 0.9626,
+                "adjustedStart": "0:00:16.3333333",
+                "adjustedEnd": "0:00:16.3666667",
+                "start": "0:00:16.3333333",
+                "end": "0:00:16.3666667"
+              },
+              {
+                "confidence": 0.9507,
+                "adjustedStart": "0:00:17.5",
+                "adjustedEnd": "0:00:17.5333333",
+                "start": "0:00:17.5",
+                "end": "0:00:17.5333333"
+              },
+              {
+                "confidence": 0.9665,
+                "adjustedStart": "0:00:21.4666667",
+                "adjustedEnd": "0:00:21.9666667",
+                "start": "0:00:21.4666667",
+                "end": "0:00:21.9666667"
+              },
+              {
+                "confidence": 0.971,
+                "adjustedStart": "0:00:39.4333333",
+                "adjustedEnd": "0:00:41.1",
+                "start": "0:00:39.4333333",
+                "end": "0:00:41.1"
+              },
+              {
+                "confidence": 0.9739,
+                "adjustedStart": "0:00:42",
+                "adjustedEnd": "0:00:42.0333333",
+                "start": "0:00:42",
+                "end": "0:00:42.0333333"
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "name": "cabinetry",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9679,
+                "adjustedStart": "0:00:14",
+                "adjustedEnd": "0:00:14.2666667",
+                "start": "0:00:14",
+                "end": "0:00:14.2666667"
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "name": "countertop",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9533,
+                "adjustedStart": "0:00:14",
+                "adjustedEnd": "0:00:14.0333333",
+                "start": "0:00:14",
+                "end": "0:00:14.0333333"
+              }
+            ]
+          },
+          {
+            "id": 12,
+            "name": "interior design",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.955,
+                "adjustedStart": "0:00:14.2333333",
+                "adjustedEnd": "0:00:14.2666667",
+                "start": "0:00:14.2333333",
+                "end": "0:00:14.2666667"
+              },
+              {
+                "confidence": 0.9502,
+                "adjustedStart": "0:00:32.6666667",
+                "adjustedEnd": "0:00:32.7",
+                "start": "0:00:32.6666667",
+                "end": "0:00:32.7"
+              },
+              {
+                "confidence": 0.9516,
+                "adjustedStart": "0:00:34.0666667",
+                "adjustedEnd": "0:00:34.1",
+                "start": "0:00:34.0666667",
+                "end": "0:00:34.1"
+              },
+              {
+                "confidence": 0.9534,
+                "adjustedStart": "0:00:43.1666667",
+                "adjustedEnd": "0:00:43.4333333",
+                "start": "0:00:43.1666667",
+                "end": "0:00:43.4333333"
+              },
+              {
+                "confidence": 0.9525,
+                "adjustedStart": "0:00:59.2666667",
+                "adjustedEnd": "0:00:59.3",
+                "start": "0:00:59.2666667",
+                "end": "0:00:59.3"
+              }
+            ]
+          },
+          {
+            "id": 13,
+            "name": "home",
+            "referenceId": "residence/home",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9503,
+                "adjustedStart": "0:00:14.2333333",
+                "adjustedEnd": "0:00:14.2666667",
+                "start": "0:00:14.2333333",
+                "end": "0:00:14.2666667"
+              }
+            ]
+          },
+          {
+            "id": 14,
+            "name": "house",
+            "referenceId": "structure/building/house",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9565,
+                "adjustedStart": "0:00:16.8",
+                "adjustedEnd": "0:00:16.8333333",
+                "start": "0:00:16.8",
+                "end": "0:00:16.8333333"
+              },
+              {
+                "confidence": 0.9593,
+                "adjustedStart": "0:00:18.2",
+                "adjustedEnd": "0:00:18.4666667",
+                "start": "0:00:18.2",
+                "end": "0:00:18.4666667"
+              },
+              {
+                "confidence": 0.9548,
+                "adjustedStart": "0:00:18.9",
+                "adjustedEnd": "0:00:18.9333333",
+                "start": "0:00:18.9",
+                "end": "0:00:18.9333333"
+              },
+              {
+                "confidence": 0.9581,
+                "adjustedStart": "0:00:35.7",
+                "adjustedEnd": "0:00:35.7333333",
+                "start": "0:00:35.7",
+                "end": "0:00:35.7333333"
+              }
+            ]
+          },
+          {
+            "id": 15,
+            "name": "elevator",
+            "referenceId": "device/lifting device/elevator",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9548,
+                "adjustedStart": "0:00:31.2666667",
+                "adjustedEnd": "0:00:31.3",
+                "start": "0:00:31.2666667",
+                "end": "0:00:31.3"
+              },
+              {
+                "confidence": 0.9604,
+                "adjustedStart": "0:01:02.5333333",
+                "adjustedEnd": "0:01:02.5666667",
+                "start": "0:01:02.5333333",
+                "end": "0:01:02.5666667"
+              }
+            ]
+          },
+          {
+            "id": 16,
+            "name": "building",
+            "referenceId": "structure/building",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9778,
+                "adjustedStart": "0:00:31.5",
+                "adjustedEnd": "0:00:31.5333333",
+                "start": "0:00:31.5",
+                "end": "0:00:31.5333333"
+              },
+              {
+                "confidence": 0.9821,
+                "adjustedStart": "0:00:46.9",
+                "adjustedEnd": "0:00:47.1666667",
+                "start": "0:00:46.9",
+                "end": "0:00:47.1666667"
+              },
+              {
+                "confidence": 0.9637,
+                "adjustedStart": "0:00:59.2666667",
+                "adjustedEnd": "0:00:59.3",
+                "start": "0:00:59.2666667",
+                "end": "0:00:59.3"
+              }
+            ]
+          },
+          {
+            "id": 17,
+            "name": "floor",
+            "referenceId": "surface/floor",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9746,
+                "adjustedStart": "0:00:32.6666667",
+                "adjustedEnd": "0:00:32.7",
+                "start": "0:00:32.6666667",
+                "end": "0:00:32.7"
+              },
+              {
+                "confidence": 0.9701,
+                "adjustedStart": "0:00:33.1333333",
+                "adjustedEnd": "0:00:33.4",
+                "start": "0:00:33.1333333",
+                "end": "0:00:33.4"
+              },
+              {
+                "confidence": 0.9698,
+                "adjustedStart": "0:00:34.5333333",
+                "adjustedEnd": "0:00:35.0333333",
+                "start": "0:00:34.5333333",
+                "end": "0:00:35.0333333"
+              },
+              {
+                "confidence": 0.9873,
+                "adjustedStart": "0:01:16.3",
+                "adjustedEnd": "0:01:16.3333333",
+                "start": "0:01:16.3",
+                "end": "0:01:16.3333333"
+              }
+            ]
+          },
+          {
+            "id": 18,
+            "name": "flooring",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9525,
+                "adjustedStart": "0:00:32.9",
+                "adjustedEnd": "0:00:32.9333333",
+                "start": "0:00:32.9",
+                "end": "0:00:32.9333333"
+              },
+              {
+                "confidence": 0.96,
+                "adjustedStart": "0:00:33.8333333",
+                "adjustedEnd": "0:00:34.3333333",
+                "start": "0:00:33.8333333",
+                "end": "0:00:34.3333333"
+              }
+            ]
+          },
+          {
+            "id": 19,
+            "name": "door",
+            "referenceId": "structure/barrier/door",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.951,
+                "adjustedStart": "0:00:33.8333333",
+                "adjustedEnd": "0:00:33.8666667",
+                "start": "0:00:33.8333333",
+                "end": "0:00:33.8666667"
+              },
+              {
+                "confidence": 0.9692,
+                "adjustedStart": "0:00:34.7666667",
+                "adjustedEnd": "0:00:35.0333333",
+                "start": "0:00:34.7666667",
+                "end": "0:00:35.0333333"
+              },
+              {
+                "confidence": 0.9643,
+                "adjustedStart": "0:00:49.4666667",
+                "adjustedEnd": "0:00:49.5",
+                "start": "0:00:49.4666667",
+                "end": "0:00:49.5"
+              },
+              {
+                "confidence": 0.9522,
+                "adjustedStart": "0:01:13.5",
+                "adjustedEnd": "0:01:13.5333333",
+                "start": "0:01:13.5",
+                "end": "0:01:13.5333333"
+              },
+              {
+                "confidence": 0.9812,
+                "adjustedStart": "0:01:16.5333333",
+                "adjustedEnd": "0:01:16.5666667",
+                "start": "0:01:16.5333333",
+                "end": "0:01:16.5666667"
+              }
+            ]
+          },
+          {
+            "id": 20,
+            "name": "office building",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9669,
+                "adjustedStart": "0:00:39.2",
+                "adjustedEnd": "0:00:41.8",
+                "start": "0:00:39.2",
+                "end": "0:00:41.8"
+              }
+            ]
+          },
+          {
+            "id": 21,
+            "name": "table",
+            "referenceId": "furniture/table",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9562,
+                "adjustedStart": "0:00:40.6",
+                "adjustedEnd": "0:00:40.8666667",
+                "start": "0:00:40.6",
+                "end": "0:00:40.8666667"
+              },
+              {
+                "confidence": 0.9571,
+                "adjustedStart": "0:00:41.3",
+                "adjustedEnd": "0:00:41.3333333",
+                "start": "0:00:41.3",
+                "end": "0:00:41.3333333"
+              }
+            ]
+          },
+          {
+            "id": 22,
+            "name": "desk",
+            "referenceId": "furniture/table/desk",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9764,
+                "adjustedStart": "0:00:40.8333333",
+                "adjustedEnd": "0:00:41.1",
+                "start": "0:00:40.8333333",
+                "end": "0:00:41.1"
+              },
+              {
+                "confidence": 0.9664,
+                "adjustedStart": "0:00:42.4666667",
+                "adjustedEnd": "0:00:42.5",
+                "start": "0:00:42.4666667",
+                "end": "0:00:42.5"
+              }
+            ]
+          },
+          {
+            "id": 23,
+            "name": "blurry",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9849,
+                "adjustedStart": "0:00:42.7",
+                "adjustedEnd": "0:00:42.7333333",
+                "start": "0:00:42.7",
+                "end": "0:00:42.7333333"
+              },
+              {
+                "confidence": 0.9651,
+                "adjustedStart": "0:00:46.4333333",
+                "adjustedEnd": "0:00:46.4666667",
+                "start": "0:00:46.4333333",
+                "end": "0:00:46.4666667"
+              },
+              {
+                "confidence": 0.9516,
+                "adjustedStart": "0:01:00.9",
+                "adjustedEnd": "0:01:00.9333333",
+                "start": "0:01:00.9",
+                "end": "0:01:00.9333333"
+              }
+            ]
+          },
+          {
+            "id": 24,
+            "name": "varnish",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9659,
+                "adjustedStart": "0:00:55.3",
+                "adjustedEnd": "0:00:55.3333333",
+                "start": "0:00:55.3",
+                "end": "0:00:55.3333333"
+              }
+            ]
+          },
+          {
+            "id": 25,
+            "name": "wooden",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9559,
+                "adjustedStart": "0:00:55.3",
+                "adjustedEnd": "0:00:55.3333333",
+                "start": "0:00:55.3",
+                "end": "0:00:55.3333333"
+              }
+            ]
+          },
+          {
+            "id": 26,
+            "name": "book",
+            "referenceId": "creation/product/book",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9615,
+                "adjustedStart": "0:01:01.6",
+                "adjustedEnd": "0:01:01.6333333",
+                "start": "0:01:01.6",
+                "end": "0:01:01.6333333"
+              }
+            ]
+          },
+          {
+            "id": 27,
+            "name": "man",
+            "referenceId": "person/man",
+            "language": "en-US",
+            "instances": [
+              {
+                "confidence": 0.9505,
+                "adjustedStart": "0:01:08.6",
+                "adjustedEnd": "0:01:08.6333333",
+                "start": "0:01:08.6",
+                "end": "0:01:08.6333333"
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": 1,
+            "instances": [
+              {
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:29.9333333",
+                "start": "0:00:00",
+                "end": "0:00:29.9333333"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "instances": [
+              {
+                "adjustedStart": "0:00:30.1333333",
+                "adjustedEnd": "0:00:32.2",
+                "start": "0:00:30.1333333",
+                "end": "0:00:32.2"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "instances": [
+              {
+                "adjustedStart": "0:00:32.4333333",
+                "adjustedEnd": "0:00:42.2666667",
+                "start": "0:00:32.4333333",
+                "end": "0:00:42.2666667"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "instances": [
+              {
+                "adjustedStart": "0:00:42.2666667",
+                "adjustedEnd": "0:00:51",
+                "start": "0:00:42.2666667",
+                "end": "0:00:51"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "instances": [
+              {
+                "adjustedStart": "0:00:51",
+                "adjustedEnd": "0:00:55.1",
+                "start": "0:00:51",
+                "end": "0:00:55.1"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "instances": [
+              {
+                "adjustedStart": "0:00:55.3",
+                "adjustedEnd": "0:00:56.8",
+                "start": "0:00:55.3",
+                "end": "0:00:56.8"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "instances": [
+              {
+                "adjustedStart": "0:00:57",
+                "adjustedEnd": "0:00:59.6",
+                "start": "0:00:57",
+                "end": "0:00:59.6"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "instances": [
+              {
+                "adjustedStart": "0:00:59.6",
+                "adjustedEnd": "0:01:17.0248047",
+                "start": "0:00:59.6",
+                "end": "0:01:17.0248047"
+              }
+            ]
+          }
+        ],
+        "shots": [
+          {
+            "id": 1,
+            "keyFrames": [
+              {
+                "id": 1,
+                "instances": [
+                  {
+                    "thumbnailId": "553eaeac-daae-40dc-9480-c31e20c0e9be",
+                    "adjustedStart": "0:00:00.2",
+                    "adjustedEnd": "0:00:00.2333333",
+                    "start": "0:00:00.2",
+                    "end": "0:00:00.2333333"
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "instances": [
+                  {
+                    "thumbnailId": "eb714d37-8338-459d-bc22-664eb07c6548",
+                    "adjustedStart": "0:00:08.2666667",
+                    "adjustedEnd": "0:00:08.3",
+                    "start": "0:00:08.2666667",
+                    "end": "0:00:08.3"
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "instances": [
+                  {
+                    "thumbnailId": "b602fb03-fcf9-48bf-860f-4f98512a0a71",
+                    "adjustedStart": "0:00:10.3666667",
+                    "adjustedEnd": "0:00:10.4",
+                    "start": "0:00:10.3666667",
+                    "end": "0:00:10.4"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:13.6666667",
+                "start": "0:00:00",
+                "end": "0:00:13.6666667"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "keyFrames": [
+              {
+                "id": 4,
+                "instances": [
+                  {
+                    "thumbnailId": "851f5751-cada-4744-a5da-9f69f1e9ca81",
+                    "adjustedStart": "0:00:13.9",
+                    "adjustedEnd": "0:00:13.9333333",
+                    "start": "0:00:13.9",
+                    "end": "0:00:13.9333333"
+                  }
+                ]
+              },
+              {
+                "id": 5,
+                "instances": [
+                  {
+                    "thumbnailId": "97b73c8f-6a35-4601-8543-fbdda9cbdd02",
+                    "adjustedStart": "0:00:14.4333333",
+                    "adjustedEnd": "0:00:14.4666667",
+                    "start": "0:00:14.4333333",
+                    "end": "0:00:14.4666667"
+                  }
+                ]
+              },
+              {
+                "id": 6,
+                "instances": [
+                  {
+                    "thumbnailId": "3d4c9dc2-9291-4bab-9b5e-a921fdf197d7",
+                    "adjustedStart": "0:00:14.7",
+                    "adjustedEnd": "0:00:14.7333333",
+                    "start": "0:00:14.7",
+                    "end": "0:00:14.7333333"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:13.8666667",
+                "adjustedEnd": "0:00:14.9666667",
+                "start": "0:00:13.8666667",
+                "end": "0:00:14.9666667"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "keyFrames": [
+              {
+                "id": 7,
+                "instances": [
+                  {
+                    "thumbnailId": "854b2cbf-2fad-4863-9e14-1577de0da830",
+                    "adjustedStart": "0:00:16.5",
+                    "adjustedEnd": "0:00:16.5333333",
+                    "start": "0:00:16.5",
+                    "end": "0:00:16.5333333"
+                  }
+                ]
+              },
+              {
+                "id": 8,
+                "instances": [
+                  {
+                    "thumbnailId": "33853c27-d2f0-4e1f-85a7-6217c5d4c1b9",
+                    "adjustedStart": "0:00:22.4666667",
+                    "adjustedEnd": "0:00:22.5",
+                    "start": "0:00:22.4666667",
+                    "end": "0:00:22.5"
+                  }
+                ]
+              },
+              {
+                "id": 9,
+                "instances": [
+                  {
+                    "thumbnailId": "9c8a4e5d-8b90-4ee7-9184-516db0b01968",
+                    "adjustedStart": "0:00:27.7666667",
+                    "adjustedEnd": "0:00:27.8",
+                    "start": "0:00:27.7666667",
+                    "end": "0:00:27.8"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:15.1666667",
+                "adjustedEnd": "0:00:29.9333333",
+                "start": "0:00:15.1666667",
+                "end": "0:00:29.9333333"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "keyFrames": [
+              {
+                "id": 10,
+                "instances": [
+                  {
+                    "thumbnailId": "ed7076e3-6581-4d93-9a1b-0600977e5aaf",
+                    "adjustedStart": "0:00:30.7666667",
+                    "adjustedEnd": "0:00:30.8",
+                    "start": "0:00:30.7666667",
+                    "end": "0:00:30.8"
+                  }
+                ]
+              },
+              {
+                "id": 11,
+                "instances": [
+                  {
+                    "thumbnailId": "6db862d9-3aa2-40fb-ae95-2a16cebdc1c8",
+                    "adjustedStart": "0:00:31.1333333",
+                    "adjustedEnd": "0:00:31.1666667",
+                    "start": "0:00:31.1333333",
+                    "end": "0:00:31.1666667"
+                  }
+                ]
+              },
+              {
+                "id": 12,
+                "instances": [
+                  {
+                    "thumbnailId": "781d1cef-c7c6-4fd0-a90e-320fde563ef5",
+                    "adjustedStart": "0:00:31.5333333",
+                    "adjustedEnd": "0:00:31.5666667",
+                    "start": "0:00:31.5333333",
+                    "end": "0:00:31.5666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:30.1333333",
+                "adjustedEnd": "0:00:32.2",
+                "start": "0:00:30.1333333",
+                "end": "0:00:32.2"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "keyFrames": [
+              {
+                "id": 13,
+                "instances": [
+                  {
+                    "thumbnailId": "0af8afb4-1d18-4aa5-aa87-981b29bf2f4b",
+                    "adjustedStart": "0:00:33.1666667",
+                    "adjustedEnd": "0:00:33.2",
+                    "start": "0:00:33.1666667",
+                    "end": "0:00:33.2"
+                  }
+                ]
+              },
+              {
+                "id": 14,
+                "instances": [
+                  {
+                    "thumbnailId": "f450636d-95d7-47a5-a7fa-b034abd70924",
+                    "adjustedStart": "0:00:35.2333333",
+                    "adjustedEnd": "0:00:35.2666667",
+                    "start": "0:00:35.2333333",
+                    "end": "0:00:35.2666667"
+                  }
+                ]
+              },
+              {
+                "id": 15,
+                "instances": [
+                  {
+                    "thumbnailId": "f23c4a72-09d7-4012-9484-565640a14d07",
+                    "adjustedStart": "0:00:37.1333333",
+                    "adjustedEnd": "0:00:37.1666667",
+                    "start": "0:00:37.1333333",
+                    "end": "0:00:37.1666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:32.4333333",
+                "adjustedEnd": "0:00:38.1666667",
+                "start": "0:00:32.4333333",
+                "end": "0:00:38.1666667"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "keyFrames": [
+              {
+                "id": 16,
+                "instances": [
+                  {
+                    "thumbnailId": "8f76486f-7047-4549-acf5-aaae632eb0d9",
+                    "adjustedStart": "0:00:38.8666667",
+                    "adjustedEnd": "0:00:38.9",
+                    "start": "0:00:38.8666667",
+                    "end": "0:00:38.9"
+                  }
+                ]
+              },
+              {
+                "id": 17,
+                "instances": [
+                  {
+                    "thumbnailId": "5dceb78b-f495-4009-9257-b0c2a1201f10",
+                    "adjustedStart": "0:00:40.3666667",
+                    "adjustedEnd": "0:00:40.4",
+                    "start": "0:00:40.3666667",
+                    "end": "0:00:40.4"
+                  }
+                ]
+              },
+              {
+                "id": 18,
+                "instances": [
+                  {
+                    "thumbnailId": "4e2e7259-edab-40cf-88d7-2e06fc74ee5e",
+                    "adjustedStart": "0:00:42.2333333",
+                    "adjustedEnd": "0:00:42.2666667",
+                    "start": "0:00:42.2333333",
+                    "end": "0:00:42.2666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:38.3666667",
+                "adjustedEnd": "0:00:42.2666667",
+                "start": "0:00:38.3666667",
+                "end": "0:00:42.2666667"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "keyFrames": [
+              {
+                "id": 19,
+                "instances": [
+                  {
+                    "thumbnailId": "de6bf936-0232-4a22-9305-adcdc6a58b84",
+                    "adjustedStart": "0:00:42.7666667",
+                    "adjustedEnd": "0:00:42.8",
+                    "start": "0:00:42.7666667",
+                    "end": "0:00:42.8"
+                  }
+                ]
+              },
+              {
+                "id": 20,
+                "instances": [
+                  {
+                    "thumbnailId": "5becc89d-3f1e-4b13-b78b-98fc075f6d64",
+                    "adjustedStart": "0:00:43.3333333",
+                    "adjustedEnd": "0:00:43.3666667",
+                    "start": "0:00:43.3333333",
+                    "end": "0:00:43.3666667"
+                  }
+                ]
+              },
+              {
+                "id": 21,
+                "instances": [
+                  {
+                    "thumbnailId": "b1c38403-82f3-459b-a79e-9e731bd25f47",
+                    "adjustedStart": "0:00:43.6333333",
+                    "adjustedEnd": "0:00:43.6666667",
+                    "start": "0:00:43.6333333",
+                    "end": "0:00:43.6666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:42.2666667",
+                "adjustedEnd": "0:00:44.3666667",
+                "start": "0:00:42.2666667",
+                "end": "0:00:44.3666667"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "keyFrames": [
+              {
+                "id": 22,
+                "instances": [
+                  {
+                    "thumbnailId": "3b984344-4348-4d3d-9520-d5ecc8edda9e",
+                    "adjustedStart": "0:00:45.6333333",
+                    "adjustedEnd": "0:00:45.6666667",
+                    "start": "0:00:45.6333333",
+                    "end": "0:00:45.6666667"
+                  }
+                ]
+              },
+              {
+                "id": 23,
+                "instances": [
+                  {
+                    "thumbnailId": "6c6222ba-15cc-4048-bf5c-98e96cc828f3",
+                    "adjustedStart": "0:00:46.5",
+                    "adjustedEnd": "0:00:46.5333333",
+                    "start": "0:00:46.5",
+                    "end": "0:00:46.5333333"
+                  }
+                ]
+              },
+              {
+                "id": 24,
+                "instances": [
+                  {
+                    "thumbnailId": "c00588e1-0193-4ffc-9e9c-42f9aace43d2",
+                    "adjustedStart": "0:00:47.2666667",
+                    "adjustedEnd": "0:00:47.3",
+                    "start": "0:00:47.2666667",
+                    "end": "0:00:47.3"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:44.5666667",
+                "adjustedEnd": "0:00:48.4333333",
+                "start": "0:00:44.5666667",
+                "end": "0:00:48.4333333"
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "keyFrames": [
+              {
+                "id": 25,
+                "instances": [
+                  {
+                    "thumbnailId": "df18e975-68b3-4465-94fc-4cbb74b18897",
+                    "adjustedStart": "0:00:48.9333333",
+                    "adjustedEnd": "0:00:48.9666667",
+                    "start": "0:00:48.9333333",
+                    "end": "0:00:48.9666667"
+                  }
+                ]
+              },
+              {
+                "id": 26,
+                "instances": [
+                  {
+                    "thumbnailId": "8ee61536-1103-4b76-8cbb-4be1d75dea76",
+                    "adjustedStart": "0:00:49.6666667",
+                    "adjustedEnd": "0:00:49.7",
+                    "start": "0:00:49.6666667",
+                    "end": "0:00:49.7"
+                  }
+                ]
+              },
+              {
+                "id": 27,
+                "instances": [
+                  {
+                    "thumbnailId": "3aa51647-4cb8-42b9-b2ab-520b591a8b49",
+                    "adjustedStart": "0:00:50.6",
+                    "adjustedEnd": "0:00:50.6333333",
+                    "start": "0:00:50.6",
+                    "end": "0:00:50.6333333"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:48.4333333",
+                "adjustedEnd": "0:00:51",
+                "start": "0:00:48.4333333",
+                "end": "0:00:51"
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "keyFrames": [
+              {
+                "id": 28,
+                "instances": [
+                  {
+                    "thumbnailId": "ff1c10a1-9100-41a8-b8a1-308f84d3ccc1",
+                    "adjustedStart": "0:00:51.3333333",
+                    "adjustedEnd": "0:00:51.3666667",
+                    "start": "0:00:51.3333333",
+                    "end": "0:00:51.3666667"
+                  }
+                ]
+              },
+              {
+                "id": 29,
+                "instances": [
+                  {
+                    "thumbnailId": "84e931c2-5a78-4911-9068-4220e795765f",
+                    "adjustedStart": "0:00:51.8333333",
+                    "adjustedEnd": "0:00:51.8666667",
+                    "start": "0:00:51.8333333",
+                    "end": "0:00:51.8666667"
+                  }
+                ]
+              },
+              {
+                "id": 30,
+                "instances": [
+                  {
+                    "thumbnailId": "8e50f21a-af4d-419b-916c-b3cf697947aa",
+                    "adjustedStart": "0:00:52.5333333",
+                    "adjustedEnd": "0:00:52.5666667",
+                    "start": "0:00:52.5333333",
+                    "end": "0:00:52.5666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:51",
+                "adjustedEnd": "0:00:52.7666667",
+                "start": "0:00:51",
+                "end": "0:00:52.7666667"
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "keyFrames": [
+              {
+                "id": 31,
+                "instances": [
+                  {
+                    "thumbnailId": "d47314c4-9b3e-46ce-8987-2b907be607f8",
+                    "adjustedStart": "0:00:53.3333333",
+                    "adjustedEnd": "0:00:53.3666667",
+                    "start": "0:00:53.3333333",
+                    "end": "0:00:53.3666667"
+                  }
+                ]
+              },
+              {
+                "id": 32,
+                "instances": [
+                  {
+                    "thumbnailId": "d163eee5-b1af-48a6-a21f-d8608d11d434",
+                    "adjustedStart": "0:00:54",
+                    "adjustedEnd": "0:00:54.0333333",
+                    "start": "0:00:54",
+                    "end": "0:00:54.0333333"
+                  }
+                ]
+              },
+              {
+                "id": 33,
+                "instances": [
+                  {
+                    "thumbnailId": "670654c0-4595-4ebf-92ce-d2762acc7187",
+                    "adjustedStart": "0:00:54.9333333",
+                    "adjustedEnd": "0:00:54.9666667",
+                    "start": "0:00:54.9333333",
+                    "end": "0:00:54.9666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:52.9666667",
+                "adjustedEnd": "0:00:55.1",
+                "start": "0:00:52.9666667",
+                "end": "0:00:55.1"
+              }
+            ]
+          },
+          {
+            "id": 12,
+            "keyFrames": [
+              {
+                "id": 34,
+                "instances": [
+                  {
+                    "thumbnailId": "ddacd0bd-2ddd-4b14-a616-e4023620bd11",
+                    "adjustedStart": "0:00:55.5666667",
+                    "adjustedEnd": "0:00:55.6",
+                    "start": "0:00:55.5666667",
+                    "end": "0:00:55.6"
+                  }
+                ]
+              },
+              {
+                "id": 35,
+                "instances": [
+                  {
+                    "thumbnailId": "b6de5151-216c-4db4-b6bb-505ae96c198e",
+                    "adjustedStart": "0:00:56.0666667",
+                    "adjustedEnd": "0:00:56.1",
+                    "start": "0:00:56.0666667",
+                    "end": "0:00:56.1"
+                  }
+                ]
+              },
+              {
+                "id": 36,
+                "instances": [
+                  {
+                    "thumbnailId": "3fcb1e4c-1759-4d95-a7b4-bc73de2b3213",
+                    "adjustedStart": "0:00:56.4333333",
+                    "adjustedEnd": "0:00:56.4666667",
+                    "start": "0:00:56.4333333",
+                    "end": "0:00:56.4666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:55.3",
+                "adjustedEnd": "0:00:56.8",
+                "start": "0:00:55.3",
+                "end": "0:00:56.8"
+              }
+            ]
+          },
+          {
+            "id": 13,
+            "keyFrames": [
+              {
+                "id": 37,
+                "instances": [
+                  {
+                    "thumbnailId": "0336b1d2-82ae-412e-b45d-f20e4843a243",
+                    "adjustedStart": "0:00:57.2666667",
+                    "adjustedEnd": "0:00:57.3",
+                    "start": "0:00:57.2666667",
+                    "end": "0:00:57.3"
+                  }
+                ]
+              },
+              {
+                "id": 38,
+                "instances": [
+                  {
+                    "thumbnailId": "37be47c4-ac9d-40fb-a3c6-b820b4b034f1",
+                    "adjustedStart": "0:00:57.6333333",
+                    "adjustedEnd": "0:00:57.6666667",
+                    "start": "0:00:57.6333333",
+                    "end": "0:00:57.6666667"
+                  }
+                ]
+              },
+              {
+                "id": 39,
+                "instances": [
+                  {
+                    "thumbnailId": "e0632fae-4299-49ef-9daf-aa60923da33f",
+                    "adjustedStart": "0:00:58.2333333",
+                    "adjustedEnd": "0:00:58.2666667",
+                    "start": "0:00:58.2333333",
+                    "end": "0:00:58.2666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:57",
+                "adjustedEnd": "0:00:58.3333333",
+                "start": "0:00:57",
+                "end": "0:00:58.3333333"
+              }
+            ]
+          },
+          {
+            "id": 14,
+            "keyFrames": [
+              {
+                "id": 40,
+                "instances": [
+                  {
+                    "thumbnailId": "9bfd0c77-0ebf-49a1-998f-420d28499b73",
+                    "adjustedStart": "0:00:58.6333333",
+                    "adjustedEnd": "0:00:58.6666667",
+                    "start": "0:00:58.6333333",
+                    "end": "0:00:58.6666667"
+                  }
+                ]
+              },
+              {
+                "id": 41,
+                "instances": [
+                  {
+                    "thumbnailId": "ede3abfe-6ced-4632-a799-a44e79ebe8b6",
+                    "adjustedStart": "0:00:59.0333333",
+                    "adjustedEnd": "0:00:59.0666667",
+                    "start": "0:00:59.0333333",
+                    "end": "0:00:59.0666667"
+                  }
+                ]
+              },
+              {
+                "id": 42,
+                "instances": [
+                  {
+                    "thumbnailId": "4597a0ff-9daa-459d-84c7-6dfb32421c06",
+                    "adjustedStart": "0:00:59.2",
+                    "adjustedEnd": "0:00:59.2333333",
+                    "start": "0:00:59.2",
+                    "end": "0:00:59.2333333"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:58.5333333",
+                "adjustedEnd": "0:00:59.6",
+                "start": "0:00:58.5333333",
+                "end": "0:00:59.6"
+              }
+            ]
+          },
+          {
+            "id": 15,
+            "keyFrames": [
+              {
+                "id": 43,
+                "instances": [
+                  {
+                    "thumbnailId": "c4050c12-7da2-4095-b05d-262fefd8862a",
+                    "adjustedStart": "0:00:59.6666667",
+                    "adjustedEnd": "0:00:59.7",
+                    "start": "0:00:59.6666667",
+                    "end": "0:00:59.7"
+                  }
+                ]
+              },
+              {
+                "id": 44,
+                "instances": [
+                  {
+                    "thumbnailId": "0c3fe261-eefb-4ad2-a6a9-12956b9f90ad",
+                    "adjustedStart": "0:01:00.4666667",
+                    "adjustedEnd": "0:01:00.5",
+                    "start": "0:01:00.4666667",
+                    "end": "0:01:00.5"
+                  }
+                ]
+              },
+              {
+                "id": 45,
+                "instances": [
+                  {
+                    "thumbnailId": "d5963988-c79d-4c0e-b280-57a74423096e",
+                    "adjustedStart": "0:01:00.7333333",
+                    "adjustedEnd": "0:01:00.7666667",
+                    "start": "0:01:00.7333333",
+                    "end": "0:01:00.7666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:59.6",
+                "adjustedEnd": "0:01:00.9",
+                "start": "0:00:59.6",
+                "end": "0:01:00.9"
+              }
+            ]
+          },
+          {
+            "id": 16,
+            "keyFrames": [
+              {
+                "id": 46,
+                "instances": [
+                  {
+                    "thumbnailId": "a5a6b4d6-c06a-47c2-a864-ff7b1c137f3f",
+                    "adjustedStart": "0:01:01.4666667",
+                    "adjustedEnd": "0:01:01.5",
+                    "start": "0:01:01.4666667",
+                    "end": "0:01:01.5"
+                  }
+                ]
+              },
+              {
+                "id": 47,
+                "instances": [
+                  {
+                    "thumbnailId": "dabdf7cd-0bd1-4e9a-9db4-6cd9eb426355",
+                    "adjustedStart": "0:01:01.7666667",
+                    "adjustedEnd": "0:01:01.8",
+                    "start": "0:01:01.7666667",
+                    "end": "0:01:01.8"
+                  }
+                ]
+              },
+              {
+                "id": 48,
+                "instances": [
+                  {
+                    "thumbnailId": "3bf9dafe-7c25-4639-9eef-fef09d1dc997",
+                    "adjustedStart": "0:01:02",
+                    "adjustedEnd": "0:01:02.0333333",
+                    "start": "0:01:02",
+                    "end": "0:01:02.0333333"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:01:01.1",
+                "adjustedEnd": "0:01:02.5",
+                "start": "0:01:01.1",
+                "end": "0:01:02.5"
+              }
+            ]
+          },
+          {
+            "id": 17,
+            "keyFrames": [
+              {
+                "id": 49,
+                "instances": [
+                  {
+                    "thumbnailId": "d9866020-9bff-439c-a46b-3bf0b985fdc3",
+                    "adjustedStart": "0:01:03.3",
+                    "adjustedEnd": "0:01:03.3333333",
+                    "start": "0:01:03.3",
+                    "end": "0:01:03.3333333"
+                  }
+                ]
+              },
+              {
+                "id": 50,
+                "instances": [
+                  {
+                    "thumbnailId": "65420a0e-0fd0-4fe2-95a0-7d0b67eae6a3",
+                    "adjustedStart": "0:01:03.9666667",
+                    "adjustedEnd": "0:01:04",
+                    "start": "0:01:03.9666667",
+                    "end": "0:01:04"
+                  }
+                ]
+              },
+              {
+                "id": 51,
+                "instances": [
+                  {
+                    "thumbnailId": "72f1a642-8171-4fa6-83fd-982df8d244a4",
+                    "adjustedStart": "0:01:04.8666667",
+                    "adjustedEnd": "0:01:04.9",
+                    "start": "0:01:04.8666667",
+                    "end": "0:01:04.9"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:01:02.5",
+                "adjustedEnd": "0:01:05.5",
+                "start": "0:01:02.5",
+                "end": "0:01:05.5"
+              }
+            ]
+          },
+          {
+            "id": 18,
+            "keyFrames": [
+              {
+                "id": 52,
+                "instances": [
+                  {
+                    "thumbnailId": "b1b4e78e-a0c0-4bcf-be73-93f76bad54c7",
+                    "adjustedStart": "0:01:06.8666667",
+                    "adjustedEnd": "0:01:06.9",
+                    "start": "0:01:06.8666667",
+                    "end": "0:01:06.9"
+                  }
+                ]
+              },
+              {
+                "id": 53,
+                "instances": [
+                  {
+                    "thumbnailId": "e2530908-b561-4fe9-9507-e1a17efc57ee",
+                    "adjustedStart": "0:01:10.0666667",
+                    "adjustedEnd": "0:01:10.1",
+                    "start": "0:01:10.0666667",
+                    "end": "0:01:10.1"
+                  }
+                ]
+              },
+              {
+                "id": 54,
+                "instances": [
+                  {
+                    "thumbnailId": "61141a50-7758-47cd-ab95-c545bc664233",
+                    "adjustedStart": "0:01:12.1666667",
+                    "adjustedEnd": "0:01:12.2",
+                    "start": "0:01:12.1666667",
+                    "end": "0:01:12.2"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:01:05.7",
+                "adjustedEnd": "0:01:14.3666667",
+                "start": "0:01:05.7",
+                "end": "0:01:14.3666667"
+              }
+            ]
+          },
+          {
+            "id": 19,
+            "keyFrames": [
+              {
+                "id": 55,
+                "instances": [
+                  {
+                    "thumbnailId": "e115e010-01a9-4cee-93d4-d0ed76a63577",
+                    "adjustedStart": "0:01:14.9666667",
+                    "adjustedEnd": "0:01:15",
+                    "start": "0:01:14.9666667",
+                    "end": "0:01:15"
+                  }
+                ]
+              },
+              {
+                "id": 56,
+                "instances": [
+                  {
+                    "thumbnailId": "7f155538-2eaa-4473-80ff-1092aa696cd6",
+                    "adjustedStart": "0:01:15.7666667",
+                    "adjustedEnd": "0:01:15.8",
+                    "start": "0:01:15.7666667",
+                    "end": "0:01:15.8"
+                  }
+                ]
+              },
+              {
+                "id": 57,
+                "instances": [
+                  {
+                    "thumbnailId": "cd4159b1-0e61-41c7-bb69-c040d19b4c20",
+                    "adjustedStart": "0:01:16.2333333",
+                    "adjustedEnd": "0:01:16.2666667",
+                    "start": "0:01:16.2333333",
+                    "end": "0:01:16.2666667"
+                  }
+                ]
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:01:14.5666667",
+                "adjustedEnd": "0:01:17.0248047",
+                "start": "0:01:14.5666667",
+                "end": "0:01:17.0248047"
+              }
+            ]
+          }
+        ],
+        "brands": [
+          {
+            "id": 1,
+            "referenceType": "Wiki",
+            "name": "SpaghettiOs",
+            "referenceId": "SpaghettiOs",
+            "referenceUrl": "http://en.wikipedia.org/wiki/SpaghettiOs",
+            "description": "SpaghettiOs is an American brand of canned spaghetti featuring circular pasta shapes in a cheese and tomato sauce — and marketed to parents as \"less messy\" than regular spaghetti. More than 150 million cans of SpaghettiOs are sold each year.",
+            "tags": [],
+            "confidence": 0.77,
+            "isCustom": false,
+            "instances": [
+              {
+                "brandType": "Transcript",
+                "instanceSource": "Transcript",
+                "adjustedStart": "0:01:11.44",
+                "adjustedEnd": "0:01:14.36",
+                "start": "0:01:11.44",
+                "end": "0:01:14.36"
+              }
+            ]
+          }
+        ],
+        "namedLocations": [
+          {
+            "id": 1,
+            "name": "town offices",
+            "referenceId": null,
+            "referenceUrl": null,
+            "description": null,
+            "tags": [],
+            "confidence": 0.54,
+            "isCustom": false,
+            "instances": [
+              {
+                "instanceSource": "Transcript",
+                "adjustedStart": "0:00:17.88",
+                "adjustedEnd": "0:00:19.76",
+                "start": "0:00:17.88",
+                "end": "0:00:19.76"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "office",
+            "referenceId": null,
+            "referenceUrl": null,
+            "description": null,
+            "tags": [],
+            "confidence": 0.72,
+            "isCustom": false,
+            "instances": [
+              {
+                "instanceSource": "Transcript",
+                "adjustedStart": "0:00:57.04",
+                "adjustedEnd": "0:01:02.44",
+                "start": "0:00:57.04",
+                "end": "0:01:02.44"
+              }
+            ]
+          }
+        ],
+        "audioEffects": [
+          {
+            "id": 0,
+            "type": "Silence",
+            "instances": [
+              {
+                "confidence": 0.7695,
+                "adjustedStart": "0:00:28.86",
+                "adjustedEnd": "0:00:29.86",
+                "start": "0:00:28.86",
+                "end": "0:00:29.86"
+              }
+            ]
+          }
+        ],
+        "observedPeople": [
+          {
+            "id": 1,
+            "thumbnailId": "05d8bfe8-1a96-4dd4-9be8-d3beaa705329",
+            "clothing": [
+              {
+                "id": 1,
+                "type": "sleeve",
+                "properties": {
+                  "length": "long"
+                }
+              },
+              {
+                "id": 2,
+                "type": "pants",
+                "properties": {
+                  "length": "long"
+                }
+              },
+              {
+                "id": 3,
+                "type": "skirtAndDress"
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:09.0365223",
+                "start": "0:00:00",
+                "end": "0:00:09.0365223"
+              },
+              {
+                "adjustedStart": "0:00:10.1369106",
+                "adjustedEnd": "0:00:13.5381109",
+                "start": "0:00:10.1369106",
+                "end": "0:00:13.5381109"
+              },
+              {
+                "adjustedStart": "0:00:15.238711",
+                "adjustedEnd": "0:00:15.9389581",
+                "start": "0:00:15.238711",
+                "end": "0:00:15.9389581"
+              },
+              {
+                "adjustedStart": "0:00:16.0389934",
+                "adjustedEnd": "0:00:29.6771396",
+                "start": "0:00:16.0389934",
+                "end": "0:00:29.6771396"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "thumbnailId": "ff0f7a7c-908e-43f9-bb05-4f1f9470a676",
+            "clothing": [
+              {
+                "id": 1,
+                "type": "sleeve",
+                "properties": {
+                  "length": "long"
+                }
+              },
+              {
+                "id": 2,
+                "type": "pants",
+                "properties": {
+                  "length": "long"
+                }
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:32.444783",
+                "adjustedEnd": "0:00:32.4781281",
+                "start": "0:00:32.444783",
+                "end": "0:00:32.4781281"
+              },
+              {
+                "adjustedStart": "0:00:32.7448889",
+                "adjustedEnd": "0:00:37.5465834",
+                "start": "0:00:32.7448889",
+                "end": "0:00:37.5465834"
+              },
+              {
+                "adjustedStart": "0:01:02.3219932",
+                "adjustedEnd": "0:01:02.6887893",
+                "start": "0:01:02.3219932",
+                "end": "0:01:02.6887893"
+              },
+              {
+                "adjustedStart": "0:01:06.890272",
+                "adjustedEnd": "0:01:12.0921077",
+                "start": "0:01:06.890272",
+                "end": "0:01:12.0921077"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "thumbnailId": "a6cdf6c8-9eab-488c-a00e-6b2b15cf489c",
+            "clothing": [
+              {
+                "id": 1,
+                "type": "sleeve",
+                "properties": {
+                  "length": "long"
+                }
+              },
+              {
+                "id": 2,
+                "type": "pants",
+                "properties": {
+                  "length": "long"
+                }
+              }
+            ],
+            "instances": [
+              {
+                "adjustedStart": "0:00:39.413909",
+                "adjustedEnd": "0:00:41.9481367",
+                "start": "0:00:39.413909",
+                "end": "0:00:41.9481367"
+              }
+            ]
+          }
+        ],
+        "detectedObjects": [
+          {
+            "id": 1,
+            "type": "Couch",
+            "thumbnailId": "ad7b65f5-f4ea-44f2-bf2e-7d6056a2531e",
+            "displayName": "couch",
+            "wikiDataId": "Q131514",
+            "instances": [
+              {
+                "confidence": 0.688,
+                "adjustedStart": "0:00:06.002118",
+                "adjustedEnd": "0:00:06.53564",
+                "start": "0:00:06.002118",
+                "end": "0:00:06.53564"
+              },
+              {
+                "confidence": 0.578,
+                "adjustedStart": "0:00:13.33804",
+                "adjustedEnd": "0:00:13.371385",
+                "start": "0:00:13.33804",
+                "end": "0:00:13.371385"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "type": "Couch",
+            "thumbnailId": "57eb085c-6280-4385-8b68-c1180367ce84",
+            "displayName": "couch",
+            "wikiDataId": "Q131514",
+            "instances": [
+              {
+                "confidence": 0.703,
+                "adjustedStart": "0:00:07.335922",
+                "adjustedEnd": "0:00:07.702718",
+                "start": "0:00:07.335922",
+                "end": "0:00:07.702718"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "type": "Chair",
+            "thumbnailId": "ecccbe15-2be4-452f-a917-c4d1bec3914c",
+            "displayName": "chair",
+            "wikiDataId": "Q15026",
+            "instances": [
+              {
+                "confidence": 0.44,
+                "adjustedStart": "0:00:08.16955",
+                "adjustedEnd": "0:00:08.869797",
+                "start": "0:00:08.16955",
+                "end": "0:00:08.869797"
+              },
+              {
+                "confidence": 0.461,
+                "adjustedStart": "0:00:11.003883",
+                "adjustedEnd": "0:00:11.037228",
+                "start": "0:00:11.003883",
+                "end": "0:00:11.037228"
+              },
+              {
+                "confidence": 0.405,
+                "adjustedStart": "0:00:12.170962",
+                "adjustedEnd": "0:00:12.204307",
+                "start": "0:00:12.170962",
+                "end": "0:00:12.204307"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "type": "DiningTable",
+            "thumbnailId": "30cdb819-5c17-4b54-a7d8-f22622460b23",
+            "displayName": "dining table",
+            "wikiDataId": "Q10552108",
+            "instances": [
+              {
+                "confidence": 0.387,
+                "adjustedStart": "0:00:15.105331",
+                "adjustedEnd": "0:00:15.438782",
+                "start": "0:00:15.105331",
+                "end": "0:00:15.438782"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "type": "PottedPlant",
+            "thumbnailId": "af26bc0a-3fb3-4ba8-943f-b3dd1e5143ad",
+            "displayName": "potted plant",
+            "wikiDataId": "Q27993793",
+            "instances": [
+              {
+                "confidence": 0.447,
+                "adjustedStart": "0:00:16.47248",
+                "adjustedEnd": "0:00:21.007413",
+                "start": "0:00:16.47248",
+                "end": "0:00:21.007413"
+              },
+              {
+                "confidence": 0.712,
+                "adjustedStart": "0:00:29.81052",
+                "adjustedEnd": "0:00:30.177316",
+                "start": "0:00:29.81052",
+                "end": "0:00:30.177316"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "type": "Chair",
+            "thumbnailId": "f8cbdf1a-8f63-4c00-9309-1fc332bbcf5e",
+            "displayName": "chair",
+            "wikiDataId": "Q15026",
+            "instances": [
+              {
+                "confidence": 0.782,
+                "adjustedStart": "0:00:32.578163",
+                "adjustedEnd": "0:00:32.94496",
+                "start": "0:00:32.578163",
+                "end": "0:00:32.94496"
+              },
+              {
+                "confidence": 0.644,
+                "adjustedStart": "0:00:33.578516",
+                "adjustedEnd": "0:00:34.612215",
+                "start": "0:00:33.578516",
+                "end": "0:00:34.612215"
+              },
+              {
+                "confidence": 0.548,
+                "adjustedStart": "0:00:59.587695",
+                "adjustedEnd": "0:01:00.121217",
+                "start": "0:00:59.587695",
+                "end": "0:01:00.121217"
+              },
+              {
+                "confidence": 0.537,
+                "adjustedStart": "0:01:01.021534",
+                "adjustedEnd": "0:01:01.088225",
+                "start": "0:01:01.021534",
+                "end": "0:01:01.088225"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "type": "Chair",
+            "thumbnailId": "b5db39b4-d1dd-40f3-8d3e-07647cfb2b33",
+            "displayName": "chair",
+            "wikiDataId": "Q15026",
+            "instances": [
+              {
+                "confidence": 0.623,
+                "adjustedStart": "0:00:59.754421",
+                "adjustedEnd": "0:01:00.287942",
+                "start": "0:00:59.754421",
+                "end": "0:01:00.287942"
+              }
+            ]
+          }
+        ],
+        "sentiments": [
+          {
+            "id": 1,
+            "averageScore": 0.5,
+            "sentimentType": "Neutral",
+            "instances": [
+              {
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:05.8",
+                "start": "0:00:00",
+                "end": "0:00:05.8"
+              },
+              {
+                "adjustedStart": "0:00:06.92",
+                "adjustedEnd": "0:00:10.4",
+                "start": "0:00:06.92",
+                "end": "0:00:10.4"
+              },
+              {
+                "adjustedStart": "0:00:11.28",
+                "adjustedEnd": "0:00:19.8",
+                "start": "0:00:11.28",
+                "end": "0:00:19.8"
+              },
+              {
+                "adjustedStart": "0:00:22.24",
+                "adjustedEnd": "0:01:17.024807",
+                "start": "0:00:22.24",
+                "end": "0:01:17.024807"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "averageScore": 0.9654,
+            "sentimentType": "Positive",
+            "instances": [
+              {
+                "adjustedStart": "0:00:05.8",
+                "adjustedEnd": "0:00:06.92",
+                "start": "0:00:05.8",
+                "end": "0:00:06.92"
+              },
+              {
+                "adjustedStart": "0:00:10.4",
+                "adjustedEnd": "0:00:11.28",
+                "start": "0:00:10.4",
+                "end": "0:00:11.28"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "averageScore": 0.1547,
+            "sentimentType": "Negative",
+            "instances": [
+              {
+                "adjustedStart": "0:00:19.8",
+                "adjustedEnd": "0:00:22.24",
+                "start": "0:00:19.8",
+                "end": "0:00:22.24"
+              }
+            ]
+          }
+        ],
+        "emotions": [
+          {
+            "id": 1,
+            "type": "Joy",
+            "instances": [
+              {
+                "confidence": 0.757,
+                "adjustedStart": "0:00:05.8",
+                "adjustedEnd": "0:00:06.92",
+                "start": "0:00:05.8",
+                "end": "0:00:06.92"
+              },
+              {
+                "confidence": 0.7857,
+                "adjustedStart": "0:00:10.4",
+                "adjustedEnd": "0:00:11.28",
+                "start": "0:00:10.4",
+                "end": "0:00:11.28"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "type": "Anger",
+            "instances": [
+              {
+                "confidence": 0.7734,
+                "adjustedStart": "0:00:19.8",
+                "adjustedEnd": "0:00:22.24",
+                "start": "0:00:19.8",
+                "end": "0:00:22.24"
+              }
+            ]
+          }
+        ],
+        "visualContentModeration": [
+          {
+            "id": 1,
+            "adultScore": 0.7283,
+            "racyScore": 0.9297,
+            "instances": [
+              {
+                "adjustedStart": "0:00:16.1",
+                "adjustedEnd": "0:00:16.1333333",
+                "start": "0:00:16.1",
+                "end": "0:00:16.1333333"
+              }
+            ]
+          }
+        ],
+        "blocks": [
+          {
+            "id": 0,
+            "instances": [
+              {
+                "adjustedStart": "0:00:00",
+                "adjustedEnd": "0:00:31.36",
+                "start": "0:00:00",
+                "end": "0:00:31.36"
+              }
+            ]
+          },
+          {
+            "id": 1,
+            "instances": [
+              {
+                "adjustedStart": "0:00:31.36",
+                "adjustedEnd": "0:01:02.44",
+                "start": "0:00:31.36",
+                "end": "0:01:02.44"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "instances": [
+              {
+                "adjustedStart": "0:01:02.44",
+                "adjustedEnd": "0:01:17.024807",
+                "start": "0:01:02.44",
+                "end": "0:01:17.024807"
+              }
+            ]
+          }
+        ],
+        "speakers": [
+          {
+            "id": 1,
+            "name": "Speaker #1",
+            "instances": [
+              {
+                "adjustedStart": "0:00:01.16",
+                "adjustedEnd": "0:00:02.96",
+                "start": "0:00:01.16",
+                "end": "0:00:02.96"
+              },
+              {
+                "adjustedStart": "0:00:02.96",
+                "adjustedEnd": "0:00:03.08",
+                "start": "0:00:02.96",
+                "end": "0:00:03.08"
+              },
+              {
+                "adjustedStart": "0:00:03.08",
+                "adjustedEnd": "0:00:04.88",
+                "start": "0:00:03.08",
+                "end": "0:00:04.88"
+              },
+              {
+                "adjustedStart": "0:00:04.88",
+                "adjustedEnd": "0:00:05",
+                "start": "0:00:04.88",
+                "end": "0:00:05"
+              },
+              {
+                "adjustedStart": "0:00:05.8",
+                "adjustedEnd": "0:00:06.92",
+                "start": "0:00:05.8",
+                "end": "0:00:06.92"
+              },
+              {
+                "adjustedStart": "0:00:10.4",
+                "adjustedEnd": "0:00:11.28",
+                "start": "0:00:10.4",
+                "end": "0:00:11.28"
+              },
+              {
+                "adjustedStart": "0:00:11.28",
+                "adjustedEnd": "0:00:12.48",
+                "start": "0:00:11.28",
+                "end": "0:00:12.48"
+              },
+              {
+                "adjustedStart": "0:00:12.48",
+                "adjustedEnd": "0:00:12.92",
+                "start": "0:00:12.48",
+                "end": "0:00:12.92"
+              },
+              {
+                "adjustedStart": "0:00:12.92",
+                "adjustedEnd": "0:00:13.12",
+                "start": "0:00:12.92",
+                "end": "0:00:13.12"
+              },
+              {
+                "adjustedStart": "0:00:16.88",
+                "adjustedEnd": "0:00:17.12",
+                "start": "0:00:16.88",
+                "end": "0:00:17.12"
+              },
+              {
+                "adjustedStart": "0:00:17.88",
+                "adjustedEnd": "0:00:19.76",
+                "start": "0:00:17.88",
+                "end": "0:00:19.76"
+              },
+              {
+                "adjustedStart": "0:00:19.8",
+                "adjustedEnd": "0:00:22.24",
+                "start": "0:00:19.8",
+                "end": "0:00:22.24"
+              },
+              {
+                "adjustedStart": "0:00:22.24",
+                "adjustedEnd": "0:00:23.32",
+                "start": "0:00:22.24",
+                "end": "0:00:23.32"
+              },
+              {
+                "adjustedStart": "0:00:26.12",
+                "adjustedEnd": "0:00:26.88",
+                "start": "0:00:26.12",
+                "end": "0:00:26.88"
+              },
+              {
+                "adjustedStart": "0:00:26.92",
+                "adjustedEnd": "0:00:28.36",
+                "start": "0:00:26.92",
+                "end": "0:00:28.36"
+              },
+              {
+                "adjustedStart": "0:00:29",
+                "adjustedEnd": "0:00:29.52",
+                "start": "0:00:29",
+                "end": "0:00:29.52"
+              },
+              {
+                "adjustedStart": "0:00:30.88",
+                "adjustedEnd": "0:00:31.36",
+                "start": "0:00:30.88",
+                "end": "0:00:31.36"
+              },
+              {
+                "adjustedStart": "0:00:32.52",
+                "adjustedEnd": "0:00:32.76",
+                "start": "0:00:32.52",
+                "end": "0:00:32.76"
+              },
+              {
+                "adjustedStart": "0:00:33.84",
+                "adjustedEnd": "0:00:35.72",
+                "start": "0:00:33.84",
+                "end": "0:00:35.72"
+              },
+              {
+                "adjustedStart": "0:00:35.84",
+                "adjustedEnd": "0:00:36.72",
+                "start": "0:00:35.84",
+                "end": "0:00:36.72"
+              },
+              {
+                "adjustedStart": "0:00:55.88",
+                "adjustedEnd": "0:00:56.6",
+                "start": "0:00:55.88",
+                "end": "0:00:56.6"
+              },
+              {
+                "adjustedStart": "0:01:03",
+                "adjustedEnd": "0:01:03.88",
+                "start": "0:01:03",
+                "end": "0:01:03.88"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Speaker #2",
+            "instances": [
+              {
+                "adjustedStart": "0:00:07.04",
+                "adjustedEnd": "0:00:07.24",
+                "start": "0:00:07.04",
+                "end": "0:00:07.24"
+              },
+              {
+                "adjustedStart": "0:00:13.88",
+                "adjustedEnd": "0:00:14.76",
+                "start": "0:00:13.88",
+                "end": "0:00:14.76"
+              },
+              {
+                "adjustedStart": "0:00:15.4",
+                "adjustedEnd": "0:00:15.8",
+                "start": "0:00:15.4",
+                "end": "0:00:15.8"
+              },
+              {
+                "adjustedStart": "0:00:40.76",
+                "adjustedEnd": "0:00:41.68",
+                "start": "0:00:40.76",
+                "end": "0:00:41.68"
+              },
+              {
+                "adjustedStart": "0:00:57.04",
+                "adjustedEnd": "0:01:02.44",
+                "start": "0:00:57.04",
+                "end": "0:01:02.44"
+              },
+              {
+                "adjustedStart": "0:01:02.44",
+                "adjustedEnd": "0:01:03",
+                "start": "0:01:02.44",
+                "end": "0:01:03"
+              },
+              {
+                "adjustedStart": "0:01:05.16",
+                "adjustedEnd": "0:01:06.36",
+                "start": "0:01:05.16",
+                "end": "0:01:06.36"
+              },
+              {
+                "adjustedStart": "0:01:07.84",
+                "adjustedEnd": "0:01:09.92",
+                "start": "0:01:07.84",
+                "end": "0:01:09.92"
+              },
+              {
+                "adjustedStart": "0:01:11.44",
+                "adjustedEnd": "0:01:14.36",
+                "start": "0:01:11.44",
+                "end": "0:01:14.36"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Speaker #3",
+            "instances": [
+              {
+                "adjustedStart": "0:00:13.8",
+                "adjustedEnd": "0:00:13.88",
+                "start": "0:00:13.8",
+                "end": "0:00:13.88"
+              },
+              {
+                "adjustedStart": "0:00:17.12",
+                "adjustedEnd": "0:00:17.88",
+                "start": "0:00:17.12",
+                "end": "0:00:17.88"
+              },
+              {
+                "adjustedStart": "0:00:35.72",
+                "adjustedEnd": "0:00:35.84",
+                "start": "0:00:35.72",
+                "end": "0:00:35.84"
+              },
+              {
+                "adjustedStart": "0:00:42.68",
+                "adjustedEnd": "0:00:43.2",
+                "start": "0:00:42.68",
+                "end": "0:00:43.2"
+              },
+              {
+                "adjustedStart": "0:00:44.44",
+                "adjustedEnd": "0:00:45.44",
+                "start": "0:00:44.44",
+                "end": "0:00:45.44"
+              },
+              {
+                "adjustedStart": "0:00:45.44",
+                "adjustedEnd": "0:00:47.32",
+                "start": "0:00:45.44",
+                "end": "0:00:47.32"
+              },
+              {
+                "adjustedStart": "0:00:47.32",
+                "adjustedEnd": "0:00:49.28",
+                "start": "0:00:47.32",
+                "end": "0:00:49.28"
+              },
+              {
+                "adjustedStart": "0:00:56.6",
+                "adjustedEnd": "0:00:57.04",
+                "start": "0:00:56.6",
+                "end": "0:00:57.04"
+              },
+              {
+                "adjustedStart": "0:01:16.2",
+                "adjustedEnd": "0:01:16.92",
+                "start": "0:01:16.2",
+                "end": "0:01:16.92"
+              }
+            ]
+          }
+        ],
+        "textualContentModeration": {
+          "id": 0,
+          "bannedWordsCount": 0,
+          "bannedWordsRatio": 0,
+          "instances": []
+        },
+        "statistics": {
+          "correspondenceCount": 17,
+          "speakerTalkToListenRatio": {
+            "1": 0.489,
+            "2": 0.337,
+            "3": 0.173
+          },
+          "speakerLongestMonolog": {
+            "1": 10,
+            "2": 6,
+            "3": 5
+          },
+          "speakerNumberOfFragments": {
+            "1": 15,
+            "2": 8,
+            "3": 7
+          },
+          "speakerWordCount": {
+            "1": 82,
+            "2": 44,
+            "3": 32
+          }
+        }
+      },
+      "thumbnailId": "bbf4df0f-8510-45b2-939f-4e828235047e",
+      "width": 640,
+      "height": 360,
+      "detectSourceLanguage": false,
+      "languageAutoDetectMode": "None",
+      "sourceLanguage": "en-US",
+      "sourceLanguages": [
+        "en-US"
+      ],
+      "language": "en-US",
+      "languages": [
+        "en-US"
+      ],
+      "indexingPreset": "Advanced",
+      "streamingPreset": "Default",
+      "linguisticModelId": "00000000-0000-0000-0000-000000000000",
+      "personModelId": "00000000-0000-0000-0000-000000000000",
+      "logoGroupId": null,
+      "isAdult": false,
+      "excludedAIs": [],
+      "isSearchable": true,
+      "publishedUrl": "https://api.videoindexer.ai/internals/Trial/Accounts/ac09490f-3445-4638-91da-3f3e659fd268/Videos/fvfntzl97d/streaming-manifest/manifest.m3u8",
+      "publishedProxyUrl": null,
+      "viewToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJWZXJzaW9uIjoiMi4wLjAuMCIsIktleVZlcnNpb24iOiJjNTgzMDU1YjU5MmI0MTE5YTY3Njg1ZDg5NzI0NmVjOCIsIkFjY291bnRJZCI6ImFjMDk0OTBmLTM0NDUtNDYzOC05MWRhLTNmM2U2NTlmZDI2OCIsIkFjY291bnRUeXBlIjoiVHJpYWwiLCJWaWRlb0lkIjoiZnZmbnR6bDk3ZCIsIlBlcm1pc3Npb24iOiJSZXN0cmljdGVkVmlld2VyIiwiRXh0ZXJuYWxVc2VySWQiOiJFMkFBNTFGQTU3NTA0NTIwOEMyQkVBREY3QTIxRTVERCIsIlVzZXJUeXBlIjoiTWljcm9zb2Z0Q29ycEFhZCIsIklzc3VlckxvY2F0aW9uIjoiVHJpYWwiLCJuYmYiOjE3NTUxMzg1MTAsImV4cCI6MTc1NTE0MjQxMCwiaXNzIjoiaHR0cHM6Ly9hcGkudmlkZW9pbmRleGVyLmFpLyIsImF1ZCI6Imh0dHBzOi8vYXBpLnZpZGVvaW5kZXhlci5haS8ifQ.R1mNkKdj7yXx4JWH6heXbXmn0z5fvUOjnPdZXQpGAyVAOFPCxoKZNlPM8-0NH_ZE3omf57lsjmdD3hy7SCNYbpkRtxFBR8R2ZlIFEbpRU3hbE_nLMM-zeEx_JYK6PwAklR5PyNpAzKE_wd9VOrO3ND9H2h9H_edAwlaIO7zNbZRc0aCGZwibHGaphlOC28ZBDVj4kNC0r9-Be1sm9MStmFJ5gIDSUAeY7jjMBArTmtohScoUYzpi8fVPuyPWr9awQG--ym0PKEQbhz7wtBdaxY6ZCd_hHJNLhTi_Wow_Ayox2nTn4sfNnD5YdKMAGvoEXHnH4bev68oWTiH5fxMErw"
+    }
+  ],
+  "videosRanges": [
+    {
+      "videoId": "fvfntzl97d",
+      "range": {
+        "start": "0:00:00",
+        "end": "0:01:17.024807"
+      }
+    }
+  ]
+}

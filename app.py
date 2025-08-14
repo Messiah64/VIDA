@@ -157,7 +157,7 @@ def health_check():
 def test_config():
     """Test Azure services configuration"""
     try:
-        from video_analyzer import VideoAnalyzer
+        from video_analyzer_original import VideoAnalyzer
         
         # Test analyzer initialization
         analyzer = VideoAnalyzer()

@@ -1,14 +1,14 @@
 {
   "video_indexer": {
     "location": "trial",
-    "account_id": "ac09490f-3445-4638-91da-3f3e659fd268",
-    "subscription_key": "f99caefac00047e0979f7a7b35144cdd"
+    "account_id": "e8c7cb50-fcf0-4074-bc80-848b4217c1e3",
+    "subscription_key": "b3dd3c7c029c47b098a46a265b7a8234"
   },
   "openai": {
-    "endpoint": "https://khamb-me7vxhbb-eastus2.cognitiveservices.azure.com/",
+    "endpoint": "https://vidadevai.cognitiveservices.azure.com/",
     "model_name": "gpt-4o",
     "deployment": "gpt-4o",
-    "subscription_key": "9fFeYtGLfGZxtysxr81gcn3yiBPginpV7uobhhWv8Uf2kpWDpPByJQQJ99BHACHYHv6XJ3w3AAAAACOGvfk3",
+    "subscription_key": "9j7UyuhqMvnJPxEx7P759sRg10xfkHvckKL8CAeSCcqjSm83ISiLJQQJ99BHACYeBjFXJ3w3AAAAACOGBNzA",
     "api_version": "2024-12-01-preview"
   },
   "processing": {

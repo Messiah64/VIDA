@@ -21,3 +21,6 @@ loguru>=0.7.0
 
 # Typing extensions for broader Python version support
 typing-extensions>=4.8.0
+
+#for video processing
+opencv-python

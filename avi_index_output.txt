@@ -3,11 +3,11 @@
   "description": "AVI test indexing",
   "privacyMode": "Private",
   "state": "Processed",
-  "accountId": "ac09490f-3445-4638-91da-3f3e659fd268",
-  "id": "fvfntzl97d",
+  "accountId": "e8c7cb50-fcf0-4074-bc80-848b4217c1e3",
+  "id": "j2v8n6rbaj",
   "name": "Test Video",
-  "userName": "Mohammed Huzefa Khambhati",
-  "created": "2025-08-14T02:30:33.3033333+00:00",
+  "userName": "Zaniel TAN",
+  "created": "2025-08-14T07:58:50.93+00:00",
   "isOwned": true,
   "isEditable": true,
   "isBase": true,
@@ -15,14 +15,14 @@
   "duration": "0:01:17.024807",
   "summarizedInsights": {
     "name": "Test Video",
-    "id": "fvfntzl97d",
+    "id": "j2v8n6rbaj",
     "privacyMode": "Private",
     "duration": {
       "time": "0:01:17.024807",
       "seconds": 77
     },
-    "thumbnailVideoId": "fvfntzl97d",
-    "thumbnailId": "bbf4df0f-8510-45b2-939f-4e828235047e",
+    "thumbnailVideoId": "j2v8n6rbaj",
+    "thumbnailId": "220cf80f-7325-4e39-bd23-6b86e1ed668f",
     "faces": [],
     "keywords": [
       {
@@ -937,8 +937,8 @@
   },
   "videos": [
     {
-      "accountId": "ac09490f-3445-4638-91da-3f3e659fd268",
-      "id": "fvfntzl97d",
+      "accountId": "e8c7cb50-fcf0-4074-bc80-848b4217c1e3",
+      "id": "j2v8n6rbaj",
       "state": "Processed",
       "moderationState": "OK",
       "reviewState": "None",
@@ -3442,7 +3442,7 @@
                 "id": 1,
                 "instances": [
                   {
-                    "thumbnailId": "553eaeac-daae-40dc-9480-c31e20c0e9be",
+                    "thumbnailId": "b9dcc2a2-7ca1-4ed5-ac8a-3190a41e45bd",
                     "adjustedStart": "0:00:00.2",
                     "adjustedEnd": "0:00:00.2333333",
                     "start": "0:00:00.2",
@@ -3454,7 +3454,7 @@
                 "id": 2,
                 "instances": [
                   {
-                    "thumbnailId": "eb714d37-8338-459d-bc22-664eb07c6548",
+                    "thumbnailId": "6f49423b-b519-43f6-8b3b-3efe5132071c",
                     "adjustedStart": "0:00:08.2666667",
                     "adjustedEnd": "0:00:08.3",
                     "start": "0:00:08.2666667",
@@ -3466,7 +3466,7 @@
                 "id": 3,
                 "instances": [
                   {
-                    "thumbnailId": "b602fb03-fcf9-48bf-860f-4f98512a0a71",
+                    "thumbnailId": "414d6be2-66ac-40bd-a6a6-562b5ac4b67a",
                     "adjustedStart": "0:00:10.3666667",
                     "adjustedEnd": "0:00:10.4",
                     "start": "0:00:10.3666667",
@@ -3491,7 +3491,7 @@
                 "id": 4,
                 "instances": [
                   {
-                    "thumbnailId": "851f5751-cada-4744-a5da-9f69f1e9ca81",
+                    "thumbnailId": "6fdd332f-f352-4d90-ab3d-cb3f9b39b011",
                     "adjustedStart": "0:00:13.9",
                     "adjustedEnd": "0:00:13.9333333",
                     "start": "0:00:13.9",
@@ -3503,7 +3503,7 @@
                 "id": 5,
                 "instances": [
                   {
-                    "thumbnailId": "97b73c8f-6a35-4601-8543-fbdda9cbdd02",
+                    "thumbnailId": "12f122fa-78f4-47f9-a148-5ade9bc169cf",
                     "adjustedStart": "0:00:14.4333333",
                     "adjustedEnd": "0:00:14.4666667",
                     "start": "0:00:14.4333333",
@@ -3515,7 +3515,7 @@
                 "id": 6,
                 "instances": [
                   {
-                    "thumbnailId": "3d4c9dc2-9291-4bab-9b5e-a921fdf197d7",
+                    "thumbnailId": "d404483e-a42b-4bd1-b5d7-b6aae4dd8481",
                     "adjustedStart": "0:00:14.7",
                     "adjustedEnd": "0:00:14.7333333",
                     "start": "0:00:14.7",
@@ -3540,7 +3540,7 @@
                 "id": 7,
                 "instances": [
                   {
-                    "thumbnailId": "854b2cbf-2fad-4863-9e14-1577de0da830",
+                    "thumbnailId": "374d68ba-a038-48fb-9ff1-f0dd5ca8140b",
                     "adjustedStart": "0:00:16.5",
                     "adjustedEnd": "0:00:16.5333333",
                     "start": "0:00:16.5",
@@ -3552,7 +3552,7 @@
                 "id": 8,
                 "instances": [
                   {
-                    "thumbnailId": "33853c27-d2f0-4e1f-85a7-6217c5d4c1b9",
+                    "thumbnailId": "9ed16e1a-70a8-46af-a8a1-568cee864faf",
                     "adjustedStart": "0:00:22.4666667",
                     "adjustedEnd": "0:00:22.5",
                     "start": "0:00:22.4666667",
@@ -3564,7 +3564,7 @@
                 "id": 9,
                 "instances": [
                   {
-                    "thumbnailId": "9c8a4e5d-8b90-4ee7-9184-516db0b01968",
+                    "thumbnailId": "edc1c9ea-0d41-4446-8a93-8d044f53e624",
                     "adjustedStart": "0:00:27.7666667",
                     "adjustedEnd": "0:00:27.8",
                     "start": "0:00:27.7666667",
@@ -3589,7 +3589,7 @@
                 "id": 10,
                 "instances": [
                   {
-                    "thumbnailId": "ed7076e3-6581-4d93-9a1b-0600977e5aaf",
+                    "thumbnailId": "ca588373-66eb-4f81-8348-95816d6a6a46",
                     "adjustedStart": "0:00:30.7666667",
                     "adjustedEnd": "0:00:30.8",
                     "start": "0:00:30.7666667",
@@ -3601,7 +3601,7 @@
                 "id": 11,
                 "instances": [
                   {
-                    "thumbnailId": "6db862d9-3aa2-40fb-ae95-2a16cebdc1c8",
+                    "thumbnailId": "423c8ce5-404a-4151-b3ab-41c937c02028",
                     "adjustedStart": "0:00:31.1333333",
                     "adjustedEnd": "0:00:31.1666667",
                     "start": "0:00:31.1333333",
@@ -3613,7 +3613,7 @@
                 "id": 12,
                 "instances": [
                   {
-                    "thumbnailId": "781d1cef-c7c6-4fd0-a90e-320fde563ef5",
+                    "thumbnailId": "66648e56-8131-4896-a0d8-49e95e4aa107",
                     "adjustedStart": "0:00:31.5333333",
                     "adjustedEnd": "0:00:31.5666667",
                     "start": "0:00:31.5333333",
@@ -3638,7 +3638,7 @@
                 "id": 13,
                 "instances": [
                   {
-                    "thumbnailId": "0af8afb4-1d18-4aa5-aa87-981b29bf2f4b",
+                    "thumbnailId": "fd653e07-3b66-4ced-b9e3-eb30e36fe87c",
                     "adjustedStart": "0:00:33.1666667",
                     "adjustedEnd": "0:00:33.2",
                     "start": "0:00:33.1666667",
@@ -3650,7 +3650,7 @@
                 "id": 14,
                 "instances": [
                   {
-                    "thumbnailId": "f450636d-95d7-47a5-a7fa-b034abd70924",
+                    "thumbnailId": "6e7b125a-1afb-4ded-a6b3-53c826a33bb4",
                     "adjustedStart": "0:00:35.2333333",
                     "adjustedEnd": "0:00:35.2666667",
                     "start": "0:00:35.2333333",
@@ -3662,7 +3662,7 @@
                 "id": 15,
                 "instances": [
                   {
-                    "thumbnailId": "f23c4a72-09d7-4012-9484-565640a14d07",
+                    "thumbnailId": "934933f5-2e71-4a79-ab62-7e831f85d732",
                     "adjustedStart": "0:00:37.1333333",
                     "adjustedEnd": "0:00:37.1666667",
                     "start": "0:00:37.1333333",
@@ -3687,7 +3687,7 @@
                 "id": 16,
                 "instances": [
                   {
-                    "thumbnailId": "8f76486f-7047-4549-acf5-aaae632eb0d9",
+                    "thumbnailId": "07954bab-dc49-46d1-bf0f-43ce6312e450",
                     "adjustedStart": "0:00:38.8666667",
                     "adjustedEnd": "0:00:38.9",
                     "start": "0:00:38.8666667",
@@ -3699,7 +3699,7 @@
                 "id": 17,
                 "instances": [
                   {
-                    "thumbnailId": "5dceb78b-f495-4009-9257-b0c2a1201f10",
+                    "thumbnailId": "62f490fb-47c4-4eae-994f-a1883d92d306",
                     "adjustedStart": "0:00:40.3666667",
                     "adjustedEnd": "0:00:40.4",
                     "start": "0:00:40.3666667",
@@ -3711,7 +3711,7 @@
                 "id": 18,
                 "instances": [
                   {
-                    "thumbnailId": "4e2e7259-edab-40cf-88d7-2e06fc74ee5e",
+                    "thumbnailId": "aee2829f-7dfa-4320-ac4a-af092b6b33c0",
                     "adjustedStart": "0:00:42.2333333",
                     "adjustedEnd": "0:00:42.2666667",
                     "start": "0:00:42.2333333",
@@ -3736,7 +3736,7 @@
                 "id": 19,
                 "instances": [
                   {
-                    "thumbnailId": "de6bf936-0232-4a22-9305-adcdc6a58b84",
+                    "thumbnailId": "dec33279-cc62-497b-9b90-e490a43c61b8",
                     "adjustedStart": "0:00:42.7666667",
                     "adjustedEnd": "0:00:42.8",
                     "start": "0:00:42.7666667",
@@ -3748,7 +3748,7 @@
                 "id": 20,
                 "instances": [
                   {
-                    "thumbnailId": "5becc89d-3f1e-4b13-b78b-98fc075f6d64",
+                    "thumbnailId": "10ba4079-7970-4874-8b84-519feec8d66e",
                     "adjustedStart": "0:00:43.3333333",
                     "adjustedEnd": "0:00:43.3666667",
                     "start": "0:00:43.3333333",
@@ -3760,7 +3760,7 @@
                 "id": 21,
                 "instances": [
                   {
-                    "thumbnailId": "b1c38403-82f3-459b-a79e-9e731bd25f47",
+                    "thumbnailId": "809b1065-a0b0-4a29-83ed-9fa868927432",
                     "adjustedStart": "0:00:43.6333333",
                     "adjustedEnd": "0:00:43.6666667",
                     "start": "0:00:43.6333333",
@@ -3785,7 +3785,7 @@
                 "id": 22,
                 "instances": [
                   {
-                    "thumbnailId": "3b984344-4348-4d3d-9520-d5ecc8edda9e",
+                    "thumbnailId": "547b1333-9da1-4f59-bef9-5fa765be6855",
                     "adjustedStart": "0:00:45.6333333",
                     "adjustedEnd": "0:00:45.6666667",
                     "start": "0:00:45.6333333",
@@ -3797,7 +3797,7 @@
                 "id": 23,
                 "instances": [
                   {
-                    "thumbnailId": "6c6222ba-15cc-4048-bf5c-98e96cc828f3",
+                    "thumbnailId": "e14a3bbe-93dc-4769-a89c-8431c5e06a18",
                     "adjustedStart": "0:00:46.5",
                     "adjustedEnd": "0:00:46.5333333",
                     "start": "0:00:46.5",
@@ -3809,7 +3809,7 @@
                 "id": 24,
                 "instances": [
                   {
-                    "thumbnailId": "c00588e1-0193-4ffc-9e9c-42f9aace43d2",
+                    "thumbnailId": "2f73174a-2419-4a9c-b977-69769dfaee37",
                     "adjustedStart": "0:00:47.2666667",
                     "adjustedEnd": "0:00:47.3",
                     "start": "0:00:47.2666667",
@@ -3834,7 +3834,7 @@
                 "id": 25,
                 "instances": [
                   {
-                    "thumbnailId": "df18e975-68b3-4465-94fc-4cbb74b18897",
+                    "thumbnailId": "4b46a599-1062-4584-8109-3bbee101a980",
                     "adjustedStart": "0:00:48.9333333",
                     "adjustedEnd": "0:00:48.9666667",
                     "start": "0:00:48.9333333",
@@ -3846,7 +3846,7 @@
                 "id": 26,
                 "instances": [
                   {
-                    "thumbnailId": "8ee61536-1103-4b76-8cbb-4be1d75dea76",
+                    "thumbnailId": "6d91f44f-4aec-4206-82c3-d7e17b7b09e0",
                     "adjustedStart": "0:00:49.6666667",
                     "adjustedEnd": "0:00:49.7",
                     "start": "0:00:49.6666667",
@@ -3858,7 +3858,7 @@
                 "id": 27,
                 "instances": [
                   {
-                    "thumbnailId": "3aa51647-4cb8-42b9-b2ab-520b591a8b49",
+                    "thumbnailId": "9e7babba-0877-462f-892f-cbdfc814ef40",
                     "adjustedStart": "0:00:50.6",
                     "adjustedEnd": "0:00:50.6333333",
                     "start": "0:00:50.6",
@@ -3883,7 +3883,7 @@
                 "id": 28,
                 "instances": [
                   {
-                    "thumbnailId": "ff1c10a1-9100-41a8-b8a1-308f84d3ccc1",
+                    "thumbnailId": "7b7791ec-9bf0-483c-beef-d9648bdc930a",
                     "adjustedStart": "0:00:51.3333333",
                     "adjustedEnd": "0:00:51.3666667",
                     "start": "0:00:51.3333333",
@@ -3895,7 +3895,7 @@
                 "id": 29,
                 "instances": [
                   {
-                    "thumbnailId": "84e931c2-5a78-4911-9068-4220e795765f",
+                    "thumbnailId": "91364761-c5e0-493a-9c2a-d7d9cb1d30b0",
                     "adjustedStart": "0:00:51.8333333",
                     "adjustedEnd": "0:00:51.8666667",
                     "start": "0:00:51.8333333",
@@ -3907,7 +3907,7 @@
                 "id": 30,
                 "instances": [
                   {
-                    "thumbnailId": "8e50f21a-af4d-419b-916c-b3cf697947aa",
+                    "thumbnailId": "9f04b9bd-9172-4bf6-917d-1a7fda657288",
                     "adjustedStart": "0:00:52.5333333",
                     "adjustedEnd": "0:00:52.5666667",
                     "start": "0:00:52.5333333",
@@ -3932,7 +3932,7 @@
                 "id": 31,
                 "instances": [
                   {
-                    "thumbnailId": "d47314c4-9b3e-46ce-8987-2b907be607f8",
+                    "thumbnailId": "dbefedb3-cb48-4145-949f-5187f0163447",
                     "adjustedStart": "0:00:53.3333333",
                     "adjustedEnd": "0:00:53.3666667",
                     "start": "0:00:53.3333333",
@@ -3944,7 +3944,7 @@
                 "id": 32,
                 "instances": [
                   {
-                    "thumbnailId": "d163eee5-b1af-48a6-a21f-d8608d11d434",
+                    "thumbnailId": "7a258de1-6f61-43f8-bf78-f098b23df0e3",
                     "adjustedStart": "0:00:54",
                     "adjustedEnd": "0:00:54.0333333",
                     "start": "0:00:54",
@@ -3956,7 +3956,7 @@
                 "id": 33,
                 "instances": [
                   {
-                    "thumbnailId": "670654c0-4595-4ebf-92ce-d2762acc7187",
+                    "thumbnailId": "36e97463-fcae-4b50-8e53-60cee6dbe08b",
                     "adjustedStart": "0:00:54.9333333",
                     "adjustedEnd": "0:00:54.9666667",
                     "start": "0:00:54.9333333",
@@ -3981,7 +3981,7 @@
                 "id": 34,
                 "instances": [
                   {
-                    "thumbnailId": "ddacd0bd-2ddd-4b14-a616-e4023620bd11",
+                    "thumbnailId": "c756b17a-7879-43bf-a708-3e10123b9993",
                     "adjustedStart": "0:00:55.5666667",
                     "adjustedEnd": "0:00:55.6",
                     "start": "0:00:55.5666667",
@@ -3993,7 +3993,7 @@
                 "id": 35,
                 "instances": [
                   {
-                    "thumbnailId": "b6de5151-216c-4db4-b6bb-505ae96c198e",
+                    "thumbnailId": "092f81e8-ebad-48ed-bdf6-8efb6b76bbbf",
                     "adjustedStart": "0:00:56.0666667",
                     "adjustedEnd": "0:00:56.1",
                     "start": "0:00:56.0666667",
@@ -4005,7 +4005,7 @@
                 "id": 36,
                 "instances": [
                   {
-                    "thumbnailId": "3fcb1e4c-1759-4d95-a7b4-bc73de2b3213",
+                    "thumbnailId": "98f08a04-d155-4c25-9290-6b30b2645240",
                     "adjustedStart": "0:00:56.4333333",
                     "adjustedEnd": "0:00:56.4666667",
                     "start": "0:00:56.4333333",
@@ -4030,7 +4030,7 @@
                 "id": 37,
                 "instances": [
                   {
-                    "thumbnailId": "0336b1d2-82ae-412e-b45d-f20e4843a243",
+                    "thumbnailId": "5cee8519-6939-40c6-8749-a31337a7596e",
                     "adjustedStart": "0:00:57.2666667",
                     "adjustedEnd": "0:00:57.3",
                     "start": "0:00:57.2666667",
@@ -4042,7 +4042,7 @@
                 "id": 38,
                 "instances": [
                   {
-                    "thumbnailId": "37be47c4-ac9d-40fb-a3c6-b820b4b034f1",
+                    "thumbnailId": "0e7b993b-7f2f-4020-b0c3-82c838430598",
                     "adjustedStart": "0:00:57.6333333",
                     "adjustedEnd": "0:00:57.6666667",
                     "start": "0:00:57.6333333",
@@ -4054,7 +4054,7 @@
                 "id": 39,
                 "instances": [
                   {
-                    "thumbnailId": "e0632fae-4299-49ef-9daf-aa60923da33f",
+                    "thumbnailId": "b1e4b654-f4a0-4534-beca-ff9576ce25e5",
                     "adjustedStart": "0:00:58.2333333",
                     "adjustedEnd": "0:00:58.2666667",
                     "start": "0:00:58.2333333",
@@ -4079,7 +4079,7 @@
                 "id": 40,
                 "instances": [
                   {
-                    "thumbnailId": "9bfd0c77-0ebf-49a1-998f-420d28499b73",
+                    "thumbnailId": "5f2f655f-03c0-44ce-80cc-b79690834a17",
                     "adjustedStart": "0:00:58.6333333",
                     "adjustedEnd": "0:00:58.6666667",
                     "start": "0:00:58.6333333",
@@ -4091,7 +4091,7 @@
                 "id": 41,
                 "instances": [
                   {
-                    "thumbnailId": "ede3abfe-6ced-4632-a799-a44e79ebe8b6",
+                    "thumbnailId": "356a7946-4a4b-492c-9d38-d337fa6795df",
                     "adjustedStart": "0:00:59.0333333",
                     "adjustedEnd": "0:00:59.0666667",
                     "start": "0:00:59.0333333",
@@ -4103,7 +4103,7 @@
                 "id": 42,
                 "instances": [
                   {
-                    "thumbnailId": "4597a0ff-9daa-459d-84c7-6dfb32421c06",
+                    "thumbnailId": "1cc7f40b-f90a-4628-aea5-86c7602987f9",
                     "adjustedStart": "0:00:59.2",
                     "adjustedEnd": "0:00:59.2333333",
                     "start": "0:00:59.2",
@@ -4128,7 +4128,7 @@
                 "id": 43,
                 "instances": [
                   {
-                    "thumbnailId": "c4050c12-7da2-4095-b05d-262fefd8862a",
+                    "thumbnailId": "38a071a2-9509-4dec-8922-1ec44fade1f0",
                     "adjustedStart": "0:00:59.6666667",
                     "adjustedEnd": "0:00:59.7",
                     "start": "0:00:59.6666667",
@@ -4140,7 +4140,7 @@
                 "id": 44,
                 "instances": [
                   {
-                    "thumbnailId": "0c3fe261-eefb-4ad2-a6a9-12956b9f90ad",
+                    "thumbnailId": "ed526edb-71b7-45d9-be68-005cc0d53229",
                     "adjustedStart": "0:01:00.4666667",
                     "adjustedEnd": "0:01:00.5",
                     "start": "0:01:00.4666667",
@@ -4152,7 +4152,7 @@
                 "id": 45,
                 "instances": [
                   {
-                    "thumbnailId": "d5963988-c79d-4c0e-b280-57a74423096e",
+                    "thumbnailId": "d0986c1c-76f8-4bde-bd85-f8e9fe490a6a",
                     "adjustedStart": "0:01:00.7333333",
                     "adjustedEnd": "0:01:00.7666667",
                     "start": "0:01:00.7333333",
@@ -4177,7 +4177,7 @@
                 "id": 46,
                 "instances": [
                   {
-                    "thumbnailId": "a5a6b4d6-c06a-47c2-a864-ff7b1c137f3f",
+                    "thumbnailId": "a88bd7e9-a84f-4416-8599-d291fca54d06",
                     "adjustedStart": "0:01:01.4666667",
                     "adjustedEnd": "0:01:01.5",
                     "start": "0:01:01.4666667",
@@ -4189,7 +4189,7 @@
                 "id": 47,
                 "instances": [
                   {
-                    "thumbnailId": "dabdf7cd-0bd1-4e9a-9db4-6cd9eb426355",
+                    "thumbnailId": "cec572c5-538a-4e3b-8c9e-784097e40158",
                     "adjustedStart": "0:01:01.7666667",
                     "adjustedEnd": "0:01:01.8",
                     "start": "0:01:01.7666667",
@@ -4201,7 +4201,7 @@
                 "id": 48,
                 "instances": [
                   {
-                    "thumbnailId": "3bf9dafe-7c25-4639-9eef-fef09d1dc997",
+                    "thumbnailId": "c7f04004-996b-4d93-a215-0187080b128d",
                     "adjustedStart": "0:01:02",
                     "adjustedEnd": "0:01:02.0333333",
                     "start": "0:01:02",
@@ -4226,7 +4226,7 @@
                 "id": 49,
                 "instances": [
                   {
-                    "thumbnailId": "d9866020-9bff-439c-a46b-3bf0b985fdc3",
+                    "thumbnailId": "51a8be67-9120-47ab-ad0c-36317e5acecd",
                     "adjustedStart": "0:01:03.3",
                     "adjustedEnd": "0:01:03.3333333",
                     "start": "0:01:03.3",
@@ -4238,7 +4238,7 @@
                 "id": 50,
                 "instances": [
                   {
-                    "thumbnailId": "65420a0e-0fd0-4fe2-95a0-7d0b67eae6a3",
+                    "thumbnailId": "f94a3f20-557b-408c-b876-9a66122717aa",
                     "adjustedStart": "0:01:03.9666667",
                     "adjustedEnd": "0:01:04",
                     "start": "0:01:03.9666667",
@@ -4250,7 +4250,7 @@
                 "id": 51,
                 "instances": [
                   {
-                    "thumbnailId": "72f1a642-8171-4fa6-83fd-982df8d244a4",
+                    "thumbnailId": "d7ef01c7-421e-43e5-8fc4-5b0bfe175e47",
                     "adjustedStart": "0:01:04.8666667",
                     "adjustedEnd": "0:01:04.9",
                     "start": "0:01:04.8666667",
@@ -4275,7 +4275,7 @@
                 "id": 52,
                 "instances": [
                   {
-                    "thumbnailId": "b1b4e78e-a0c0-4bcf-be73-93f76bad54c7",
+                    "thumbnailId": "899faa4c-5a78-409d-96cd-c1c35ea829be",
                     "adjustedStart": "0:01:06.8666667",
                     "adjustedEnd": "0:01:06.9",
                     "start": "0:01:06.8666667",
@@ -4287,7 +4287,7 @@
                 "id": 53,
                 "instances": [
                   {
-                    "thumbnailId": "e2530908-b561-4fe9-9507-e1a17efc57ee",
+                    "thumbnailId": "cfc68a26-b3de-4486-b194-b99750dedd69",
                     "adjustedStart": "0:01:10.0666667",
                     "adjustedEnd": "0:01:10.1",
                     "start": "0:01:10.0666667",
@@ -4299,7 +4299,7 @@
                 "id": 54,
                 "instances": [
                   {
-                    "thumbnailId": "61141a50-7758-47cd-ab95-c545bc664233",
+                    "thumbnailId": "f5bd17e4-d931-447d-bda9-cf1bad7a30b1",
                     "adjustedStart": "0:01:12.1666667",
                     "adjustedEnd": "0:01:12.2",
                     "start": "0:01:12.1666667",
@@ -4324,7 +4324,7 @@
                 "id": 55,
                 "instances": [
                   {
-                    "thumbnailId": "e115e010-01a9-4cee-93d4-d0ed76a63577",
+                    "thumbnailId": "fa5b38f6-e20c-4800-9c3b-e61c07aafebc",
                     "adjustedStart": "0:01:14.9666667",
                     "adjustedEnd": "0:01:15",
                     "start": "0:01:14.9666667",
@@ -4336,7 +4336,7 @@
                 "id": 56,
                 "instances": [
                   {
-                    "thumbnailId": "7f155538-2eaa-4473-80ff-1092aa696cd6",
+                    "thumbnailId": "114cb5c4-57df-4007-aa08-d40a48068ebc",
                     "adjustedStart": "0:01:15.7666667",
                     "adjustedEnd": "0:01:15.8",
                     "start": "0:01:15.7666667",
@@ -4348,7 +4348,7 @@
                 "id": 57,
                 "instances": [
                   {
-                    "thumbnailId": "cd4159b1-0e61-41c7-bb69-c040d19b4c20",
+                    "thumbnailId": "fbce6e99-38f0-43ab-889e-365b8a8435bf",
                     "adjustedStart": "0:01:16.2333333",
                     "adjustedEnd": "0:01:16.2666667",
                     "start": "0:01:16.2333333",
@@ -4448,7 +4448,7 @@
         "observedPeople": [
           {
             "id": 1,
-            "thumbnailId": "05d8bfe8-1a96-4dd4-9be8-d3beaa705329",
+            "thumbnailId": "4829dcbe-98af-481e-9ae1-3d44e51b46db",
             "clothing": [
               {
                 "id": 1,
@@ -4498,7 +4498,7 @@
           },
           {
             "id": 2,
-            "thumbnailId": "ff0f7a7c-908e-43f9-bb05-4f1f9470a676",
+            "thumbnailId": "eb7596b5-2785-418b-8314-feb921782c79",
             "clothing": [
               {
                 "id": 1,
@@ -4544,7 +4544,7 @@
           },
           {
             "id": 3,
-            "thumbnailId": "a6cdf6c8-9eab-488c-a00e-6b2b15cf489c",
+            "thumbnailId": "1a9c92c4-f97e-475a-876f-fcbf64870922",
             "clothing": [
               {
                 "id": 1,
@@ -4575,7 +4575,7 @@
           {
             "id": 1,
             "type": "Couch",
-            "thumbnailId": "ad7b65f5-f4ea-44f2-bf2e-7d6056a2531e",
+            "thumbnailId": "e25f6080-db20-4ec3-a86a-317cba35afbd",
             "displayName": "couch",
             "wikiDataId": "Q131514",
             "instances": [
@@ -4598,7 +4598,7 @@
           {
             "id": 2,
             "type": "Couch",
-            "thumbnailId": "57eb085c-6280-4385-8b68-c1180367ce84",
+            "thumbnailId": "f9494da9-48ba-40c8-90b1-a22c171bd87b",
             "displayName": "couch",
             "wikiDataId": "Q131514",
             "instances": [
@@ -4614,7 +4614,7 @@
           {
             "id": 3,
             "type": "Chair",
-            "thumbnailId": "ecccbe15-2be4-452f-a917-c4d1bec3914c",
+            "thumbnailId": "5aeafc8c-eaa8-4e6a-878b-0de930df51f8",
             "displayName": "chair",
             "wikiDataId": "Q15026",
             "instances": [
@@ -4644,7 +4644,7 @@
           {
             "id": 4,
             "type": "DiningTable",
-            "thumbnailId": "30cdb819-5c17-4b54-a7d8-f22622460b23",
+            "thumbnailId": "7028688a-e4c1-4e37-b0d7-d40aebbc2861",
             "displayName": "dining table",
             "wikiDataId": "Q10552108",
             "instances": [
@@ -4660,7 +4660,7 @@
           {
             "id": 5,
             "type": "PottedPlant",
-            "thumbnailId": "af26bc0a-3fb3-4ba8-943f-b3dd1e5143ad",
+            "thumbnailId": "d8b15b5e-0558-467f-a17a-349f747485d9",
             "displayName": "potted plant",
             "wikiDataId": "Q27993793",
             "instances": [
@@ -4683,7 +4683,7 @@
           {
             "id": 6,
             "type": "Chair",
-            "thumbnailId": "f8cbdf1a-8f63-4c00-9309-1fc332bbcf5e",
+            "thumbnailId": "66824fc4-b3ed-434f-8239-e7d0dfaf26d5",
             "displayName": "chair",
             "wikiDataId": "Q15026",
             "instances": [
@@ -4720,7 +4720,7 @@
           {
             "id": 7,
             "type": "Chair",
-            "thumbnailId": "b5db39b4-d1dd-40f3-8d3e-07647cfb2b33",
+            "thumbnailId": "67f07a5f-043e-489d-9cbf-dc28cddf6cd5",
             "displayName": "chair",
             "wikiDataId": "Q15026",
             "instances": [
@@ -5174,7 +5174,7 @@
           }
         }
       },
-      "thumbnailId": "bbf4df0f-8510-45b2-939f-4e828235047e",
+      "thumbnailId": "220cf80f-7325-4e39-bd23-6b86e1ed668f",
       "width": 640,
       "height": 360,
       "detectSourceLanguage": false,
@@ -5195,14 +5195,14 @@
       "isAdult": false,
       "excludedAIs": [],
       "isSearchable": true,
-      "publishedUrl": "https://api.videoindexer.ai/internals/Trial/Accounts/ac09490f-3445-4638-91da-3f3e659fd268/Videos/fvfntzl97d/streaming-manifest/manifest.m3u8",
+      "publishedUrl": "https://api.videoindexer.ai/internals/Trial/Accounts/e8c7cb50-fcf0-4074-bc80-848b4217c1e3/Videos/j2v8n6rbaj/streaming-manifest/manifest.m3u8",
       "publishedProxyUrl": null,
-      "viewToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJWZXJzaW9uIjoiMi4wLjAuMCIsIktleVZlcnNpb24iOiJjNTgzMDU1YjU5MmI0MTE5YTY3Njg1ZDg5NzI0NmVjOCIsIkFjY291bnRJZCI6ImFjMDk0OTBmLTM0NDUtNDYzOC05MWRhLTNmM2U2NTlmZDI2OCIsIkFjY291bnRUeXBlIjoiVHJpYWwiLCJWaWRlb0lkIjoiZnZmbnR6bDk3ZCIsIlBlcm1pc3Npb24iOiJSZXN0cmljdGVkVmlld2VyIiwiRXh0ZXJuYWxVc2VySWQiOiJFMkFBNTFGQTU3NTA0NTIwOEMyQkVBREY3QTIxRTVERCIsIlVzZXJUeXBlIjoiTWljcm9zb2Z0Q29ycEFhZCIsIklzc3VlckxvY2F0aW9uIjoiVHJpYWwiLCJuYmYiOjE3NTUxMzg1MTAsImV4cCI6MTc1NTE0MjQxMCwiaXNzIjoiaHR0cHM6Ly9hcGkudmlkZW9pbmRleGVyLmFpLyIsImF1ZCI6Imh0dHBzOi8vYXBpLnZpZGVvaW5kZXhlci5haS8ifQ.R1mNkKdj7yXx4JWH6heXbXmn0z5fvUOjnPdZXQpGAyVAOFPCxoKZNlPM8-0NH_ZE3omf57lsjmdD3hy7SCNYbpkRtxFBR8R2ZlIFEbpRU3hbE_nLMM-zeEx_JYK6PwAklR5PyNpAzKE_wd9VOrO3ND9H2h9H_edAwlaIO7zNbZRc0aCGZwibHGaphlOC28ZBDVj4kNC0r9-Be1sm9MStmFJ5gIDSUAeY7jjMBArTmtohScoUYzpi8fVPuyPWr9awQG--ym0PKEQbhz7wtBdaxY6ZCd_hHJNLhTi_Wow_Ayox2nTn4sfNnD5YdKMAGvoEXHnH4bev68oWTiH5fxMErw"
+      "viewToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJWZXJzaW9uIjoiMi4wLjAuMCIsIktleVZlcnNpb24iOiJjNTgzMDU1YjU5MmI0MTE5YTY3Njg1ZDg5NzI0NmVjOCIsIkFjY291bnRJZCI6ImU4YzdjYjUwLWZjZjAtNDA3NC1iYzgwLTg0OGI0MjE3YzFlMyIsIkFjY291bnRUeXBlIjoiVHJpYWwiLCJWaWRlb0lkIjoiajJ2OG42cmJhaiIsIlBlcm1pc3Npb24iOiJSZXN0cmljdGVkVmlld2VyIiwiRXh0ZXJuYWxVc2VySWQiOiIyNTlFQzcwOEZGNUY0RDg4QUYyNUZCRDNCQkI5Q0ZCOCIsIlVzZXJUeXBlIjoiTWljcm9zb2Z0Q29ycEFhZCIsIklzc3VlckxvY2F0aW9uIjoiVHJpYWwiLCJuYmYiOjE3NTUxNTgzMzcsImV4cCI6MTc1NTE2MjIzNywiaXNzIjoiaHR0cHM6Ly9hcGkudmlkZW9pbmRleGVyLmFpLyIsImF1ZCI6Imh0dHBzOi8vYXBpLnZpZGVvaW5kZXhlci5haS8ifQ.iA9RWWc535ocgk3GQptxk4BM-oL5YUQ3AsRdvobLmTQBo2agS7XvIckenMZMT6hKUuE9qfYGeJJPR0GSRbstboqAMSGSrAilKs2N1eraGsILg8Xjl9sEZVLkOdLdp7gjBjE40LENYScXspwgOCnUUCD0uA3Tdbv2JJGJdk780KRPGEQktE6lof_txUSsZZOxPm7FhsYIYr1pS3cSaxSoShAXAiJkz8Ith9K9h0UIQYmqIxGs4kL8F0e48a8hIUeWK_uabmoi7oyhZFZTM32FHr5_zB8YQogzC_55tm_MVI3YW6cAaOQTJrTEcsZ3dFV_sGmbKXjy_B1BSpg_6JkhIw"
     }
   ],
   "videosRanges": [
     {
-      "videoId": "fvfntzl97d",
+      "videoId": "j2v8n6rbaj",
       "range": {
         "start": "0:00:00",
         "end": "0:01:17.024807"

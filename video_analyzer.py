@@ -4,6 +4,8 @@ import json
 import math
 import hashlib
 import os
+import re
+import cv2
 from pathlib import Path
 from openai import AsyncOpenAI
 import asyncio
@@ -357,7 +359,15 @@ Identify main participants, locations, and significant events across the video.
 Highlight major shifts in mood, emotion, or discussion topics throughout the video.
 
 ### Scene-by-Scene Breakdown
-Provide timestamped analysis of key moments and transitions.
+Provide timestamped analysis of key moments and transitions. Use this EXACT format for each scene:
+START_TIME–END_TIME: Description of what happens in this scene.
+
+Example format:
+0:00–0:15: Opening scene with introduction.
+0:15–0:45: Main discussion begins.
+1:30–2:00: Conclusion and wrap-up.
+
+Use timestamps in M:SS or H:MM:SS format. Each scene must be on its own line.
 
 ### TL;DR Summary
 Conclude with 3-4 sentences summarizing the entire video content and main takeaways.
@@ -386,6 +396,440 @@ Make this read like a professional content analysis report, not raw data.
         except Exception as e:
             logger.error(f"Failed to generate final summary: {e}")
             return self.generate_fallback_summary(structured_data)
+    
+    def filter_insights_by_timerange(self, structured_data: Dict[str, Any], start_seconds: float, end_seconds: float) -> Dict[str, Any]:
+        """Filter structured insights to only include data within the specified time range"""
+        filtered_data = {}
+        
+        def is_in_timerange(item, start_sec, end_sec):
+            """Check if an item falls within the time range"""
+            if not isinstance(item, dict):
+                return False
+                
+            # Check for direct start/end times
+            if 'start' in item:
+                item_start = self._timestamp_to_seconds(str(item['start']))
+                return start_sec <= item_start <= end_sec
+            
+            # Check for instances with start/end times
+            if 'instances' in item and item['instances']:
+                for instance in item['instances']:
+                    if isinstance(instance, dict) and 'start' in instance:
+                        inst_start = self._timestamp_to_seconds(str(instance['start']))
+                        if start_sec <= inst_start <= end_sec:
+                            return True
+            
+            # Check for appearances with start/end times  
+            if 'appearances' in item and item['appearances']:
+                for appearance in item['appearances']:
+                    if isinstance(appearance, dict) and 'startTime' in appearance:
+                        app_start = self._timestamp_to_seconds(str(appearance['startTime']))
+                        if start_sec <= app_start <= end_sec:
+                            return True
+            
+            return False
+        
+        # Filter each category of insights
+        for key, items in structured_data.items():
+            if key == 'video_metadata':
+                filtered_data[key] = items  # Keep metadata as-is
+                continue
+                
+            if isinstance(items, list):
+                filtered_items = []
+                for item in items:
+                    if is_in_timerange(item, start_seconds, end_seconds):
+                        filtered_items.append(item)
+                filtered_data[key] = filtered_items
+            else:
+                filtered_data[key] = items
+        
+        return filtered_data
+    
+    async def generate_detailed_scene_analysis(self, scene: Dict[str, Any], filtered_insights: Dict[str, Any]) -> str:
+        """Generate detailed AI analysis for a specific scene using filtered insights"""
+        try:
+            # Extract key information from filtered insights
+            transcript_segments = filtered_insights.get('transcript', [])
+            speakers = filtered_insights.get('speakers', [])
+            labels = filtered_insights.get('labels', [])
+            faces = filtered_insights.get('faces', [])
+            named_people = filtered_insights.get('named_people', [])
+            named_locations = filtered_insights.get('named_locations', [])
+            brands = filtered_insights.get('brands', [])
+            topics = filtered_insights.get('topics', [])
+            keywords = filtered_insights.get('keywords', [])
+            sentiments = filtered_insights.get('sentiments', [])
+            audio_effects = filtered_insights.get('audio_effects', [])
+            ocr_text = filtered_insights.get('ocr_text', [])
+            
+            # Build transcript text for this timeframe
+            transcript_text = ""
+            for segment in transcript_segments:
+                timestamp = segment.get('start', '00:00')
+                text = segment.get('text', '')
+                speaker_id = segment.get('speakerId', 'Unknown')
+                transcript_text += f"[{timestamp}] Speaker {speaker_id}: {text}\n"
+            
+            # Compile insights for AI analysis
+            insights_summary = {
+                "transcript_segments": len(transcript_segments),
+                "speakers_detected": len(speakers),
+                "visual_labels": [label.get('name', '') for label in labels[:10]],
+                "people_identified": [person.get('name', '') for person in named_people],
+                "locations_mentioned": [loc.get('name', '') for loc in named_locations],
+                "brands_detected": [brand.get('name', '') for brand in brands],
+                "key_topics": [topic.get('name', '') for topic in topics],
+                "keywords": [kw.get('name', '') for kw in keywords[:15]],
+                "sentiment_analysis": sentiments[:3] if sentiments else [],
+                "audio_events": [ae.get('type', '') for ae in audio_effects],
+                "text_on_screen": [ocr.get('text', '') for ocr in ocr_text[:5]]
+            }
+            
+            detailed_prompt = f"""
+You are an expert video content analyst. Provide a comprehensive, detailed analysis of this specific video segment.
+
+**Time Range:** {scene['start_time']} to {scene['end_time']} (Scene {scene['scene_number']})
+
+**Transcript Content:**
+{transcript_text if transcript_text else "No transcript available for this segment."}
+
+**Visual & Audio Intelligence Data:**
+{json.dumps(insights_summary, indent=2, ensure_ascii=False)}
+
+**Scene Context from Overall Analysis:**
+{scene['description']}
+
+## Provide a detailed breakdown covering:
+
+### 1. Narrative Summary
+What exactly happens in this time segment? Provide a detailed, chronological account.
+
+### 2. Dialogue & Communication Analysis  
+- Key conversations and speaker interactions
+- Tone, emotion, and communication style
+- Important quotes or statements
+
+### 3. Visual Scene Description
+- Physical environment and setting details
+- People present and their roles/actions
+- Objects, brands, text visible on screen
+- Camera movements or scene transitions
+
+### 4. Character & Entity Analysis
+- Who are the main participants?
+- What are their roles and relationships?
+- Any named individuals or organizations mentioned
+
+### 5. Thematic Content
+- Main topics and subjects discussed
+- Underlying themes or messages
+- Educational or informational content
+
+### 6. Technical & Production Elements
+- Audio quality, effects, or notable sounds
+- Visual presentation style
+- Any technical observations
+
+### 7. Context & Significance
+- How this segment fits into the overall video narrative
+- Key takeaways or important information conveyed
+- Emotional or dramatic highlights
+
+Make this analysis comprehensive and detailed - imagine you're creating a professional content review for media analysis.
+"""
+            
+            response = await self.openai_client.chat.completions.create(
+                messages=[
+                    {"role": "system", "content": "You are a professional video content analyst specializing in detailed scene-by-scene breakdowns. Provide thorough, insightful analysis."},
+                    {"role": "user", "content": detailed_prompt}
+                ],
+                max_tokens=3000,
+                temperature=0.4,
+                top_p=1.0,
+                model=self.config['openai']['deployment']
+            )
+            
+            detailed_analysis = response.choices[0].message.content
+            
+            # Add technical metadata at the end
+            metadata_section = f"""
+
+---
+
+## Technical Metadata for {scene['start_time']} - {scene['end_time']}
+
+**Confidence Threshold:** {self.confidence_filter.min_confidence}
+**Data Sources:** Azure Video Indexer + Azure OpenAI Analysis
+
+**Quantified Insights:**
+- Transcript segments: {len(transcript_segments)}
+- Visual elements detected: {len(labels)}
+- Named entities: {len(named_people + named_locations + brands)}
+- Audio events: {len(audio_effects)}
+- Text recognition instances: {len(ocr_text)}
+
+**Processing Notes:**
+All insights filtered for confidence >= {self.confidence_filter.min_confidence}
+Analysis generated using {self.config['openai']['model_name']} on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+"""
+            
+            return detailed_analysis + metadata_section
+            
+        except Exception as e:
+            logger.error(f"Failed to generate detailed analysis for scene {scene['scene_number']}: {e}")
+            
+            # Fallback analysis
+            fallback = f"""
+# Detailed Scene Analysis - {scene['start_time']} to {scene['end_time']}
+
+## Scene {scene['scene_number']} Analysis
+
+**Time Range:** {scene['start_time']} - {scene['end_time']}
+
+**Basic Summary:**
+{scene['description']}
+
+**Note:** Detailed AI analysis failed. This segment contains:
+- {len(filtered_insights.get('transcript', []))} transcript segments
+- {len(filtered_insights.get('labels', []))} visual elements detected
+- {len(filtered_insights.get('speakers', []))} speakers identified
+
+**Raw Transcript (if available):**
+"""
+            # Add basic transcript
+            for segment in filtered_insights.get('transcript', []):
+                timestamp = segment.get('start', '00:00')
+                text = segment.get('text', '')
+                speaker_id = segment.get('speakerId', 'Unknown')
+                fallback += f"[{timestamp}] Speaker {speaker_id}: {text}\n"
+            
+            return fallback
+    
+    async def save_detailed_scene_analyses(self, scenes: List[Dict[str, Any]], structured_data: Dict[str, Any], output_dir: str = "scene_analyses") -> List[str]:
+        """Generate and save detailed analysis for each scene"""
+        
+        # Create output directory
+        output_path = Path(output_dir)
+        output_path.mkdir(exist_ok=True)
+        
+        saved_analyses = []
+        
+        try:
+            tasks = []
+            for scene in scenes:
+                start_seconds = scene['start_seconds']
+                end_seconds = self._timestamp_to_seconds(scene['end_time'])
+                
+                # Filter insights for this time range
+                filtered_insights = self.filter_insights_by_timerange(structured_data, start_seconds, end_seconds)
+                
+                # Create analysis task
+                task = self.generate_detailed_scene_analysis(scene, filtered_insights)
+                tasks.append((scene, task))
+            
+            # Process scenes with concurrency control
+            semaphore = asyncio.Semaphore(self.config['processing'].get('max_workers', 4))
+            
+            async def bounded_analysis(scene, task):
+                async with semaphore:
+                    analysis = await task
+                    return scene, analysis
+            
+            results = await asyncio.gather(
+                *[bounded_analysis(scene, task) for scene, task in tasks],
+                return_exceptions=True
+            )
+            
+            for i, result in enumerate(results):
+                if isinstance(result, Exception):
+                    logger.error(f"Scene {i+1} analysis failed: {result}")
+                    continue
+                
+                scene, analysis = result
+                
+                # Create filename
+                safe_timestamp = scene["start_time"].replace(':', '-')
+                filename = f"scene_{scene['scene_number']:02d}_{safe_timestamp}.txt"
+                filepath = output_path / filename
+                
+                # Save analysis
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(analysis)
+                
+                saved_analyses.append(str(filepath))
+                logger.info(f"Saved detailed analysis for scene {scene['scene_number']}: {filename}")
+        
+        except Exception as e:
+            logger.error(f"Error processing scene analyses: {e}")
+        
+        return saved_analyses
+    
+    def parse_scene_breakdown(self, final_summary):
+        """Parse the Scene-by-Scene Breakdown from the final summary"""
+        scenes = []
+        
+        # Find the Scene-by-Scene Breakdown section - try multiple patterns
+        patterns_to_try = [
+            r'Scene-by-Scene Breakdown(.*?)(?=\n#|---|\Z)',  # Plain header
+            r'#\s*Scene-by-Scene Breakdown(.*?)(?=\n#|---|\Z)',  # With # header
+            r'###\s*Scene-by-Scene Breakdown(.*?)(?=###|---|\Z)',  # With ### header
+            r'\*\*Scene-by-Scene Breakdown\*\*(.*?)(?=\*\*[^*]|---|\Z)',  # With ** bold
+        ]
+        
+        scene_content = None
+        for pattern in patterns_to_try:
+            scene_match = re.search(pattern, final_summary, re.DOTALL | re.IGNORECASE)
+            if scene_match:
+                scene_content = scene_match.group(1)
+                logger.info(f"Found Scene-by-Scene Breakdown with pattern: {pattern[:30]}...")
+                break
+        
+        if not scene_content:
+            logger.warning("No Scene-by-Scene Breakdown section found in summary")
+            return scenes
+        
+        # Extract individual scenes with various timestamp formats
+        # Updated pattern to handle:
+        # - 0:00–0:05.8 (M:SS or M:SS.ms format)
+        # - 0:00:00 – 0:02:33 (H:MM:SS format)
+        # - With or without ** bold markers
+        timestamp_patterns = [
+            # M:SS or M:SS.ms format (like 0:00–0:05.8)
+            r'(\d+:\d+(?:\.\d+)?)\s*[–\-—]\s*(\d+:\d+(?:\.\d+)?)\s*:\s*(.*?)(?=\d+:\d+|$)',
+            # H:MM:SS format
+            r'(\d+:\d+:\d+)\s*[–\-—]\s*(\d+:\d+:\d+)\s*:\s*(.*?)(?=\d+:\d+:\d+|$)',
+            # With optional ** markers
+            r'(?:\*\*)?(\d+:\d+(?:\.\d+)?)\s*[–\-—]\s*(\d+:\d+(?:\.\d+)?)(?:\*\*)?\s*:\s*(.*?)(?=(?:\*\*)?\d+:\d+|$)',
+            r'(?:\*\*)?(\d+:\d+:\d+)\s*[–\-—]\s*(\d+:\d+:\d+)(?:\*\*)?\s*:\s*(.*?)(?=(?:\*\*)?\d+:\d+:\d+|$)',
+        ]
+        
+        matches = []
+        for pattern in timestamp_patterns:
+            found_matches = re.findall(pattern, scene_content, re.DOTALL)
+            if found_matches:
+                matches = found_matches
+                logger.info(f"Found {len(found_matches)} scenes with timestamp pattern: {pattern[:50]}...")
+                break
+        
+        if not matches:
+            logger.warning("No timestamp patterns matched in scene content")
+            logger.debug(f"Scene content preview: {scene_content[:200]}...")
+        
+        for i, (start_time, end_time, description) in enumerate(matches):
+            # Clean up the description
+            description = description.strip()
+            # Remove any trailing punctuation or whitespace
+            description = re.sub(r'\s+', ' ', description)
+            
+            scene = {
+                "scene_number": i + 1,
+                "start_time": start_time.strip(),
+                "end_time": end_time.strip(), 
+                "description": description,
+                "start_seconds": self._timestamp_to_seconds(start_time.strip())
+            }
+            scenes.append(scene)
+            logger.debug(f"Scene {i+1}: {start_time} - {end_time}")
+            
+        logger.info(f"Extracted {len(scenes)} scenes from breakdown")
+        return scenes
+    
+    def _timestamp_to_seconds(self, timestamp: str) -> float:
+        """Convert timestamp string (H:MM:SS, MM:SS, M:SS.ms) to seconds"""
+        try:
+            # Remove any extra whitespace
+            timestamp = timestamp.strip()
+            
+            # Handle different timestamp formats
+            parts = timestamp.split(':')
+            
+            if len(parts) == 3:
+                # H:MM:SS format
+                hours = float(parts[0])
+                minutes = float(parts[1])
+                seconds = float(parts[2])
+                return hours * 3600 + minutes * 60 + seconds
+                
+            elif len(parts) == 2:
+                # MM:SS or M:SS or M:SS.ms format
+                minutes = float(parts[0])
+                seconds = float(parts[1])  # This handles decimal seconds like 05.8
+                return minutes * 60 + seconds
+                
+            elif len(parts) == 1:
+                # Just seconds
+                return float(parts[0])
+                
+            else:
+                logger.warning(f"Unexpected timestamp format: {timestamp}")
+                return 0.0
+                
+        except (ValueError, IndexError) as e:
+            logger.warning(f"Could not parse timestamp: {timestamp} - {e}")
+            return 0.0
+    
+    def extract_frames_from_scenes(self, video_path: str, scenes: List[Dict[str, Any]], output_dir: str = "scene_frames") -> List[str]:
+        """Extract one frame from each scene timestamp and save to folder"""
+        
+        # Create output directory
+        output_path = Path(output_dir)
+        output_path.mkdir(exist_ok=True)
+        
+        saved_frames = []
+        
+        try:
+            # Open video file
+            cap = cv2.VideoCapture(video_path)
+            
+            if not cap.isOpened():
+                logger.error(f"Could not open video file: {video_path}")
+                return saved_frames
+            
+            fps = cap.get(cv2.CAP_PROP_FPS)
+            total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+            duration = total_frames / fps
+            
+            logger.info(f"Video info: {duration:.2f}s, {fps:.2f} FPS, {total_frames} frames")
+            
+            for scene in scenes:
+                timestamp_seconds = scene["start_seconds"]
+                start_time = scene["start_time"]
+                
+                # Calculate frame number
+                frame_number = int(timestamp_seconds * fps)
+                
+                if frame_number >= total_frames:
+                    logger.warning(f"Timestamp {start_time} exceeds video duration, skipping")
+                    continue
+                
+                # Set video position to the frame
+                cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
+                
+                # Read the frame
+                ret, frame = cap.read()
+                
+                if ret:
+                    # Create filename with timestamp
+                    safe_timestamp = start_time.replace(':', '-')
+                    filename = f"scene_{scene['scene_number']:02d}_{safe_timestamp}.jpg"
+                    filepath = output_path / filename
+                    
+                    # Save frame
+                    cv2.imwrite(str(filepath), frame)
+                    saved_frames.append(str(filepath))
+                    
+                    logger.info(f"Saved frame for scene {scene['scene_number']} at {start_time}: {filename}")
+                else:
+                    logger.warning(f"Could not read frame at timestamp {start_time}")
+            
+            cap.release()
+            logger.info(f"Extracted {len(saved_frames)} frames to {output_dir}")
+            
+        except Exception as e:
+            logger.error(f"Error extracting frames: {e}")
+        
+        return saved_frames
     
     def generate_fallback_summary(self, structured_data):
         """Generate a basic summary when OpenAI processing fails"""
@@ -548,6 +992,38 @@ Video processing completed with high-confidence transcript extraction and metada
                 # Step 6: Generate final comprehensive summary asynchronously
                 final_summary = await self.generate_final_summary_async(valid_results, structured_data)
                 
+                # Step 7: Extract scenes and frames
+                scenes = self.parse_scene_breakdown(final_summary)
+                if scenes:
+                    logger.info(f"Found {len(scenes)} scenes, extracting frames and generating detailed analyses...")
+                    
+                    # Extract frames
+                    saved_frames = self.extract_frames_from_scenes(video_path, scenes)
+                    
+                    # Generate detailed scene analyses
+                    saved_analyses = await self.save_detailed_scene_analyses(scenes, structured_data)
+                    
+                    # Add frame and analysis information to the summary
+                    frame_info = "\n\n---\n\n## Extracted Scene Data\n"
+                    for i, scene in enumerate(scenes):
+                        frame_info += f"**Scene {scene['scene_number']}** ({scene['start_time']} - {scene['end_time']}):\n"
+                        
+                        # Frame info
+                        if i < len(saved_frames):
+                            frame_info += f"  - Frame: `{Path(saved_frames[i]).name}`\n"
+                        else:
+                            frame_info += f"  - Frame: extraction failed\n"
+                        
+                        # Analysis info
+                        if i < len(saved_analyses):
+                            frame_info += f"  - Detailed Analysis: `{Path(saved_analyses[i]).name}`\n"
+                        else:
+                            frame_info += f"  - Detailed Analysis: generation failed\n"
+                        
+                        frame_info += "\n"
+                    
+                    final_summary += frame_info
+                
                 return final_summary
                 
             except Exception as e:
@@ -561,6 +1037,39 @@ Video processing completed with high-confidence transcript extraction and metada
                     chunk_results.append(result)
                 
                 final_summary = await self.generate_final_summary_async(chunk_results, structured_data)
+                
+                # Extract scenes and frames for fallback processing too
+                scenes = self.parse_scene_breakdown(final_summary)
+                if scenes:
+                    logger.info(f"Found {len(scenes)} scenes in fallback, extracting frames and generating detailed analyses...")
+                    
+                    # Extract frames
+                    saved_frames = self.extract_frames_from_scenes(video_path, scenes)
+                    
+                    # Generate detailed scene analyses
+                    saved_analyses = await self.save_detailed_scene_analyses(scenes, structured_data)
+                    
+                    # Add frame and analysis information to the summary
+                    frame_info = "\n\n---\n\n## Extracted Scene Data\n"
+                    for i, scene in enumerate(scenes):
+                        frame_info += f"**Scene {scene['scene_number']}** ({scene['start_time']} - {scene['end_time']}):\n"
+                        
+                        # Frame info
+                        if i < len(saved_frames):
+                            frame_info += f"  - Frame: `{Path(saved_frames[i]).name}`\n"
+                        else:
+                            frame_info += f"  - Frame: extraction failed\n"
+                        
+                        # Analysis info
+                        if i < len(saved_analyses):
+                            frame_info += f"  - Detailed Analysis: `{Path(saved_analyses[i]).name}`\n"
+                        else:
+                            frame_info += f"  - Detailed Analysis: generation failed\n"
+                        
+                        frame_info += "\n"
+                    
+                    final_summary += frame_info
+                
                 return final_summary
             
         except Exception as e:
@@ -580,11 +1089,38 @@ Video processing completed with high-confidence transcript extraction and metada
             str: Human-readable analysis summary in markdown format
         """
         return asyncio.run(self.analyze_video_async(video_path, video_name, video_description))
+    
+    def analyze_video_with_scenes(self, video_path, video_name, video_description):
+        """
+        Analyze video and return both summary and parsed scenes with detailed analyses
+        
+        Args:
+            video_path (str): Path to the video file
+            video_name (str): Name for the video
+            video_description (str): Description for the video
+            
+        Returns:
+            tuple: (summary_text, scenes_list, frame_paths, analysis_paths)
+        """
+        async def _analyze_with_scenes():
+            summary = await self.analyze_video_async(video_path, video_name, video_description)
+            scenes = self.parse_scene_breakdown(summary)
+            saved_frames = []
+            saved_analyses = []
+            if scenes:
+                saved_frames = self.extract_frames_from_scenes(video_path, scenes)
+                # Note: detailed analyses are generated during main analysis, 
+                # but we can generate them again if needed
+                structured_data = {}  # This would need to be passed from the main analysis
+                # saved_analyses = self.save_detailed_scene_analyses(scenes, structured_data)
+            return summary, scenes, saved_frames, saved_analyses
+        
+        return asyncio.run(_analyze_with_scenes())
 
 
 # Example usage and testing functions
 async def main():
-    """Example usage of the enhanced video analyzer"""
+    """Example usage of the enhanced video analyzer with scene extraction and detailed analysis"""
     analyzer = VideoAnalyzer()
     
     # Test async OpenAI connection
@@ -598,16 +1134,110 @@ async def main():
         # Replace with your actual video path
         video_path = "example_video.mp4"
         video_name = "Test Video Analysis"
-        video_description = "Testing enhanced video analyzer with async processing"
+        video_description = "Testing enhanced video analyzer with scene extraction and detailed analysis"
         
         print("Starting video analysis...")
-        summary = await analyzer.analyze_video_async(video_path, video_name, video_description)
         
+        # Option 1: Get complete analysis with scene extraction and detailed breakdowns
+        summary = await analyzer.analyze_video_async(video_path, video_name, video_description)
         print("Analysis complete!")
         print(summary)
         
+        # Option 2: Get summary + structured scene data (detailed analyses generated during main analysis)
+        # summary, scenes, frame_paths, analysis_paths = analyzer.analyze_video_with_scenes(video_path, video_name, video_description)
+        # print(f"\nExtracted {len(scenes)} scenes:")
+        # for scene in scenes:
+        #     print(f"Scene {scene['scene_number']}: {scene['start_time']} - {scene['end_time']}")
+        #     print(f"  Description: {scene['description'][:100]}...")
+        # print(f"\nSaved {len(frame_paths)} frame images")
+        # print(f"Generated {len(analysis_paths)} detailed scene analyses")
+        
     except Exception as e:
         print(f"Analysis failed: {e}")
+
+
+def example_scene_extraction():
+    """Example of extracting scenes and generating detailed analyses from an existing summary"""
+    analyzer = VideoAnalyzer()
+    
+    # Example summary text (replace with actual summary)
+    sample_summary = """
+    ### Scene-by-Scene Breakdown
+    
+    **0:00:00 – 0:02:33**
+    Introduction to the Airport Police Division and their role in crime prevention.
+    
+    **0:02:33 – 0:04:33** 
+    Shirley shares her story of being deceived by another conman.
+    
+    **0:04:34 – 0:09:07**
+    Transition to terrorism preparedness and public vigilance.
+    """
+    
+    # Parse scenes
+    scenes = analyzer.parse_scene_breakdown(sample_summary)
+    
+    print("Extracted scenes:")
+    for scene in scenes:
+        print(f"Scene {scene['scene_number']}: {scene['start_time']} - {scene['end_time']}")
+        print(f"  Seconds: {scene['start_seconds']}")
+        print(f"  Description: {scene['description']}")
+        print()
+    
+    # Extract frames and generate detailed analyses (if you have a video file and structured data)
+    # video_path = "your_video.mp4"
+    # structured_data = {}  # This would come from your video analysis
+    # saved_frames = analyzer.extract_frames_from_scenes(video_path, scenes)
+    # saved_analyses = analyzer.save_detailed_scene_analyses(scenes, structured_data)
+    # print(f"Saved {len(saved_frames)} frames and {len(saved_analyses)} detailed analyses")
+
+
+def example_detailed_analysis():
+    """Example showing what detailed scene analysis files contain"""
+    print("""
+Example detailed scene analysis file content (scene_01_0-00-00.txt):
+
+# Detailed Scene Analysis - 0:00:00 to 0:02:33
+
+## Scene 1 Analysis
+
+### 1. Narrative Summary
+The video opens with an introduction to the Airport Police Division, establishing their primary role in crime prevention at the airport. The scene features Doris recounting her personal experience of being targeted by a sophisticated scam operation...
+
+### 2. Dialogue & Communication Analysis
+- Key speaker: Doris (victim testimonial)
+- Tone: Serious, educational, cautionary
+- Important quote: "I thought he was a genuine government officer..."
+
+### 3. Visual Scene Description
+- Setting: Interview setup with police division backdrop
+- People: Doris (scam victim), police representatives
+- Visual elements: Official police insignia, clean interview environment
+
+### 4. Character & Entity Analysis
+- Doris: Scam victim providing testimonial
+- Airport Police Division: Law enforcement agency
+- Conman: Antagonist (mentioned but not shown)
+
+### 5. Thematic Content
+- Crime prevention and public awareness
+- Vulnerability of citizens to sophisticated scams
+- Role of law enforcement in education
+
+### 6. Technical & Production Elements
+- Professional interview lighting and setup
+- Clear audio quality
+- Educational documentary style
+
+### 7. Context & Significance
+This opening segment establishes the video's educational purpose and introduces real-world consequences of criminal activity...
+
+---
+
+## Technical Metadata for 0:00:00 - 0:02:33
+[Technical details and processing information]
+    """)
+    print("This is the type of detailed analysis saved in each scene's .txt file!")
 
 
 if __name__ == "__main__":
@@ -619,3 +1249,9 @@ if __name__ == "__main__":
     
     # Run the async main function
     asyncio.run(main())
+    
+    # Uncomment to test scene extraction only
+    # example_scene_extraction()
+    
+    # Uncomment to see example of detailed analysis content
+    # example_detailed_analysis()
